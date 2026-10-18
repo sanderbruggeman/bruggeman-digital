@@ -309,41 +309,43 @@
 
           </div>
 
-          <!-- Rechter Kolom: Merkillustratie met zwevende trust badges (lg:col-span-5) -->
+          <!-- Rechter Kolom: Merkillustratie & Zekerheden (lg:col-span-5) -->
           <div class="lg:col-span-5 relative mt-6 lg:mt-0 flex justify-center">
             <!-- Achtergrond gloed -->
             <div class="absolute -inset-4 bg-gradient-to-tr from-orange/15 to-navy/10 rounded-3xl blur-2xl -z-10 opacity-70"></div>
             
-            <div class="relative w-full max-w-sm sm:max-w-md bg-[#FAF9F5] p-3 sm:p-5 rounded-2xl sm:rounded-3xl border border-border shadow-elevated">
-              <!-- Illustratie -->
-              <div class="relative rounded-xl sm:rounded-2xl overflow-hidden flex items-center justify-center">
+            <div class="relative w-full max-w-sm sm:max-w-md bg-surface p-4 sm:p-5 rounded-2xl sm:rounded-3xl border border-border shadow-elevated">
+              
+              <!-- Bovenbalk: Duidelijke MKB-waarde (doorlooptijd & status) -->
+              <div class="flex items-center justify-between pb-3.5 mb-3 border-b border-border/80 text-xs">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span class="font-bold text-navy">Binnen 2 - 3 weken online</span>
+                </div>
+                <span class="font-mono text-[11px] font-semibold text-orange bg-orange-light px-2.5 py-0.5 rounded-full border border-orange/20">All-in service</span>
+              </div>
+
+              <!-- Illustratie container -->
+              <div class="relative rounded-xl sm:rounded-2xl overflow-hidden bg-[#FAF9F5] border border-border/50 p-2 sm:p-3 flex items-center justify-center">
                 <img 
                   src="assets/hero-illustration.png" 
                   alt="Bruggeman Digital - WordPress Systeem & Digitale Maatwerkoplossingen" 
-                  class="w-full h-auto max-h-[380px] object-contain transition-transform duration-500 hover:scale-[1.02]"
+                  class="w-full h-auto max-h-[340px] object-contain transition-transform duration-500 hover:scale-[1.02]"
                   loading="eager"
                   width="1122" 
                   height="1402"
                 />
               </div>
 
-              <!-- Zwevende badge 1: Linksboven / Performance -->
-              <div class="absolute -top-3.5 -left-2 sm:-left-4 bg-surface/95 backdrop-blur-md px-3.5 py-2 rounded-xl border border-border shadow-card flex items-center gap-2.5">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span class="text-xs font-bold text-navy">99/100 PageSpeed</span>
-                <span class="text-[11px] text-muted hidden sm:inline">• Supersnel</span>
+              <!-- Onderbalk: 100% Eigendom & Geen contract -->
+              <div class="pt-3.5 mt-3 border-t border-border/80 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 font-bold text-navy">
+                  <span class="text-orange font-bold">✓</span>
+                  <span>100% Jouw eigendom</span>
+                </div>
+                <span class="text-muted text-[11px]">Géén maandelijks abonnement</span>
               </div>
 
-              <!-- Zwevende badge 2: Rechtsonder / Eigenaarschap -->
-              <div class="absolute -bottom-3.5 -right-2 sm:-right-4 bg-surface/95 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-border shadow-card flex items-center gap-2.5">
-                <span class="w-6 h-6 rounded-lg bg-orange-light text-orange flex items-center justify-center font-bold text-xs shrink-0">
-                  ✓
-                </span>
-                <div>
-                  <strong class="block text-xs font-bold text-navy leading-tight">100% Eigendom</strong>
-                  <span class="text-[10px] text-muted block leading-tight">Géén abonnement</span>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -954,7 +956,7 @@
               <span>LinkedIn</span>
             </a>
           </div>
-          <p class="text-[11px] text-muted pt-1">Rechtsvorm: Eenmanszaak • Tarieven excl. 21% btw</p>
+          <p class="text-[11px] text-muted pt-1">Tarieven excl. 21% btw</p>
         </div>
 
       </div>
