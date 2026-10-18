@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>WordPress Bedrijfswebsite Laten Maken | Bruggeman Digital</title>
+  <meta name="description" content="Professionele WordPress bedrijfswebsite laten maken? Eenmalige investering, 100% jouw eigendom en géén verplicht maandabonnement. Bekijk mijn werk & prijzen." />
+  <meta name="author" content="Sander Bruggeman - Bruggeman Digital" />
+  <link rel="canonical" href="https://www.bruggemandigital.nl/" />
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.bruggemandigital.nl/" />
+  <meta property="og:title" content="WordPress Bedrijfswebsite Laten Maken | Bruggeman Digital" />
+  <meta property="og:description" content="Een professionele bedrijfswebsite die 100% van jou is. Eenmalige investering, vrije hostingkeuze en géén verplichte maandabonnementen." />
+  <meta property="og:image" content="https://www.bruggemandigital.nl/assets/fruvyland-screenshot.png" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#F7F6F3',
+            surface: '#FFFFFF',
+            fg: '#17191C',
+            muted: '#5C616B',
+            border: '#E4E2DD',
+            primary: {
+              DEFAULT: '#195DE6',
+              hover: '#1348B8',
+              light: '#EBF1FD'
+            },
+            whatsapp: '#25D366'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #F7F6F3;
+      color: #17191C;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+    details > summary {
+      list-style: none;
+    }
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+
+  <!-- Structured Data (JSON-LD) voor Google SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "name": "Bruggeman Digital",
+        "url": "https://www.bruggemandigital.nl",
+        "logo": "https://www.bruggemandigital.nl/logo.svg",
+        "image": "https://www.bruggemandigital.nl/assets/sander-portrait.jpg",
+        "description": "Freelance WordPress specialist voor professionele bedrijfswebsites zonder verplichte maandelijkse onderhouds- of hostingabonnementen.",
+        "founder": {
+          "@type": "Person",
+          "name": "Sander Bruggeman",
+          "sameAs": ["https://www.linkedin.com/in/sander-bruggeman-415596197/"]
+        },
+        "priceRange": "€€",
+        "telephone": "+31619588717",
+        "email": "srabruggeman@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "NL"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Hoe kan het dat ik bij Bruggeman Digital géén maandelijks bedrag betaal en bij andere webbureaus wel?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Veel bureaus gebruiken verplichte onderhoudscontracten als verdienmodel. Ik kies voor transparantie: je betaalt voor het ontwerpen en bouwen van je site. Een goed gebouwde WordPress-website met automatische basis-updates heeft in de praktijk nauwelijks betaald maandelijks onderhoud nodig."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wat kost een professionele WordPress bedrijfswebsite?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Als transparante richtlijn: het complete traject voor referentieproject Fruvyland is gerealiseerd voor € 2.000,- ex. btw eenmalig. Afhankelijk van de omvang van jouw wensen maak ik altijd vooraf een vaste prijsafspraak."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="antialiased selection:bg-primary selection:text-white">
+
+  <!-- ================= HEADER / NAVIGATIE ================= -->
+  <header class="sticky top-0 z-50 bg-bg/90 backdrop-blur-md border-b border-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="logo.svg" alt="Bruggeman Digital Logo" class="h-9 w-auto" onerror="this.style.display='none'" />
+        <span class="font-bold text-xl tracking-tight text-fg">Bruggeman<span class="text-primary">Digital</span></span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-muted">
+        <a href="#waarom" class="hover:text-fg transition-colors">Waarom ik?</a>
+        <a href="#werk" class="hover:text-fg transition-colors">Werk & Richtprijs</a>
+        <a href="#werkwijze" class="hover:text-fg transition-colors">Werkwijze</a>
+        <a href="#over-mij" class="hover:text-fg transition-colors">Over mij</a>
+        <a href="#faq" class="hover:text-fg transition-colors">FAQ</a>
+      </nav>
+
+      <!-- CTA Knop -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-primary hover:bg-primary-hover rounded-lg shadow-sm transition-all">
+          Bespreek je project
+        </a>
+      </div>
+
+      <!-- Mobiele Menu Knop -->
+      <button id="mobile-menu-btn" aria-label="Open menu" class="md:hidden p-2 rounded-lg text-fg hover:bg-border/50">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Uitklapbaar Mobiel Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-border px-4 pt-3 pb-6 space-y-3">
+      <a href="#waarom" class="block py-2 text-base font-medium text-fg">Waarom ik?</a>
+      <a href="#werk" class="block py-2 text-base font-medium text-fg">Werk & Richtprijs</a>
+      <a href="#werkwijze" class="block py-2 text-base font-medium text-fg">Werkwijze</a>
+      <a href="#over-mij" class="block py-2 text-base font-medium text-fg">Over mij</a>
+      <a href="#faq" class="block py-2 text-base font-medium text-fg">Veelgestelde vragen</a>
+      <a href="#contact" class="block w-full text-center py-3 mt-2 text-base font-semibold text-white bg-primary rounded-lg">
+        Bespreek je project
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTIE ================= -->
+    <section class="py-16 md:py-24 lg:py-28 border-b border-border overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Tekst Kolom -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- WordPress Badge met officieel logo -->
+            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface border border-border shadow-sm">
+              <!-- Officieel WordPress W-logo -->
+              <svg class="w-4 h-4 text-[#21759B]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.002 2.002c-5.514 0-9.998 4.486-9.998 9.998 0 5.514 4.484 10 9.998 10 5.514 0 9.998-4.486 9.998-10 0-5.512-4.484-9.998-9.998-9.998zm-8.694 9.998c0-1.26.27-2.456.753-3.537l4.15 11.37c-2.893-1.404-4.903-4.382-4.903-7.833zm8.694 8.694c-.852 0-1.676-.126-2.455-.356l2.607-7.571 2.671 7.319c.018.043.041.08.066.115-.892.317-1.852.493-2.889.493zm1.196-12.765c.523-.027.994-.082.994-.082.468-.055.413-.742-.055-.715 0 0-1.406.11-2.313.11-.853 0-2.286-.11-2.286-.11-.468-.027-.523.688-.055.715 0 0 .442.055.91.082l1.351 3.704-1.898 5.691-3.158-9.395c.523-.027.994-.082.994-.082.468-.055.413-.742-.055-.715 0 0-1.406.11-2.313.11-.162 0-.354-.004-.557-.011 1.552-2.357 4.221-3.914 7.255-3.914 2.261 0 4.321.863 5.867 2.277-.038-.002-.073-.008-.112-.008-.853 0-1.458.742-1.458 1.54 0 .715.413 1.32.853 2.036.33.578.715 1.32.715 2.393 0 .743-.286 1.604-.66 2.806l-.866 2.892-3.162-9.419zm4.316 11.497l2.634-7.614c.492-1.23.655-2.212.655-3.09 0-.318-.021-.614-.06-.889.662 1.213 1.043 2.602 1.043 4.084 0 3.204-1.737 5.999-4.272 7.509z"/>
+              </svg>
+              <span class="text-xs font-semibold uppercase tracking-wider text-fg">WordPress Bedrijfswebsites op Maat</span>
+            </div>
+
+            <!-- H1 Kop -->
+            <h1 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-fg leading-[1.12]">
+              Een professionele bedrijfswebsite die <span class="text-primary">100% van jou</span> is. Zonder verplichte abonnementen.
+            </h1>
+
+            <!-- Subkop -->
+            <p class="text-lg sm:text-xl text-muted leading-relaxed">
+              Veel webbureaus lokken je met een laag instaptarief, maar binden je vervolgens jarenlang aan dure hosting- en onderhoudscontracten. Ik draai het om: ik bouw snelle, conversiegerichte WordPress-websites voor een heldere eenmalige prijs. Daarna ben je volledig vrij.
+            </p>
+
+            <!-- CTA Knoppen -->
+            <div class="flex flex-col sm:flex-row gap-4 pt-2">
+              <a href="#contact" class="inline-flex items-center justify-center px-6 py-4 text-base font-bold text-white bg-primary hover:bg-primary-hover rounded-xl shadow-sm transition-all">
+                Vraag een vrijblijvende prijsindicatie aan
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+              <a href="#werk" class="inline-flex items-center justify-center px-6 py-4 text-base font-semibold text-fg bg-surface hover:bg-border/40 border border-border rounded-xl transition-all">
+                Bekijk werk & richtprijs ↓
+              </a>
+            </div>
+
+            <!-- USPs balkje -->
+            <div class="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm font-medium text-muted">
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Geen verplichte maandkosten</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Vrije keuze in eigen hosting</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Direct contact met de bouwer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visuele Kolom -->
+          <div class="lg:col-span-5">
+            <div class="relative rounded-2xl bg-surface p-3 border border-border shadow-xl">
+              <img 
+                src="assets/fruvyland-screenshot.png" 
+                alt="Voorbeeld WordPress website gerealiseerd door Bruggeman Digital" 
+                class="rounded-xl w-full h-auto object-cover border border-border/60"
+                onerror="this.src='assets/hero-illustration.png'"
+              />
+              <!-- Zwevend Prijs/Bewijs Kaartje -->
+              <div class="mt-3 sm:mt-0 sm:absolute sm:-bottom-5 sm:-left-5 bg-surface px-4 py-3 rounded-xl border border-border shadow-lg flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-primary-light text-primary flex items-center justify-center font-bold">
+                  ✓
+                </div>
+                <div>
+                  <p class="text-xs font-medium text-muted">Referentie: Fruvyland</p>
+                  <p class="text-sm font-bold text-fg">Opgeleverd voor € 2.000,- <span class="font-normal text-xs text-muted">(ex. btw)</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WAAROM IK / ANTI-LOCK-IN SECTIE ================= -->
+    <section id="waarom" class="py-20 bg-surface border-b border-border">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <span class="font-mono text-xs uppercase tracking-widest text-primary font-semibold">Geen vendor lock-in</span>
+          <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-fg tracking-tight">
+            Waarom ondernemers kiezen voor vrijheid (en niet voor een duur webbureau)
+          </h2>
+          <p class="mt-4 text-lg text-muted leading-relaxed">
+            Een goede bedrijfswebsite hoeft geen doorlopende kostenpost te zijn. Toch betaalt het gros van het MKB elke maand tientallen tot honderden euro's aan een bureau voor een website waar zelden iets aan verandert. Bij Bruggeman Digital werkt dat anders:
+          </p>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-3 gap-8">
+          <!-- USP 1 -->
+          <div class="bg-bg p-8 rounded-2xl border border-border flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-primary-light text-primary flex items-center justify-center mb-6">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h3 class="text-xl font-bold text-fg mb-3">Geen verplicht onderhouds- of hostingpakket</h3>
+              <p class="text-muted text-sm leading-relaxed">
+                Je betaalt mij eenmalig voor het ontwerpen en bouwen van een uitstekende website. Zodra de site staat, zit je nergens aan vast. Wil je een half jaar later toch iets laten aanpassen of uitbreiden? Dan help ik je gewoon op oproepbasis.
+              </p>
+            </div>
+          </div>
+
+          <!-- USP 2 -->
+          <div class="bg-bg p-8 rounded-2xl border border-border flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-primary-light text-primary flex items-center justify-center mb-6">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+              </div>
+              <h3 class="text-xl font-bold text-fg mb-3">100% jouw eigendom, op jouw eigen domein</h3>
+              <p class="text-muted text-sm leading-relaxed">
+                De website wordt los ontwikkeld en op jouw eigen hostingomgeving en domeinnaam opgeleverd. Jij kiest zelf waar je jouw site host en hebt altijd alle beheerdersrechten. Uiteraard help en adviseer ik je graag bij het instellen hiervan.
+              </p>
+            </div>
+          </div>
+
+          <!-- USP 3 (met WordPress Logo) -->
+          <div class="bg-bg p-8 rounded-2xl border border-border flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-[#21759B]/10 text-[#21759B] flex items-center justify-center mb-6">
+                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12.002 2.002c-5.514 0-9.998 4.486-9.998 9.998 0 5.514 4.484 10 9.998 10 5.514 0 9.998-4.486 9.998-10 0-5.512-4.484-9.998-9.998-9.998zm-8.694 9.998c0-1.26.27-2.456.753-3.537l4.15 11.37c-2.893-1.404-4.903-4.382-4.903-7.833zm8.694 8.694c-.852 0-1.676-.126-2.455-.356l2.607-7.571 2.671 7.319c.018.043.041.08.066.115-.892.317-1.852.493-2.889.493zm1.196-12.765c.523-.027.994-.082.994-.082.468-.055.413-.742-.055-.715 0 0-1.406.11-2.313.11-.853 0-2.286-.11-2.286-.11-.468-.027-.523.688-.055.715 0 0 .442.055.91.082l1.351 3.704-1.898 5.691-3.158-9.395c.523-.027.994-.082.994-.082.468-.055.413-.742-.055-.715 0 0-1.406.11-2.313.11-.162 0-.354-.004-.557-.011 1.552-2.357 4.221-3.914 7.255-3.914 2.261 0 4.321.863 5.867 2.277-.038-.002-.073-.008-.112-.008-.853 0-1.458.742-1.458 1.54 0 .715.413 1.32.853 2.036.33.578.715 1.32.715 2.393 0 .743-.286 1.604-.66 2.806l-.866 2.892-3.162-9.419zm4.316 11.497l2.634-7.614c.492-1.23.655-2.212.655-3.09 0-.318-.021-.614-.06-.889.662 1.213 1.043 2.602 1.043 4.084 0 3.204-1.737 5.999-4.272 7.509z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-fg mb-3">Gebouwd op de standaard: WordPress</h3>
+              <p class="text-muted text-sm leading-relaxed">
+                Geen gesloten maatwerksystemen waar alleen de oorspronkelijke bouwer iets in kan aanpassen. Ik ontwikkel in WordPress: gebruiksvriendelijk, toekomstbestendig en na oplevering kun je zelf eenvoudig teksten of foto's wijzigen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BEWIJS & PRIJSANKER (FRUVYLAND CASE) ================= -->
+    <section id="werk" class="py-20 border-b border-border">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-12">
+          <span class="font-mono text-xs uppercase tracking-widest text-primary font-semibold">Bewijs & Richtprijs</span>
+          <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-fg tracking-tight">
+            Bewezen resultaat & transparante prijzen
+          </h2>
+          <p class="mt-4 text-lg text-muted">
+            Ik geloof niet in vage "vanaf"-prijzen of onoverzichtelijke pakketten. Aan de hand van echt opgeleverd werk laat ik je precies zien wat je kunt verwachten en wat dat kost.
+          </p>
+        </div>
+
+        <!-- Case Study Card -->
+        <div class="bg-surface rounded-3xl border border-border shadow-sm overflow-hidden">
+          <div class="grid lg:grid-cols-12">
+            
+            <!-- Afbeelding van Fruvyland -->
+            <div class="lg:col-span-6 bg-bg p-6 sm:p-10 flex items-center justify-center border-b lg:border-b-0 lg:border-r border-border">
+              <img 
+                src="assets/fruvyland-screenshot.png" 
+                alt="Screenshot van de Fruvyland WordPress website" 
+                class="rounded-xl shadow-md border border-border w-full h-auto object-cover"
+              />
+            </div>
+
+            <!-- Case Beschrijving + Anchor Price -->
+            <div class="lg:col-span-6 p-6 sm:p-10 flex flex-col justify-between space-y-6">
+              <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-primary-light text-primary text-xs font-bold uppercase tracking-wide mb-3">
+                  Klantcase • WordPress Bedrijfswebsite
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-fg">
+                  Nieuwe website voor Fruvyland
+                </h3>
+                <p class="mt-3 text-muted text-sm sm:text-base leading-relaxed">
+                  Voor Fruvyland heb ik de volledige online presentatie vanaf de grond opgebouwd. Het doel: een frisse, professionele uitstraling die direct vertrouwen wekt bij bezoekers, razendsnel laadt op zowel mobiel als desktop, en eenvoudig zelf te beheren is in WordPress.
+                </p>
+
+                <ul class="mt-5 space-y-2.5 text-sm text-fg font-medium">
+                  <li class="flex items-start gap-2.5">
+                    <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span>Maatwerk WordPress-ontwerp passend bij de merkidentiteit</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span>Volledig responsive (smartphone, tablet & desktop)</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span>Technische SEO-basis en snelheidsoptimalisatie</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span>Opgeleverd op de eigen hostingomgeving van de klant</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Het Prijsanker Blok -->
+              <div class="bg-bg p-6 rounded-2xl border border-border">
+                <div class="flex flex-wrap items-baseline justify-between gap-2 pb-3 mb-3 border-b border-border">
+                  <span class="text-sm font-bold uppercase tracking-wider text-muted">Projectinvestering (Richtprijs)</span>
+                  <div>
+                    <span class="text-2xl sm:text-3xl font-extrabold text-fg">€ 2.000,-</span>
+                    <span class="text-xs text-muted font-medium">ex. btw (eenmalig)</span>
+                  </div>
+                </div>
+                <p class="text-xs sm:text-sm text-muted leading-relaxed">
+                  <strong>Hoe werkt dit voor jouw project?</strong> Het volledige traject voor Fruvyland is gerealiseerd voor € 2.000,- ex. btw (en € 0,- per maand aan mij na oplevering). Zoek je een compactere website, of juist een uitgebreidere site? Gebruik dit bedrag als eerlijke richtlijn. Je ontvangt altijd vooraf een vaste totaalprijs.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WERKWIJZE SECTIE ================= -->
+    <section id="werkwijze" class="py-20 bg-surface border-b border-border">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="font-mono text-xs uppercase tracking-widest text-primary font-semibold">Simpel Proces</span>
+          <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-fg tracking-tight">
+            Van idee naar livegang in 4 heldere stappen
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-6 rounded-2xl bg-bg border border-border">
+            <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-primary text-white">Stap 01</span>
+            <h3 class="mt-4 text-lg font-bold text-fg">Kennismaking & Vaste Prijs</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">
+              We bespreken jouw wensen, doelen en voorbeelden. Binnen enkele dagen ontvang je een helder voorstel met een vaste totaalprijs.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-bg border border-border">
+            <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-primary text-white">Stap 02</span>
+            <h3 class="mt-4 text-lg font-bold text-fg">Ontwerp & Opzet</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">
+              Ik bouw een eerste werkende versie op een tijdelijke testomgeving. Je ziet direct hoe jouw nieuwe website eruit komt te zien en aanvoelt.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-bg border border-border">
+            <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-primary text-white">Stap 03</span>
+            <h3 class="mt-4 text-lg font-bold text-fg">Feedback & Verfijning</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">
+              We lopen samen door het ontwerp. Ik verwerk jouw feedback en zorg dat alle teksten, afbeeldingen en formulieren kloppen.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-bg border border-border">
+            <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-primary text-white">Stap 04</span>
+            <h3 class="mt-4 text-lg font-bold text-fg">Oplevering & Overdracht</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">
+              Ik verhuis de site naar jouw eigen domein en hosting. Je krijgt een korte uitleg over WordPress en vanaf dat moment zijn alle sleutels 100% van jou.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OVER SANDER + LINKEDIN SECTIE ================= -->
+    <section id="over-mij" class="py-20 border-b border-border">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-12 gap-10 items-center">
+          
+          <!-- Portretfoto -->
+          <div class="md:col-span-4 flex justify-center">
+            <div class="relative w-56 h-56 sm:w-64 sm:h-64 rounded-2xl overflow-hidden border-2 border-border shadow-md bg-surface">
+              <img 
+                src="assets/sander-portrait.jpg" 
+                alt="Sander Bruggeman - Oprichter Bruggeman Digital" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Bio Tekst -->
+          <div class="md:col-span-8 space-y-4">
+            <span class="font-mono text-xs uppercase tracking-widest text-primary font-semibold">Over Bruggeman Digital</span>
+            <h2 class="text-3xl font-extrabold text-fg tracking-tight">
+              Eén vast aanspreekpunt: aangenaam, ik ben Sander
+            </h2>
+            <p class="text-muted leading-relaxed">
+              Achter Bruggeman Digital zit geen groot bureau met accountmanagers of wisselende stagiairs. Als je met mij werkt, heb je rechtstreeks contact met degene die jouw website daadwerkelijk ontwerpt en bouwt.
+            </p>
+            <p class="text-muted leading-relaxed">
+              Als zelfstandig ondernemer help ik bedrijven aan een professionele online uitstraling zonder onnodige complexiteit. Ik hou van korte lijntjes via WhatsApp of mail, duidelijke afspraken vooraf en techniek die gewoon doet wat het moet doen.
+            </p>
+            <div class="pt-2">
+              <a 
+                href="https://www.linkedin.com/in/sander-bruggeman-415596197/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-lg bg-surface border border-border hover:border-[#0A66C2] text-sm font-semibold text-fg transition-all shadow-sm"
+              >
+                <!-- Officieel LinkedIn Logo -->
+                <svg class="w-4 h-4 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+                <span>Bekijk mijn profiel op LinkedIn</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ================= OPEN DEUR BANNER (ANDERE DIGITALE PROJECTEN) ================= -->
+        <div class="mt-16 bg-fg text-white rounded-2xl p-8 sm:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-lg">
+          <div class="space-y-2 max-w-2xl">
+            <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-blue-400">
+              <span>• Breder inzetbaar</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold">
+              Heb je een ander digitaal vraagstuk of maatwerkproject?
+            </h3>
+            <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+              Hoewel mijn hoofdfocus ligt op WordPress-bedrijfswebsites, ben ik vanuit Bruggeman Digital ook beschikbaar voor andere digitale projecten. Denk aan maatwerk webapplicaties, technische optimalisaties of het meedenken over een nieuw digitaal concept.
+            </p>
+          </div>
+          <a href="#contact" class="shrink-0 inline-flex items-center justify-center px-5 py-3 text-sm font-bold bg-white text-fg hover:bg-gray-100 rounded-xl transition-all">
+            Sparren over een ander project →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= FAQ SECTIE ================= -->
+    <section id="faq" class="py-20 bg-surface border-b border-border">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="font-mono text-xs uppercase tracking-widest text-primary font-semibold">Veelgestelde Vragen</span>
+          <h2 class="mt-2 text-3xl font-extrabold text-fg tracking-tight">
+            Duidelijkheid vooraf
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          <details class="group bg-bg rounded-xl border border-border p-6" open>
+            <summary class="flex cursor-pointer items-center justify-between font-bold text-fg">
+              <span>Hoe kan het dat ik bij jou géén maandelijks bedrag betaal en bij andere bureaus wel?</span>
+              <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-primary">▼</span>
+            </summary>
+            <p class="mt-4 text-sm text-muted leading-relaxed">
+              Veel webbureaus gebruiken verplichte onderhouds- en hostingcontracten als doorlopend verdienmodel. Ik kies voor transparantie: je betaalt voor de uren die ik daadwerkelijk besteed aan het bouwen van je site. Een goed opgezette WordPress-website met automatische basis-updates heeft in de praktijk nauwelijks betaald maandelijks onderhoud nodig.
+            </p>
+          </details>
+
+          <details class="group bg-bg rounded-xl border border-border p-6">
+            <summary class="flex cursor-pointer items-center justify-between font-bold text-fg">
+              <span>Heb ik dan helemaal geen terugkerende kosten voor mijn website?</span>
+              <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-primary">▼</span>
+            </summary>
+            <p class="mt-4 text-sm text-muted leading-relaxed">
+              Elke website op het internet heeft een domeinnaam (bijv. <code class="text-xs bg-surface px-1.5 py-0.5 rounded border">.nl</code>) en webhosting nodig. Omdat je dit rechtstreeks op jouw eigen naam afsluit bij een hostingpartij naar keuze, betaal je enkel de kostprijs aan die provider (vaak slechts € 5,- tot € 12,- per maand) in plaats van een fors bedrag aan een webbureau.
+            </p>
+          </details>
+
+          <details class="group bg-bg rounded-xl border border-border p-6">
+            <summary class="flex cursor-pointer items-center justify-between font-bold text-fg">
+              <span>Wat als ik geen verstand heb van hosting of domeinnamen?</span>
+              <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-primary">▼</span>
+            </summary>
+            <p class="mt-4 text-sm text-muted leading-relaxed">
+              Geen zorgen, daar laat ik je niet mee zwemmen. Ik adviseer je precies welk pakket bij jouw bedrijf past en stel alles van A tot Z technisch voor je in. Het enige verschil is dat het abonnement op jouw eigen naam staat, zodat jij altijd volledig eigenaar blijft.
+            </p>
+          </details>
+
+          <details class="group bg-bg rounded-xl border border-border p-6">
+            <summary class="flex cursor-pointer items-center justify-between font-bold text-fg">
+              <span>Wat als ik in de toekomst toch hulp nodig heb of iets wil uitbreiden?</span>
+              <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-primary">▼</span>
+            </summary>
+            <p class="mt-4 text-sm text-muted leading-relaxed">
+              Dan stuur je me gewoon een WhatsAppje of een e-mail. Kleine vragen beantwoord ik vaak direct als service, en voor grotere aanpassingen of nieuwe pagina's spreken we vooraf een eerlijk uurtarief of een vaste prijs af.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTIE ================= -->
+    <section id="contact" class="py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12">
+          
+          <!-- Linker Kolom: Directe Contactkanalen -->
+          <div class="lg:col-span-5 space-y-6">
+            <span class="font-mono text-xs uppercase tracking-widest text-primary font-semibold">Contact</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-fg tracking-tight">
+              Klaar voor een website zonder wurgcontracten?
+            </h2>
+            <p class="text-muted leading-relaxed">
+              Laat je gegevens achter via het formulier of kies hieronder je favoriete manier om direct een bericht te sturen. Ik reageer doorgaans dezelfde werkdag nog.
+            </p>
+
+            <div class="space-y-3 pt-2">
+              <!-- WhatsApp Knop -->
+              <a 
+                href="https://wa.me/31619588717?text=Hoi%20Sander%2C%20ik%20heb%20een%20vraag%20over%20een%20website%20%2F%20digitaal%20project." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="flex items-center gap-4 p-4 rounded-xl bg-surface border border-border hover:border-whatsapp transition-all shadow-sm group"
+              >
+                <div class="w-11 h-11 rounded-lg bg-[#25D366]/10 text-[#25D366] flex items-center justify-center shrink-0">
+                  <!-- Officieel WhatsApp Icoon -->
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.124 1.529 5.855l-1.529 5.581 5.716-1.5c1.681.916 3.609 1.439 5.66 1.439 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-wider text-emerald-700">Snelste reactie • WhatsApp</p>
+                  <p class="text-base font-bold text-fg group-hover:text-primary transition-colors">+31 6 19588717</p>
+                </div>
+              </a>
+
+              <!-- E-mail Knop -->
+              <a 
+                href="mailto:srabruggeman@gmail.com"
+                class="flex items-center gap-4 p-4 rounded-xl bg-surface border border-border hover:border-primary transition-all shadow-sm group"
+              >
+                <div class="w-11 h-11 rounded-lg bg-primary-light text-primary flex items-center justify-center shrink-0">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs font-medium text-muted">Stuur een e-mail</p>
+                  <p class="text-base font-bold text-fg group-hover:text-primary transition-colors">srabruggeman@gmail.com</p>
+                </div>
+              </a>
+
+              <!-- LinkedIn Knop -->
+              <a 
+                href="https://www.linkedin.com/in/sander-bruggeman-415596197/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="flex items-center gap-4 p-4 rounded-xl bg-surface border border-border hover:border-[#0A66C2] transition-all shadow-sm group"
+              >
+                <div class="w-11 h-11 rounded-lg bg-[#0A66C2]/10 text-[#0A66C2] flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs font-medium text-muted">Connect via LinkedIn</p>
+                  <p class="text-base font-bold text-fg group-hover:text-primary transition-colors">Sander Bruggeman</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Rechter Kolom: Contactformulier (Statisch compatibel via FormSubmit / Web3Forms) -->
+          <div class="lg:col-span-7">
+            <div class="bg-surface p-8 sm:p-10 rounded-2xl border border-border shadow-sm">
+              <h3 class="text-xl font-bold text-fg mb-6">Stuur direct een bericht</h3>
+              
+              <!-- 
+                Dit formulier gebruikt FormSubmit.co zodat het op GitHub Pages zonder backend direct 
+                naar srabruggeman@gmail.com mailt. De eerste keer dat je het test, ontvang je eenmalig 
+                een bevestigingsmailtje op srabruggeman@gmail.com om het adres te activeren.
+              -->
+              <form action="https://formsubmit.co/srabruggeman@gmail.com" method="POST" class="space-y-5">
+                <!-- FormSubmit Configuratie -->
+                <input type="hidden" name="_subject" value="Nieuwe aanvraag via BruggemanDigital.nl" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="text" name="_honey" style="display:none" />
+
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="naam" class="block text-sm font-semibold text-fg mb-1.5">Naam *</label>
+                    <input type="text" id="naam" name="Naam" required placeholder="Jouw naam" class="w-full px-4 py-3 rounded-xl bg-bg border border-border focus:outline-none focus:border-primary text-sm" />
+                  </div>
+                  <div>
+                    <label for="bedrijf" class="block text-sm font-semibold text-fg mb-1.5">Bedrijfsnaam <span class="text-muted font-normal">(optioneel)</span></label>
+                    <input type="text" id="bedrijf" name="Bedrijf" placeholder="Naam van je bedrijf" class="w-full px-4 py-3 rounded-xl bg-bg border border-border focus:outline-none focus:border-primary text-sm" />
+                  </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="email" class="block text-sm font-semibold text-fg mb-1.5">E-mailadres *</label>
+                    <input type="email" id="email" name="email" required placeholder="naam@bedrijf.nl" class="w-full px-4 py-3 rounded-xl bg-bg border border-border focus:outline-none focus:border-primary text-sm" />
+                  </div>
+                  <div>
+                    <label for="telefoon" class="block text-sm font-semibold text-fg mb-1.5">Telefoonnummer <span class="text-muted font-normal">(optioneel)</span></label>
+                    <input type="tel" id="telefoon" name="Telefoon" placeholder="06 - 12345678" class="w-full px-4 py-3 rounded-xl bg-bg border border-border focus:outline-none focus:border-primary text-sm" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="onderwerp" class="block text-sm font-semibold text-fg mb-1.5">Waar kan ik je mee helpen?</label>
+                  <select id="onderwerp" name="Onderwerp" class="w-full px-4 py-3 rounded-xl bg-bg border border-border focus:outline-none focus:border-primary text-sm text-fg">
+                    <option value="Nieuwe WordPress Bedrijfswebsite">Nieuwe WordPress Bedrijfswebsite</option>
+                    <option value="Bestaande website vernieuwen">Bestaande website vernieuwen</option>
+                    <option value="Ander digitaal project / maatwerk">Ander digitaal project / maatwerk</option>
+                    <option value="Anders / Algemene vraag">Anders / Algemene vraag</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="bericht" class="block text-sm font-semibold text-fg mb-1.5">Vertel kort over je project of vraag *</label>
+                  <textarea id="bericht" name="Bericht" rows="4" required placeholder="Waar ben je naar op zoek? Heb je al een domeinnaam of voorbeeld in gedachten?" class="w-full px-4 py-3 rounded-xl bg-bg border border-border focus:outline-none focus:border-primary text-sm"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-4 px-6 text-base font-bold text-white bg-primary hover:bg-primary-hover rounded-xl shadow-sm transition-all">
+                  Verstuur bericht
+                </button>
+                <p class="text-xs text-muted text-center pt-1">
+                  Je gegevens worden alleen gebruikt om te reageren op je bericht. Zie de <a href="privacy.html" class="underline hover:text-fg">privacyverklaring</a>.
+                </p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+<footer class="bg-surface border-t border-border py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-sm text-muted">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <div class="space-y-1">
+          <div class="flex items-center gap-3">
+            <img src="logo.svg" alt="Bruggeman Digital" class="h-6 w-auto" onerror="this.style.display='none'" />
+            <span class="font-bold text-fg">Bruggeman Digital</span>
+          </div>
+          <p class="text-xs text-muted">Handelsnaam van Sander Bruggeman • KVK: 42082488 • Nederland</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="mailto:srabruggeman@gmail.com" class="hover:text-fg transition-colors">srabruggeman@gmail.com</a>
+          <a href="https://wa.me/31619588717" target="_blank" rel="noopener noreferrer" class="hover:text-fg transition-colors">+31 6 19588717</a>
+          <a href="https://www.linkedin.com/in/sander-bruggeman-415596197/" target="_blank" rel="noopener noreferrer" class="hover:text-fg transition-colors">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+        <p>© 2026 Bruggeman Digital. Alle rechten voorbehouden.</p>
+        <div class="flex items-center gap-6">
+          <a href="privacy.html" class="hover:text-fg underline underline-offset-4">Privacyverklaring</a>
+          <a href="algemene-voorwaarden.html" class="hover:text-fg underline underline-offset-4">Algemene Voorwaarden</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobiele Menu Script -->
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => menu.classList.add('hidden'));
+    });
+  </script>
+</body>
+</html>
