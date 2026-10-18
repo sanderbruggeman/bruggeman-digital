@@ -10,7 +10,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -21,12 +21,14 @@
             navy: {
               DEFAULT: '#13294B',
               dark: '#0B1B33',
+              deep: '#071224',
               light: '#1E3A66',
               surface: '#F4F7FB'
             },
             orange: {
               DEFAULT: '#FF6A2B',
               hover: '#E85819',
+              dark: '#D94B0E',
               light: '#FFF4EF',
               border: '#FFD4C0'
             },
@@ -36,10 +38,13 @@
             muted: '#475569',
             border: '#E2E8F0'
           },
-          fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'] },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
           boxShadow: {
-            'soft': '0 4px 20px -2px rgba(19, 41, 75, 0.05)',
-            'card': '0 10px 30px -4px rgba(19, 41, 75, 0.08)'
+            'soft': '0 2px 15px -3px rgba(19, 41, 75, 0.05), 0 4px 6px -2px rgba(19, 41, 75, 0.03)',
+            'card': '0 10px 25px -5px rgba(19, 41, 75, 0.06), 0 8px 10px -6px rgba(19, 41, 75, 0.04)',
           }
         }
       }
@@ -49,7 +54,7 @@
 <body class="bg-bg text-fg antialiased selection:bg-orange selection:text-white">
 
   <!-- Header -->
-  <header class="bg-surface border-b border-border shadow-sm sticky top-0 z-50">
+  <header class="bg-surface border-b border-border shadow-soft sticky top-0 z-50">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
         <img src="logo.svg" alt="Bruggeman Digital Logo" class="h-8 w-auto" />
@@ -80,14 +85,14 @@
         <section class="space-y-3 text-sm sm:text-base text-muted leading-relaxed">
           <h2 class="text-xl font-bold text-navy">Artikel 2. Offertes en Vaste Prijsafspraken</h2>
           <p>
-            Alle offertes zijn vrijblijvend en 30 dagen geldig. Prijzen zijn altijd exclusief btw. Wanneer een vaste projectprijs wordt afgesproken, omvat deze alle werkzaamheden zoals omschreven in het projectvoorstel. Meerwerk (extra pagina's of functionaliteiten buiten de oorspronkelijke afspraak) wordt altijd vooraf besproken en apart geoffreerd.
+            Alle offertes zijn vrijblijvend en 30 dagen geldig. Prijzen zijn altijd exclusief btw. Wanneer een vaste projectprijs wordt afgesproken, omvat deze alle werkzaamheden zoals omschreven in het projectvoorstel. Meerwerk (extra pagina's of functionaliteiten buiten de oorspronkelijke afspraak) wordt altijd vooraf besproken en apart overeengekomen.
           </p>
         </section>
 
         <section class="space-y-3 text-sm sm:text-base text-muted leading-relaxed">
           <h2 class="text-xl font-bold text-navy">Artikel 3. Uitvoering, Aanlevering & Feedback</h2>
           <p>
-            Opdrachtgever levert benodigde materialen (zoals logo's, teksten, afbeeldingen en toegang tot de eigen hosting/domeinnaam) tijdig aan en garandeert dat hierop geen auteursrechten van derden worden geschonden. In de vaste projectprijs zijn standaard twee feedbackrondes inbegrepen voordat de website definitief wordt opgeleverd.
+            Opdrachtgever levert benodigde materialen (zoals logo's, teksten, afbeeldingen en toegang tot de eigen hosting/domeinnaam) tijdig aan en garandeert dat hierop geen auteursrechten van derden worden geschonden. In de vaste projectprijs zijn standaard feedbackrondes inbegrepen voordat de website definitief wordt opgeleverd.
           </p>
         </section>
 
@@ -97,7 +102,7 @@
             Na volledige betaling van de factuur wordt de ontwikkelde website opgeleverd op de door opdrachtgever gekozen hostingomgeving en krijgt opdrachtgever het volledige eigendoms- en beheersrecht over de website.
           </p>
           <p>
-            Bruggeman Digital hanteert <strong>geen verplicht onderhouds- of hostingabonnement</strong>. Dit betekent dat opdrachtgever na oplevering zelf verantwoordelijk is voor het aanhouden van zijn webhosting, domeinnaam, het maken van back-ups en het bijwerken van WordPress en plugins, tenzij partijen hiervoor apart werkzaamheden op uur- of projectbasis afspreken.
+            Bruggeman Digital hanteert <strong>geen verplicht onderhouds- of hostingabonnement</strong>. Dit betekent dat opdrachtgever na oplevering zelf verantwoordelijk is voor het aanhouden van zijn webhosting, domeinnaam, het maken van back-ups en het bijwerken van WordPress en plugins, tenzij partijen hiervoor apart werkzaamheden op afroep- of projectbasis afspreken.
           </p>
         </section>
 
