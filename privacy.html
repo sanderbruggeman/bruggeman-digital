@@ -62,81 +62,101 @@
 
   <!-- Header -->
   <header class="bg-bg/90 backdrop-blur-md border-b border-border sticky top-0 z-50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-18 flex items-center justify-between">
       <a href="index.html" class="flex items-center" aria-label="Bruggeman Digital">
-        <img src="logo.svg" alt="Bruggeman Digital" class="h-8 w-auto object-contain" onerror="this.style.display='none'" />
+        <img src="logo.svg" alt="Bruggeman Digital" class="h-7 md:h-8 w-auto object-contain" onerror="this.style.display='none'" />
       </a>
-      <a href="index.html" class="inline-flex items-center gap-1.5 text-sm font-bold text-navy hover:text-orange transition-colors">
+      <a href="index.html" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-navy hover:text-orange transition-colors">
         ← Terug naar de hoofdpagina
       </a>
     </div>
   </header>
 
   <!-- Content -->
-  <main class="py-16 md:py-20">
+  <main class="py-12 sm:py-16">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-surface p-8 sm:p-12 rounded-2xl border border-border shadow-card space-y-8">
-        <div class="border-b border-border pb-6">
-          <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Juridisch</span>
-          <h1 class="mt-1 text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">Privacyverklaring</h1>
-          <p class="mt-2 text-sm text-muted">Laatst bijgewerkt: oktober 2026</p>
+      <div class="bg-surface p-6 sm:p-10 rounded-2xl border border-border shadow-card space-y-7">
+        <div class="border-b border-border pb-5">
+          <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Juridisch & Privacy</span>
+          <h1 class="mt-1 text-2xl sm:text-3xl font-extrabold text-navy tracking-tight">Privacyverklaring</h1>
+          <p class="mt-1.5 text-xs sm:text-sm text-muted">Laatst bijgewerkt: oktober 2026 • Volledig conform de Algemene Verordening Gegevensbescherming (AVG / GDPR)</p>
         </div>
 
-        <section class="space-y-3 text-sm sm:text-base text-muted leading-relaxed">
-          <h2 class="text-xl font-bold text-navy">1. Wie ben ik?</h2>
+        <section class="space-y-3 text-sm text-muted leading-relaxed">
+          <h2 class="text-lg sm:text-xl font-bold text-navy">1. Wie ben ik en bedrijfsgegevens</h2>
           <p>
-            Bruggeman Digital (eigendom van Sander Bruggeman) hecht veel waarde aan jouw privacy. Ik verzamel zo min mogelijk gegevens en maak op deze website <strong>geen gebruik van tracking-cookies of advertentiepixels</strong>.
+            Bruggeman Digital hecht de hoogste waarde aan de bescherming van jouw persoonsgegevens. Ik verwerk uitsluitend gegevens die noodzakelijk zijn voor het uitvoeren van mijn dienstverlening en maak op deze website <strong>geen gebruik van tracking-cookies, advertentiepixels of tracking-scripts van derden</strong>.
           </p>
-          <ul class="list-disc pl-5 space-y-1.5 text-navy font-semibold">
-            <li><strong>Bedrijfsnaam:</strong> Bruggeman Digital</li>
-            <li><strong>KVK-nummer:</strong> 42082488</li>
+          <ul class="list-disc pl-5 space-y-1.5 text-navy font-semibold text-xs sm:text-sm">
+            <li><strong>Handelsnaam:</strong> Bruggeman Digital</li>
+            <li><strong>Rechtsvorm & Eigenaar:</strong> Eenmanszaak van Sander Bruggeman</li>
+            <li><strong>Kamer van Koophandel (KVK):</strong> 42082488</li>
+            <li><strong>Btw-identificatienummer:</strong> Btw-id vermeld op offertes en facturen (op aanvraag direct verstrekt)</li>
+            <li><strong>Vestigingsland:</strong> Nederland</li>
             <li><strong>E-mailadres:</strong> <a href="mailto:srabruggeman@gmail.com" class="text-orange underline hover:text-orange-hover">srabruggeman@gmail.com</a></li>
             <li><strong>WhatsApp:</strong> <a href="https://wa.me/31619588717" target="_blank" rel="noopener noreferrer" class="text-orange underline hover:text-orange-hover">+31 6 19588717</a></li>
           </ul>
         </section>
 
-        <section class="space-y-3 text-sm sm:text-base text-muted leading-relaxed">
-          <h2 class="text-xl font-bold text-navy">2. Welke persoonsgegevens verwerk ik en waarom?</h2>
-          <p>Ik verwerk alleen persoonsgegevens die je zelf actief aan mij verstrekt wanneer je contact opneemt via het contactformulier, e-mail, WhatsApp of LinkedIn, of wanneer je klant bij mij wordt:</p>
-          <ul class="list-disc pl-5 space-y-1 text-slate-700">
+        <section class="space-y-3 text-sm text-muted leading-relaxed">
+          <h2 class="text-lg sm:text-xl font-bold text-navy">2. Welke persoonsgegevens verwerk ik en waarom?</h2>
+          <p>Ik verwerk alleen persoonsgegevens die je zelf actief aan mij verstrekt wanneer je contact opneemt via het contactformulier, e-mail, WhatsApp of LinkedIn, of wanneer er een zakelijke overeenkomst tot stand komt:</p>
+          <ul class="list-disc pl-5 space-y-1 text-navy font-medium text-xs sm:text-sm">
             <li>Voor- en achternaam en eventuele bedrijfsnaam</li>
             <li>E-mailadres en telefoonnummer</li>
-            <li>De inhoud van jouw bericht of projectaanvraag</li>
-            <li>Facturatie- en adresgegevens (uitsluitend wanneer er een opdracht tot stand komt)</li>
+            <li>De inhoud van jouw projectaanvraag of vraag</li>
+            <li>Facturatie-, adres- en bankgegevens (uitsluitend bij een formele opdracht)</li>
           </ul>
           <p>
-            <strong>Grondslag (AVG):</strong> Deze gegevens worden verwerkt om jouw aanvraag te beantwoorden (precontractuele fase), een offerte op te stellen, een overeenkomst uit te voeren of te voldoen aan de wettelijke boekhoudplicht (Belastingdienst).
+            <strong>Wettelijke grondslagen (artikel 6 lid 1 AVG):</strong>
           </p>
-        </section>
-
-        <section class="space-y-3 text-sm sm:text-base text-muted leading-relaxed">
-          <h2 class="text-xl font-bold text-navy">3. Geen tracking-cookies</h2>
-          <p>
-            Deze website plaatst geen analytische, tracking- of marketingcookies. Je kunt deze website dus volledig anoniem bezoeken zonder dat jouw surfgedrag wordt gevolgd.
-          </p>
-        </section>
-
-        <section class="space-y-3 text-sm sm:text-base text-muted leading-relaxed">
-          <h2 class="text-xl font-bold text-navy">4. Delen met derden (Subverwerkers)</h2>
-          <p>Ik verkoop jouw gegevens nooit aan derden. Voor de technische werking van deze website en mijn communicatie maak ik enkel gebruik van de volgende betrouwbare dienstverleners:</p>
-          <ul class="list-disc pl-5 space-y-1 text-slate-700">
-            <li><strong>GitHub Pages (GitHub Inc.):</strong> Voor de statische hosting van deze website (verwerkt enkel technische verbindingsgegevens zoals IP-adres in serverlogs voor beveiliging).</li>
-            <li><strong>FormSubmit.co & Google (Gmail):</strong> Voor het technisch doorsturen en ontvangen van berichten die je via het contactformulier of per e-mail verstuurt.</li>
-            <li><strong>WhatsApp / LinkedIn:</strong> Alleen wanneer je er zelf voor kiest om mij via deze kanalen te benaderen.</li>
+          <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm">
+            <li><strong>Toestemming (sub a):</strong> Voor het beantwoorden van berichten die je via het contactformulier verstuurt.</li>
+            <li><strong>Noodzakelijk voor de uitvoering van een overeenkomst (sub b):</strong> Voor het opstellen van offertes en het realiseren van websiteprojecten.</li>
+            <li><strong>Wettelijke verplichting (sub c):</strong> Voor het naleven van de wettelijke fiscale administratieplicht van de Belastingdienst (artikel 52 Algemene wet inzake rijksbelastingen).</li>
           </ul>
         </section>
 
-        <section class="space-y-3 text-sm sm:text-base text-muted leading-relaxed">
-          <h2 class="text-xl font-bold text-navy">5. Bewaartermijnen</h2>
+        <section class="space-y-3 text-sm text-muted leading-relaxed">
+          <h2 class="text-lg sm:text-xl font-bold text-navy">3. Geen tracking-cookies (Cookie-wetgeving & AVG)</h2>
           <p>
-            Wanneer je contact opneemt maar er geen opdracht volgt, verwijder ik jouw contactgegevens uiterlijk na 1 jaar. Word je klant? Dan bewaar ik de facturen en relevante projectadministratie gedurende de wettelijke fiscale bewaartermijn van 7 jaar.
+            Deze website is volledig cookie-vrij op het gebied van tracking en advertenties. Er worden géén marketingcookies, Google Analytics trackers of social-media pixels geplaatst. Een cookiemelding is daarom conform de Telecommunicatiewet en AVG-richtlijnen niet van toepassing.
           </p>
         </section>
 
-        <section class="space-y-3 text-sm sm:text-base text-muted leading-relaxed">
-          <h2 class="text-xl font-bold text-navy">6. Jouw rechten (Inzage, wijziging en verwijdering)</h2>
+        <section class="space-y-3 text-sm text-muted leading-relaxed">
+          <h2 class="text-lg sm:text-xl font-bold text-navy">4. Delen met derden (Verwerkers)</h2>
+          <p>Persoonsgegevens worden nooit verkocht of voor marketingdoeleinden aan derden verstrekt. Voor de technische hosting en formulierafhandeling maak ik uitsluitend gebruik van betrouwbare partijen:</p>
+          <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm">
+            <li><strong>GitHub Pages (GitHub Inc.):</strong> Voor de statische hosting via beveiligde HTTPS-verbinding (verwerkt uitsluitend technische serverlogs).</li>
+            <li><strong>FormSubmit.co & Google (Gmail):</strong> Voor het veilig transporteren en ontvangen van berichten uit het contactformulier.</li>
+            <li><strong>WhatsApp (Meta) & LinkedIn:</strong> Uitsluitend wanneer je er zelf actief voor kiest om mij via deze communicatiekanalen te benaderen.</li>
+          </ul>
+        </section>
+
+        <section class="space-y-3 text-sm text-muted leading-relaxed">
+          <h2 class="text-lg sm:text-xl font-bold text-navy">5. Bewaartermijnen</h2>
           <p>
-            Je hebt altijd het recht om je persoonsgegevens in te zien, te laten corrigeren of te laten verwijderen. Stuur hiervoor een kort bericht naar <a href="mailto:srabruggeman@gmail.com" class="text-orange underline hover:text-orange-hover">srabruggeman@gmail.com</a> en ik regel het direct voor je. Daarnaast heb je het recht om een klacht in te dienen bij de Autoriteit Persoonsgegevens.
+            Contactaanvragen en correspondentie zonder vervolgopdracht worden uiterlijk binnen 1 jaar na het laatste contactmoment verwijderd. Klantgegevens en factuuradministratie worden conform de wettelijke fiscale bewaartermijn van de Belastingdienst 7 jaar bewaard.
+          </p>
+        </section>
+
+        <section class="space-y-3 text-sm text-muted leading-relaxed">
+          <h2 class="text-lg sm:text-xl font-bold text-navy">6. Jouw privacyrechten onder de AVG</h2>
+          <p>
+            Onder de AVG heb je recht op:
+          </p>
+          <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm">
+            <li>Inzage in jouw opgeslagen persoonsgegevens (art. 15 AVG);</li>
+            <li>Correctie of aanvulling van onjuiste gegevens (art. 16 AVG);</li>
+            <li>Verwijdering van gegevens wanneer deze niet langer nodig zijn (art. 17 AVG);</li>
+            <li>Beperking van de gegevensverwerking (art. 18 AVG);</li>
+            <li>Dataportabiliteit / overdraagbaarheid (art. 20 AVG);</li>
+            <li>Bezwaar tegen gegevensverwerking (art. 21 AVG);</li>
+            <li>Het indienen van een klacht bij de toezichthouder: de <strong>Autoriteit Persoonsgegevens (AP)</strong>.</li>
+          </ul>
+          <p>
+            Voor vragen of uitoefening van jouw rechten kun je te allen tijde contact opnemen via <a href="mailto:srabruggeman@gmail.com" class="text-orange underline hover:text-orange-hover">srabruggeman@gmail.com</a>.
           </p>
         </section>
       </div>
@@ -144,11 +164,11 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-bg border-t border-border py-12">
+  <footer class="bg-bg border-t border-border py-10 sm:py-12">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
       <div class="flex items-center gap-3">
         <img src="logo.svg" alt="Bruggeman Digital" class="h-6 w-auto" onerror="this.style.display='none'" />
-        <span>Handelsnaam van Sander Bruggeman • KVK: 42082488</span>
+        <span>Bruggeman Digital • Eenmanszaak van Sander Bruggeman • KVK: 42082488</span>
       </div>
       <div class="flex items-center gap-6 font-semibold">
         <a href="index.html" class="hover:text-navy underline underline-offset-4">Home</a>
