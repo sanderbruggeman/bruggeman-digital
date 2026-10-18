@@ -21,7 +21,7 @@
   <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -30,21 +30,38 @@
       theme: {
         extend: {
           colors: {
-            bg: '#F7F6F3',
-            surface: '#FFFFFF',
-            fg: '#17191C',
-            muted: '#5C616B',
-            border: '#E4E2DD',
-            primary: {
-              DEFAULT: '#195DE6',
-              hover: '#1348B8',
-              light: '#EBF1FD'
+            navy: {
+              DEFAULT: '#13294B',
+              dark: '#0B1B33',
+              deep: '#071224',
+              light: '#1E3A66',
+              surface: '#F4F7FB'
             },
+            orange: {
+              DEFAULT: '#FF6A2B',
+              hover: '#E85819',
+              dark: '#D94B0E',
+              light: '#FFF4EF',
+              tint: 'rgba(255, 106, 43, 0.08)',
+              border: '#FFD4C0'
+            },
+            bg: '#F8FAFC',
+            surface: '#FFFFFF',
+            fg: '#0F172A',
+            muted: '#475569',
+            border: '#E2E8F0',
             whatsapp: '#25D366'
           },
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(19, 41, 75, 0.05)',
+            'card': '0 10px 30px -4px rgba(19, 41, 75, 0.08)',
+            'elevated': '0 20px 40px -6px rgba(19, 41, 75, 0.12)',
+            'orange-glow': '0 10px 25px -4px rgba(255, 106, 43, 0.35)',
+            'orange-sm': '0 4px 14px 0 rgba(255, 106, 43, 0.25)',
           }
         }
       }
@@ -53,8 +70,8 @@
 
   <style>
     body {
-      background-color: #F7F6F3;
-      color: #17191C;
+      background-color: #F8FAFC;
+      color: #0F172A;
       font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     }
     details > summary {
@@ -62,6 +79,10 @@
     }
     details > summary::-webkit-details-marker {
       display: none;
+    }
+    .hero-glow {
+      background: radial-gradient(circle at 85% 20%, rgba(255, 106, 43, 0.07) 0%, transparent 60%),
+                  radial-gradient(circle at 15% 80%, rgba(19, 41, 75, 0.04) 0%, transparent 50%);
     }
   </style>
 
@@ -115,35 +136,50 @@
   }
   </script>
 </head>
-<body class="antialiased selection:bg-primary selection:text-white">
+<body class="antialiased selection:bg-orange selection:text-white">
+
+  <!-- ================= TOP NOTIFICATION BAR ================= -->
+  <div class="bg-navy-dark text-white/90 text-xs py-2 px-4 border-b border-navy-light/40">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-orange animate-pulse"></span>
+        <span>Freelance WordPress specialist • Direct contact met de bouwer</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-4 text-white/70">
+        <a href="tel:+31619588717" class="hover:text-white transition-colors">Bel direct: +31 6 19 58 87 17</a>
+        <span>•</span>
+        <a href="https://wa.me/31619588717" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 font-medium transition-colors">WhatsApp openen</a>
+      </div>
+    </div>
+  </div>
 
   <!-- ================= HEADER / NAVIGATIE ================= -->
-  <header class="sticky top-0 z-50 bg-bg/90 backdrop-blur-md border-b border-border">
+  <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-border shadow-sm">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <!-- Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-        <img src="logo.svg" alt="Bruggeman Digital Logo" class="h-9 w-auto" onerror="this.style.display='none'" />
-        <span class="font-bold text-xl tracking-tight text-fg">Bruggeman<span class="text-primary">Digital</span></span>
+      <a href="#" class="flex items-center gap-3.5 group">
+        <img src="logo.svg" alt="Bruggeman Digital Logo" class="h-9 w-auto transition-transform group-hover:scale-105" />
       </a>
 
       <!-- Desktop Menu -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-muted">
-        <a href="#waarom" class="hover:text-fg transition-colors">Waarom ik?</a>
-        <a href="#werk" class="hover:text-fg transition-colors">Werk & Richtprijs</a>
-        <a href="#werkwijze" class="hover:text-fg transition-colors">Werkwijze</a>
-        <a href="#over-mij" class="hover:text-fg transition-colors">Over mij</a>
-        <a href="#faq" class="hover:text-fg transition-colors">FAQ</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-muted">
+        <a href="#waarom" class="hover:text-navy transition-colors">Waarom ik?</a>
+        <a href="#werk" class="hover:text-navy transition-colors">Werk & Richtprijs</a>
+        <a href="#werkwijze" class="hover:text-navy transition-colors">Werkwijze</a>
+        <a href="#over-mij" class="hover:text-navy transition-colors">Over mij</a>
+        <a href="#faq" class="hover:text-navy transition-colors">FAQ</a>
       </nav>
 
       <!-- CTA Knop -->
       <div class="hidden md:flex items-center gap-3">
-        <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-primary hover:bg-primary-hover rounded-lg shadow-sm transition-all">
+        <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white bg-orange hover:bg-orange-hover rounded-xl shadow-orange-sm hover:shadow-orange-glow hover:-translate-y-0.5 transition-all">
           Bespreek je project
+          <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
       </div>
 
       <!-- Mobiele Menu Knop -->
-      <button id="mobile-menu-btn" aria-label="Open menu" class="md:hidden p-2 rounded-lg text-fg hover:bg-border/50">
+      <button id="mobile-menu-btn" aria-label="Open menu" class="md:hidden p-2.5 rounded-xl text-navy hover:bg-navy-surface border border-border">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -151,13 +187,13 @@
     </div>
 
     <!-- Uitklapbaar Mobiel Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-border px-4 pt-3 pb-6 space-y-3">
-      <a href="#waarom" class="block py-2 text-base font-medium text-fg">Waarom ik?</a>
-      <a href="#werk" class="block py-2 text-base font-medium text-fg">Werk & Richtprijs</a>
-      <a href="#werkwijze" class="block py-2 text-base font-medium text-fg">Werkwijze</a>
-      <a href="#over-mij" class="block py-2 text-base font-medium text-fg">Over mij</a>
-      <a href="#faq" class="block py-2 text-base font-medium text-fg">Veelgestelde vragen</a>
-      <a href="#contact" class="block w-full text-center py-3 mt-2 text-base font-semibold text-white bg-primary rounded-lg">
+    <div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-border px-4 pt-3 pb-6 space-y-3 shadow-lg">
+      <a href="#waarom" class="block py-2 text-base font-semibold text-navy hover:text-orange">Waarom ik?</a>
+      <a href="#werk" class="block py-2 text-base font-semibold text-navy hover:text-orange">Werk & Richtprijs</a>
+      <a href="#werkwijze" class="block py-2 text-base font-semibold text-navy hover:text-orange">Werkwijze</a>
+      <a href="#over-mij" class="block py-2 text-base font-semibold text-navy hover:text-orange">Over mij</a>
+      <a href="#faq" class="block py-2 text-base font-semibold text-navy hover:text-orange">Veelgestelde vragen</a>
+      <a href="#contact" class="block w-full text-center py-3 mt-2 text-base font-bold text-white bg-orange hover:bg-orange-hover rounded-xl shadow-orange-sm">
         Bespreek je project
       </a>
     </div>
@@ -165,78 +201,110 @@
 
   <main>
     <!-- ================= HERO SECTIE ================= -->
-    <section class="py-16 md:py-24 lg:py-28 border-b border-border overflow-hidden">
+    <section class="relative py-16 md:py-24 lg:py-28 border-b border-border hero-glow overflow-hidden">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           
           <!-- Tekst Kolom -->
           <div class="lg:col-span-7 space-y-6">
-            <!-- WordPress Badge met officieel logo -->
-            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface border border-border shadow-sm">
-              <!-- Officieel WordPress W-logo -->
-              <svg class="w-4 h-4 text-[#21759B]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12.002 2.002c-5.514 0-9.998 4.486-9.998 9.998 0 5.514 4.484 10 9.998 10 5.514 0 9.998-4.486 9.998-10 0-5.512-4.484-9.998-9.998-9.998zm-8.694 9.998c0-1.26.27-2.456.753-3.537l4.15 11.37c-2.893-1.404-4.903-4.382-4.903-7.833zm8.694 8.694c-.852 0-1.676-.126-2.455-.356l2.607-7.571 2.671 7.319c.018.043.041.08.066.115-.892.317-1.852.493-2.889.493zm1.196-12.765c.523-.027.994-.082.994-.082.468-.055.413-.742-.055-.715 0 0-1.406.11-2.313.11-.853 0-2.286-.11-2.286-.11-.468-.027-.523.688-.055.715 0 0 .442.055.91.082l1.351 3.704-1.898 5.691-3.158-9.395c.523-.027.994-.082.994-.082.468-.055.413-.742-.055-.715 0 0-1.406.11-2.313.11-.162 0-.354-.004-.557-.011 1.552-2.357 4.221-3.914 7.255-3.914 2.261 0 4.321.863 5.867 2.277-.038-.002-.073-.008-.112-.008-.853 0-1.458.742-1.458 1.54 0 .715.413 1.32.853 2.036.33.578.715 1.32.715 2.393 0 .743-.286 1.604-.66 2.806l-.866 2.892-3.162-9.419zm4.316 11.497l2.634-7.614c.492-1.23.655-2.212.655-3.09 0-.318-.021-.614-.06-.889.662 1.213 1.043 2.602 1.043 4.084 0 3.204-1.737 5.999-4.272 7.509z"/>
-              </svg>
-              <span class="text-xs font-semibold uppercase tracking-wider text-fg">WordPress Bedrijfswebsites op Maat</span>
+            
+            <!-- WordPress Badge met officieel logo & oranje stip -->
+            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface border border-orange-border/80 shadow-soft">
+              <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#21759B]/10 text-[#21759B]">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12.002 2.002c-5.514 0-9.998 4.486-9.998 9.998 0 5.514 4.484 10 9.998 10 5.514 0 9.998-4.486 9.998-10 0-5.512-4.484-9.998-9.998-9.998zm-8.694 9.998c0-1.26.27-2.456.753-3.537l4.15 11.37c-2.893-1.404-4.903-4.382-4.903-7.833zm8.694 8.694c-.852 0-1.676-.126-2.455-.356l2.607-7.571 2.671 7.319c.018.043.041.08.066.115-.892.317-1.852.493-2.889.493zm1.196-12.765c.523-.027.994-.082.994-.082.468-.055.413-.742-.055-.715 0 0-1.406.11-2.313.11-.853 0-2.286-.11-2.286-.11-.468-.027-.523.688-.055.715 0 0 .442.055.91.082l1.351 3.704-1.898 5.691-3.158-9.395c.523-.027.994-.082.994-.082.468-.055.413-.742-.055-.715 0 0-1.406.11-2.313.11-.162 0-.354-.004-.557-.011 1.552-2.357 4.221-3.914 7.255-3.914 2.261 0 4.321.863 5.867 2.277-.038-.002-.073-.008-.112-.008-.853 0-1.458.742-1.458 1.54 0 .715.413 1.32.853 2.036.33.578.715 1.32.715 2.393 0 .743-.286 1.604-.66 2.806l-.866 2.892-3.162-9.419zm4.316 11.497l2.634-7.614c.492-1.23.655-2.212.655-3.09 0-.318-.021-.614-.06-.889.662 1.213 1.043 2.602 1.043 4.084 0 3.204-1.737 5.999-4.272 7.509z"/>
+                </svg>
+              </span>
+              <span class="text-xs font-bold uppercase tracking-wider text-navy">WordPress Bedrijfswebsites op Maat</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-orange"></span>
             </div>
 
             <!-- H1 Kop -->
-            <h1 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-fg leading-[1.12]">
-              Een professionele bedrijfswebsite die <span class="text-primary">100% van jou</span> is. Zonder verplichte abonnementen.
+            <h1 class="text-4xl sm:text-5xl lg:text-[3.35rem] font-extrabold tracking-tight text-navy leading-[1.12]">
+              Een professionele bedrijfswebsite die <span class="text-orange relative inline-block">100% van jou<span class="absolute left-0 bottom-1 w-full h-2 bg-orange/15 -z-10 rounded"></span></span> is. Zonder verplichte abonnementen.
             </h1>
 
             <!-- Subkop -->
-            <p class="text-lg sm:text-xl text-muted leading-relaxed">
+            <p class="text-lg sm:text-xl text-muted leading-relaxed font-normal">
               Veel webbureaus lokken je met een laag instaptarief, maar binden je vervolgens jarenlang aan dure hosting- en onderhoudscontracten. Ik draai het om: ik bouw snelle, conversiegerichte WordPress-websites voor een heldere eenmalige prijs. Daarna ben je volledig vrij.
             </p>
 
             <!-- CTA Knoppen -->
             <div class="flex flex-col sm:flex-row gap-4 pt-2">
-              <a href="#contact" class="inline-flex items-center justify-center px-6 py-4 text-base font-bold text-white bg-primary hover:bg-primary-hover rounded-xl shadow-sm transition-all">
+              <a href="#contact" class="inline-flex items-center justify-center px-7 py-4 text-base font-bold text-white bg-orange hover:bg-orange-hover rounded-xl shadow-orange-sm hover:shadow-orange-glow hover:-translate-y-0.5 transition-all text-center">
                 Vraag een vrijblijvende prijsindicatie aan
-                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                <svg class="w-5 h-5 ml-2.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
-              <a href="#werk" class="inline-flex items-center justify-center px-6 py-4 text-base font-semibold text-fg bg-surface hover:bg-border/40 border border-border rounded-xl transition-all">
+              <a href="#werk" class="inline-flex items-center justify-center px-6 py-4 text-base font-semibold text-navy bg-surface hover:bg-navy-surface border border-border hover:border-navy/30 rounded-xl shadow-soft transition-all text-center">
                 Bekijk werk & richtprijs ↓
               </a>
             </div>
 
             <!-- USPs balkje -->
-            <div class="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm font-medium text-muted">
-              <div class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                <span>Geen verplichte maandkosten</span>
+            <div class="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm font-semibold text-navy">
+              <div class="flex items-center gap-2.5 bg-surface/80 px-3 py-2 rounded-lg border border-border/80">
+                <span class="w-5 h-5 rounded-full bg-orange-light text-orange flex items-center justify-center shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span class="text-xs sm:text-sm">Geen verplichte maandkosten</span>
               </div>
-              <div class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                <span>Vrije keuze in eigen hosting</span>
+              <div class="flex items-center gap-2.5 bg-surface/80 px-3 py-2 rounded-lg border border-border/80">
+                <span class="w-5 h-5 rounded-full bg-orange-light text-orange flex items-center justify-center shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span class="text-xs sm:text-sm">Vrije keuze in eigen hosting</span>
               </div>
-              <div class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                <span>Direct contact met de bouwer</span>
+              <div class="flex items-center gap-2.5 bg-surface/80 px-3 py-2 rounded-lg border border-border/80">
+                <span class="w-5 h-5 rounded-full bg-orange-light text-orange flex items-center justify-center shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span class="text-xs sm:text-sm">Direct contact met Sander</span>
               </div>
             </div>
           </div>
 
-          <!-- Visuele Kolom -->
+          <!-- Visuele Kolom (Browser Mockup + Floating Price Pill) -->
           <div class="lg:col-span-5">
-            <div class="relative rounded-2xl bg-surface p-3 border border-border shadow-xl">
-              <img 
-                src="assets/fruvyland-screenshot.png" 
-                alt="Voorbeeld WordPress website gerealiseerd door Bruggeman Digital" 
-                class="rounded-xl w-full h-auto object-cover border border-border/60"
-                onerror="this.src='assets/hero-illustration.png'"
-              />
-              <!-- Zwevend Prijs/Bewijs Kaartje -->
-              <div class="mt-3 sm:mt-0 sm:absolute sm:-bottom-5 sm:-left-5 bg-surface px-4 py-3 rounded-xl border border-border shadow-lg flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-primary-light text-primary flex items-center justify-center font-bold">
+            <div class="relative">
+              <!-- Glow backdrop effect -->
+              <div class="absolute -inset-2 bg-gradient-to-r from-orange/20 to-navy/15 rounded-3xl blur-xl opacity-70"></div>
+              
+              <!-- Browser Window Frame -->
+              <div class="relative rounded-2xl bg-surface border border-border shadow-elevated overflow-hidden">
+                <!-- Browser Header / Dots -->
+                <div class="bg-navy-dark px-4 py-3 flex items-center gap-2 border-b border-navy-light/40">
+                  <div class="flex gap-1.5">
+                    <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                  </div>
+                  <div class="mx-auto bg-navy-light/50 text-white/70 text-[11px] font-mono px-3 py-1 rounded-md border border-white/10 max-w-[200px] truncate text-center">
+                    🔒 https://fruvyland.nl
+                  </div>
+                </div>
+
+                <!-- Screenshot -->
+                <img 
+                  src="assets/fruvyland-screenshot.png" 
+                  alt="Voorbeeld WordPress website gerealiseerd door Bruggeman Digital" 
+                  class="w-full h-auto object-cover"
+                  onerror="this.src='assets/hero-illustration.png'"
+                />
+              </div>
+
+              <!-- Floating Price Badge -->
+              <div class="mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-left-6 bg-surface px-5 py-3.5 rounded-2xl border border-orange-border shadow-card flex items-center gap-3.5 animate-fade-up">
+                <div class="w-11 h-11 rounded-xl bg-orange-light text-orange flex items-center justify-center font-bold text-lg shrink-0">
                   ✓
                 </div>
                 <div>
-                  <p class="text-xs font-medium text-muted">Referentie: Fruvyland</p>
-                  <p class="text-sm font-bold text-fg">Opgeleverd voor € 2.000,- <span class="font-normal text-xs text-muted">(ex. btw)</span></p>
+                  <p class="text-xs font-semibold text-muted uppercase tracking-wider">Referentieproject Fruvyland</p>
+                  <p class="text-sm sm:text-base font-extrabold text-navy">
+                    Vaste prijs: <span class="text-orange">€ 2.000,-</span> <span class="font-normal text-xs text-muted">(ex. btw)</span>
+                  </p>
                 </div>
               </div>
+
             </div>
           </div>
 
@@ -248,8 +316,8 @@
     <section id="waarom" class="py-20 bg-surface border-b border-border">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl">
-          <span class="font-mono text-xs uppercase tracking-widest text-primary font-semibold">Geen vendor lock-in</span>
-          <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-fg tracking-tight">
+          <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Geen vendor lock-in</span>
+          <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
             Waarom ondernemers kiezen voor vrijheid (en niet voor een duur webbureau)
           </h2>
           <p class="mt-4 text-lg text-muted leading-relaxed">
@@ -258,44 +326,53 @@
         </div>
 
         <div class="mt-12 grid md:grid-cols-3 gap-8">
-          <!-- USP 1 -->
-          <div class="bg-bg p-8 rounded-2xl border border-border flex flex-col justify-between">
+          <!-- Card 1 -->
+          <div class="bg-navy-surface p-8 rounded-2xl border border-border hover:border-orange-border hover:shadow-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
             <div>
-              <div class="w-12 h-12 rounded-xl bg-primary-light text-primary flex items-center justify-center mb-6">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div class="w-14 h-14 rounded-2xl bg-orange-light text-orange flex items-center justify-center mb-6 shadow-sm">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
               </div>
-              <h3 class="text-xl font-bold text-fg mb-3">Geen verplicht onderhouds- of hostingpakket</h3>
+              <h3 class="text-xl font-bold text-navy mb-3">Geen verplicht onderhouds- of hostingpakket</h3>
               <p class="text-muted text-sm leading-relaxed">
                 Je betaalt mij eenmalig voor het ontwerpen en bouwen van een uitstekende website. Zodra de site staat, zit je nergens aan vast. Wil je een half jaar later toch iets laten aanpassen of uitbreiden? Dan help ik je gewoon op oproepbasis.
               </p>
             </div>
+            <div class="pt-6 mt-6 border-t border-border/80 text-xs font-semibold text-orange flex items-center gap-1.5">
+              <span>Geen maandelijkse verplichtingen</span> →
+            </div>
           </div>
 
-          <!-- USP 2 -->
-          <div class="bg-bg p-8 rounded-2xl border border-border flex flex-col justify-between">
+          <!-- Card 2 -->
+          <div class="bg-navy-surface p-8 rounded-2xl border border-border hover:border-navy/40 hover:shadow-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
             <div>
-              <div class="w-12 h-12 rounded-xl bg-primary-light text-primary flex items-center justify-center mb-6">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+              <div class="w-14 h-14 rounded-2xl bg-navy/10 text-navy flex items-center justify-center mb-6 shadow-sm">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
               </div>
-              <h3 class="text-xl font-bold text-fg mb-3">100% jouw eigendom, op jouw eigen domein</h3>
+              <h3 class="text-xl font-bold text-navy mb-3">100% jouw eigendom, op jouw eigen domein</h3>
               <p class="text-muted text-sm leading-relaxed">
                 De website wordt los ontwikkeld en op jouw eigen hostingomgeving en domeinnaam opgeleverd. Jij kiest zelf waar je jouw site host en hebt altijd alle beheerdersrechten. Uiteraard help en adviseer ik je graag bij het instellen hiervan.
               </p>
             </div>
+            <div class="pt-6 mt-6 border-t border-border/80 text-xs font-semibold text-navy flex items-center gap-1.5">
+              <span>Volledige controle over code & data</span> →
+            </div>
           </div>
 
-          <!-- USP 3 (met WordPress Logo) -->
-          <div class="bg-bg p-8 rounded-2xl border border-border flex flex-col justify-between">
+          <!-- Card 3 -->
+          <div class="bg-navy-surface p-8 rounded-2xl border border-border hover:border-[#21759B]/40 hover:shadow-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
             <div>
-              <div class="w-12 h-12 rounded-xl bg-[#21759B]/10 text-[#21759B] flex items-center justify-center mb-6">
-                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <div class="w-14 h-14 rounded-2xl bg-[#21759B]/10 text-[#21759B] flex items-center justify-center mb-6 shadow-sm">
+                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M12.002 2.002c-5.514 0-9.998 4.486-9.998 9.998 0 5.514 4.484 10 9.998 10 5.514 0 9.998-4.486 9.998-10 0-5.512-4.484-9.998-9.998-9.998zm-8.694 9.998c0-1.26.27-2.456.753-3.537l4.15 11.37c-2.893-1.404-4.903-4.382-4.903-7.833zm8.694 8.694c-.852 0-1.676-.126-2.455-.356l2.607-7.571 2.671 7.319c.018.043.041.08.066.115-.892.317-1.852.493-2.889.493zm1.196-12.765c.523-.027.994-.082.994-.082.468-.055.413-.742-.055-.715 0 0-1.406.11-2.313.11-.853 0-2.286-.11-2.286-.11-.468-.027-.523.688-.055.715 0 0 .442.055.91.082l1.351 3.704-1.898 5.691-3.158-9.395c.523-.027.994-.082.994-.082.468-.055.413-.742-.055-.715 0 0-1.406.11-2.313.11-.162 0-.354-.004-.557-.011 1.552-2.357 4.221-3.914 7.255-3.914 2.261 0 4.321.863 5.867 2.277-.038-.002-.073-.008-.112-.008-.853 0-1.458.742-1.458 1.54 0 .715.413 1.32.853 2.036.33.578.715 1.32.715 2.393 0 .743-.286 1.604-.66 2.806l-.866 2.892-3.162-9.419zm4.316 11.497l2.634-7.614c.492-1.23.655-2.212.655-3.09 0-.318-.021-.614-.06-.889.662 1.213 1.043 2.602 1.043 4.084 0 3.204-1.737 5.999-4.272 7.509z"/>
                 </svg>
               </div>
-              <h3 class="text-xl font-bold text-fg mb-3">Gebouwd op de standaard: WordPress</h3>
+              <h3 class="text-xl font-bold text-navy mb-3">Gebouwd op de standaard: WordPress</h3>
               <p class="text-muted text-sm leading-relaxed">
                 Geen gesloten maatwerksystemen waar alleen de oorspronkelijke bouwer iets in kan aanpassen. Ik ontwikkel in WordPress: gebruiksvriendelijk, toekomstbestendig en na oplevering kun je zelf eenvoudig teksten of foto's wijzigen.
               </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-border/80 text-xs font-semibold text-[#21759B] flex items-center gap-1.5">
+              <span>Eenvoudig zelf te beheren</span> →
             </div>
           </div>
         </div>
@@ -303,11 +380,11 @@
     </section>
 
     <!-- ================= BEWIJS & PRIJSANKER (FRUVYLAND CASE) ================= -->
-    <section id="werk" class="py-20 border-b border-border">
+    <section id="werk" class="py-20 border-b border-border bg-bg">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mb-12">
-          <span class="font-mono text-xs uppercase tracking-widest text-primary font-semibold">Bewijs & Richtprijs</span>
-          <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-fg tracking-tight">
+          <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Bewijs & Richtprijs</span>
+          <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
             Bewezen resultaat & transparante prijzen
           </h2>
           <p class="mt-4 text-lg text-muted">
@@ -316,62 +393,78 @@
         </div>
 
         <!-- Case Study Card -->
-        <div class="bg-surface rounded-3xl border border-border shadow-sm overflow-hidden">
+        <div class="bg-surface rounded-3xl border border-border shadow-card overflow-hidden">
           <div class="grid lg:grid-cols-12">
             
-            <!-- Afbeelding van Fruvyland -->
-            <div class="lg:col-span-6 bg-bg p-6 sm:p-10 flex items-center justify-center border-b lg:border-b-0 lg:border-r border-border">
-              <img 
-                src="assets/fruvyland-screenshot.png" 
-                alt="Screenshot van de Fruvyland WordPress website" 
-                class="rounded-xl shadow-md border border-border w-full h-auto object-cover"
-              />
+            <!-- Linker Kolom: Afbeelding van Fruvyland -->
+            <div class="lg:col-span-6 bg-navy-surface p-6 sm:p-10 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-border">
+              <div class="rounded-2xl overflow-hidden border border-border shadow-elevated bg-surface">
+                <div class="bg-navy-dark px-3 py-2 flex items-center gap-1.5 border-b border-navy-light/40">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                  <span class="text-[10px] text-white/60 font-mono ml-2">fruvyland.nl</span>
+                </div>
+                <img 
+                  src="assets/fruvyland-screenshot.png" 
+                  alt="Screenshot van de Fruvyland WordPress website" 
+                  class="w-full h-auto object-cover"
+                />
+              </div>
             </div>
 
-            <!-- Case Beschrijving + Anchor Price -->
+            <!-- Rechter Kolom: Case Beschrijving + Anchor Price -->
             <div class="lg:col-span-6 p-6 sm:p-10 flex flex-col justify-between space-y-6">
               <div>
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-primary-light text-primary text-xs font-bold uppercase tracking-wide mb-3">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-light text-orange text-xs font-bold uppercase tracking-wide mb-3 border border-orange-border/60">
                   Klantcase • WordPress Bedrijfswebsite
                 </div>
-                <h3 class="text-2xl sm:text-3xl font-extrabold text-fg">
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-navy">
                   Nieuwe website voor Fruvyland
                 </h3>
                 <p class="mt-3 text-muted text-sm sm:text-base leading-relaxed">
                   Voor Fruvyland heb ik de volledige online presentatie vanaf de grond opgebouwd. Het doel: een frisse, professionele uitstraling die direct vertrouwen wekt bij bezoekers, razendsnel laadt op zowel mobiel als desktop, en eenvoudig zelf te beheren is in WordPress.
                 </p>
 
-                <ul class="mt-5 space-y-2.5 text-sm text-fg font-medium">
+                <ul class="mt-5 space-y-2.5 text-sm text-navy font-semibold">
                   <li class="flex items-start gap-2.5">
-                    <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="w-5 h-5 rounded-full bg-orange-light text-orange flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                    </span>
                     <span>Maatwerk WordPress-ontwerp passend bij de merkidentiteit</span>
                   </li>
                   <li class="flex items-start gap-2.5">
-                    <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="w-5 h-5 rounded-full bg-orange-light text-orange flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                    </span>
                     <span>Volledig responsive (smartphone, tablet & desktop)</span>
                   </li>
                   <li class="flex items-start gap-2.5">
-                    <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="w-5 h-5 rounded-full bg-orange-light text-orange flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                    </span>
                     <span>Technische SEO-basis en snelheidsoptimalisatie</span>
                   </li>
                   <li class="flex items-start gap-2.5">
-                    <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="w-5 h-5 rounded-full bg-orange-light text-orange flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                    </span>
                     <span>Opgeleverd op de eigen hostingomgeving van de klant</span>
                   </li>
                 </ul>
               </div>
 
               <!-- Het Prijsanker Blok -->
-              <div class="bg-bg p-6 rounded-2xl border border-border">
-                <div class="flex flex-wrap items-baseline justify-between gap-2 pb-3 mb-3 border-b border-border">
-                  <span class="text-sm font-bold uppercase tracking-wider text-muted">Projectinvestering (Richtprijs)</span>
-                  <div>
-                    <span class="text-2xl sm:text-3xl font-extrabold text-fg">€ 2.000,-</span>
+              <div class="bg-orange-light/60 p-6 rounded-2xl border border-orange-border">
+                <div class="flex flex-wrap items-baseline justify-between gap-2 pb-3 mb-3 border-b border-orange-border/80">
+                  <span class="text-xs font-bold uppercase tracking-wider text-muted">Projectinvestering (Richtprijs)</span>
+                  <div class="flex items-baseline gap-1.5">
+                    <span class="text-3xl font-extrabold text-navy">€ 2.000,-</span>
                     <span class="text-xs text-muted font-medium">ex. btw (eenmalig)</span>
                   </div>
                 </div>
                 <p class="text-xs sm:text-sm text-muted leading-relaxed">
-                  <strong>Hoe werkt dit voor jouw project?</strong> Het volledige traject voor Fruvyland is gerealiseerd voor € 2.000,- ex. btw (en € 0,- per maand aan mij na oplevering). Zoek je een compactere website, of juist een uitgebreidere site? Gebruik dit bedrag als eerlijke richtlijn. Je ontvangt altijd vooraf een vaste totaalprijs.
+                  <strong class="text-navy">Hoe werkt dit voor jouw project?</strong> Het volledige traject voor Fruvyland is gerealiseerd voor € 2.000,- ex. btw (en € 0,- per maand aan mij na oplevering). Zoek je een compactere website, of juist een uitgebreidere site? Gebruik dit bedrag als eerlijke richtlijn. Je ontvangt altijd vooraf een vaste totaalprijs.
                 </p>
               </div>
             </div>
@@ -385,40 +478,45 @@
     <section id="werkwijze" class="py-20 bg-surface border-b border-border">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-14">
-          <span class="font-mono text-xs uppercase tracking-widest text-primary font-semibold">Simpel Proces</span>
-          <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-fg tracking-tight">
+          <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Simpel Proces</span>
+          <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
             Van idee naar livegang in 4 heldere stappen
           </h2>
+          <p class="mt-3 text-muted text-base">Zonder jargon, zonder verrassingen achteraf.</p>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="p-6 rounded-2xl bg-bg border border-border">
-            <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-primary text-white">Stap 01</span>
-            <h3 class="mt-4 text-lg font-bold text-fg">Kennismaking & Vaste Prijs</h3>
+          <!-- Stap 1 -->
+          <div class="p-6 rounded-2xl bg-navy-surface border border-border hover:border-orange-border transition-colors">
+            <span class="font-mono text-xs font-extrabold px-3 py-1 rounded-full bg-orange text-white">Stap 01</span>
+            <h3 class="mt-5 text-lg font-bold text-navy">Kennismaking & Vaste Prijs</h3>
             <p class="mt-2 text-sm text-muted leading-relaxed">
               We bespreken jouw wensen, doelen en voorbeelden. Binnen enkele dagen ontvang je een helder voorstel met een vaste totaalprijs.
             </p>
           </div>
 
-          <div class="p-6 rounded-2xl bg-bg border border-border">
-            <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-primary text-white">Stap 02</span>
-            <h3 class="mt-4 text-lg font-bold text-fg">Ontwerp & Opzet</h3>
+          <!-- Stap 2 -->
+          <div class="p-6 rounded-2xl bg-navy-surface border border-border hover:border-orange-border transition-colors">
+            <span class="font-mono text-xs font-extrabold px-3 py-1 rounded-full bg-navy text-white">Stap 02</span>
+            <h3 class="mt-5 text-lg font-bold text-navy">Ontwerp & Opzet</h3>
             <p class="mt-2 text-sm text-muted leading-relaxed">
               Ik bouw een eerste werkende versie op een tijdelijke testomgeving. Je ziet direct hoe jouw nieuwe website eruit komt te zien en aanvoelt.
             </p>
           </div>
 
-          <div class="p-6 rounded-2xl bg-bg border border-border">
-            <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-primary text-white">Stap 03</span>
-            <h3 class="mt-4 text-lg font-bold text-fg">Feedback & Verfijning</h3>
+          <!-- Stap 3 -->
+          <div class="p-6 rounded-2xl bg-navy-surface border border-border hover:border-orange-border transition-colors">
+            <span class="font-mono text-xs font-extrabold px-3 py-1 rounded-full bg-navy text-white">Stap 03</span>
+            <h3 class="mt-5 text-lg font-bold text-navy">Feedback & Verfijning</h3>
             <p class="mt-2 text-sm text-muted leading-relaxed">
               We lopen samen door het ontwerp. Ik verwerk jouw feedback en zorg dat alle teksten, afbeeldingen en formulieren kloppen.
             </p>
           </div>
 
-          <div class="p-6 rounded-2xl bg-bg border border-border">
-            <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-primary text-white">Stap 04</span>
-            <h3 class="mt-4 text-lg font-bold text-fg">Oplevering & Overdracht</h3>
+          <!-- Stap 4 -->
+          <div class="p-6 rounded-2xl bg-navy-surface border border-border hover:border-orange-border transition-colors">
+            <span class="font-mono text-xs font-extrabold px-3 py-1 rounded-full bg-orange text-white">Stap 04</span>
+            <h3 class="mt-5 text-lg font-bold text-navy">Oplevering & Overdracht</h3>
             <p class="mt-2 text-sm text-muted leading-relaxed">
               Ik verhuis de site naar jouw eigen domein en hosting. Je krijgt een korte uitleg over WordPress en vanaf dat moment zijn alle sleutels 100% van jou.
             </p>
@@ -428,25 +526,28 @@
     </section>
 
     <!-- ================= OVER SANDER + LINKEDIN SECTIE ================= -->
-    <section id="over-mij" class="py-20 border-b border-border">
+    <section id="over-mij" class="py-20 border-b border-border bg-bg">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-12 gap-10 items-center">
           
-          <!-- Portretfoto -->
+          <!-- Portretfoto met accent ring -->
           <div class="md:col-span-4 flex justify-center">
-            <div class="relative w-56 h-56 sm:w-64 sm:h-64 rounded-2xl overflow-hidden border-2 border-border shadow-md bg-surface">
-              <img 
-                src="assets/sander-portrait.jpg" 
-                alt="Sander Bruggeman - Oprichter Bruggeman Digital" 
-                class="w-full h-full object-cover"
-              />
+            <div class="relative group">
+              <div class="absolute -inset-2 bg-gradient-to-tr from-orange to-navy rounded-3xl blur-md opacity-30 group-hover:opacity-50 transition-opacity"></div>
+              <div class="relative w-56 h-56 sm:w-64 sm:h-64 rounded-2xl overflow-hidden border-4 border-surface shadow-elevated bg-surface">
+                <img 
+                  src="assets/sander-portrait.jpg" 
+                  alt="Sander Bruggeman - Oprichter Bruggeman Digital" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
 
           <!-- Bio Tekst -->
           <div class="md:col-span-8 space-y-4">
-            <span class="font-mono text-xs uppercase tracking-widest text-primary font-semibold">Over Bruggeman Digital</span>
-            <h2 class="text-3xl font-extrabold text-fg tracking-tight">
+            <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Over Bruggeman Digital</span>
+            <h2 class="text-3xl font-extrabold text-navy tracking-tight">
               Eén vast aanspreekpunt: aangenaam, ik ben Sander
             </h2>
             <p class="text-muted leading-relaxed">
@@ -460,13 +561,13 @@
                 href="https://www.linkedin.com/in/sander-bruggeman-415596197/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-lg bg-surface border border-border hover:border-[#0A66C2] text-sm font-semibold text-fg transition-all shadow-sm"
+                class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface border border-border hover:border-[#0A66C2] text-sm font-bold text-navy transition-all shadow-soft group"
               >
                 <!-- Officieel LinkedIn Logo -->
                 <svg class="w-4 h-4 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                 </svg>
-                <span>Bekijk mijn profiel op LinkedIn</span>
+                <span class="group-hover:text-[#0A66C2] transition-colors">Bekijk mijn profiel op LinkedIn</span>
               </a>
             </div>
           </div>
@@ -474,19 +575,20 @@
         </div>
 
         <!-- ================= OPEN DEUR BANNER (ANDERE DIGITALE PROJECTEN) ================= -->
-        <div class="mt-16 bg-fg text-white rounded-2xl p-8 sm:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-lg">
-          <div class="space-y-2 max-w-2xl">
-            <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-blue-400">
+        <div class="mt-16 bg-navy-dark text-white rounded-3xl p-8 sm:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-elevated border border-navy-light/40 relative overflow-hidden">
+          <div class="absolute -right-8 -bottom-8 w-48 h-48 bg-orange/10 rounded-full blur-2xl pointer-events-none"></div>
+          <div class="space-y-2 max-w-2xl relative z-10">
+            <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-orange font-bold">
               <span>• Breder inzetbaar</span>
             </div>
-            <h3 class="text-xl sm:text-2xl font-bold">
+            <h3 class="text-xl sm:text-2xl font-extrabold text-white">
               Heb je een ander digitaal vraagstuk of maatwerkproject?
             </h3>
-            <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
               Hoewel mijn hoofdfocus ligt op WordPress-bedrijfswebsites, ben ik vanuit Bruggeman Digital ook beschikbaar voor andere digitale projecten. Denk aan maatwerk webapplicaties, technische optimalisaties of het meedenken over een nieuw digitaal concept.
             </p>
           </div>
-          <a href="#contact" class="shrink-0 inline-flex items-center justify-center px-5 py-3 text-sm font-bold bg-white text-fg hover:bg-gray-100 rounded-xl transition-all">
+          <a href="#contact" class="shrink-0 relative z-10 inline-flex items-center justify-center px-6 py-3.5 text-sm font-bold bg-white text-navy hover:bg-orange hover:text-white rounded-xl shadow-soft transition-all">
             Sparren over een ander project →
           </a>
         </div>
@@ -498,47 +600,48 @@
     <section id="faq" class="py-20 bg-surface border-b border-border">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <span class="font-mono text-xs uppercase tracking-widest text-primary font-semibold">Veelgestelde Vragen</span>
-          <h2 class="mt-2 text-3xl font-extrabold text-fg tracking-tight">
+          <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Veelgestelde Vragen</span>
+          <h2 class="mt-2 text-3xl font-extrabold text-navy tracking-tight">
             Duidelijkheid vooraf
           </h2>
+          <p class="mt-2 text-sm text-muted">Geen verborgen addertjes onder het gras.</p>
         </div>
 
         <div class="space-y-4">
-          <details class="group bg-bg rounded-xl border border-border p-6" open>
-            <summary class="flex cursor-pointer items-center justify-between font-bold text-fg">
+          <details class="group bg-navy-surface rounded-2xl border border-border p-6 hover:border-orange-border transition-colors" open>
+            <summary class="flex cursor-pointer items-center justify-between font-bold text-navy">
               <span>Hoe kan het dat ik bij jou géén maandelijks bedrag betaal en bij andere bureaus wel?</span>
-              <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-primary">▼</span>
+              <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-orange">▼</span>
             </summary>
             <p class="mt-4 text-sm text-muted leading-relaxed">
               Veel webbureaus gebruiken verplichte onderhouds- en hostingcontracten als doorlopend verdienmodel. Ik kies voor transparantie: je betaalt voor de uren die ik daadwerkelijk besteed aan het bouwen van je site. Een goed opgezette WordPress-website met automatische basis-updates heeft in de praktijk nauwelijks betaald maandelijks onderhoud nodig.
             </p>
           </details>
 
-          <details class="group bg-bg rounded-xl border border-border p-6">
-            <summary class="flex cursor-pointer items-center justify-between font-bold text-fg">
+          <details class="group bg-navy-surface rounded-2xl border border-border p-6 hover:border-orange-border transition-colors">
+            <summary class="flex cursor-pointer items-center justify-between font-bold text-navy">
               <span>Heb ik dan helemaal geen terugkerende kosten voor mijn website?</span>
-              <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-primary">▼</span>
+              <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-orange">▼</span>
             </summary>
             <p class="mt-4 text-sm text-muted leading-relaxed">
-              Elke website op het internet heeft een domeinnaam (bijv. <code class="text-xs bg-surface px-1.5 py-0.5 rounded border">.nl</code>) en webhosting nodig. Omdat je dit rechtstreeks op jouw eigen naam afsluit bij een hostingpartij naar keuze, betaal je enkel de kostprijs aan die provider (vaak slechts € 5,- tot € 12,- per maand) in plaats van een fors bedrag aan een webbureau.
+              Elke website op het internet heeft een domeinnaam (bijv. <code class="text-xs bg-surface px-1.5 py-0.5 rounded border border-border text-navy">.nl</code>) en webhosting nodig. Omdat je dit rechtstreeks op jouw eigen naam afsluit bij een hostingpartij naar keuze, betaal je enkel de kostprijs aan die provider (vaak slechts € 5,- tot € 12,- per maand) in plaats van een fors bedrag aan een webbureau.
             </p>
           </details>
 
-          <details class="group bg-bg rounded-xl border border-border p-6">
-            <summary class="flex cursor-pointer items-center justify-between font-bold text-fg">
+          <details class="group bg-navy-surface rounded-2xl border border-border p-6 hover:border-orange-border transition-colors">
+            <summary class="flex cursor-pointer items-center justify-between font-bold text-navy">
               <span>Wat als ik geen verstand heb van hosting of domeinnamen?</span>
-              <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-primary">▼</span>
+              <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-orange">▼</span>
             </summary>
             <p class="mt-4 text-sm text-muted leading-relaxed">
               Geen zorgen, daar laat ik je niet mee zwemmen. Ik adviseer je precies welk pakket bij jouw bedrijf past en stel alles van A tot Z technisch voor je in. Het enige verschil is dat het abonnement op jouw eigen naam staat, zodat jij altijd volledig eigenaar blijft.
             </p>
           </details>
 
-          <details class="group bg-bg rounded-xl border border-border p-6">
-            <summary class="flex cursor-pointer items-center justify-between font-bold text-fg">
+          <details class="group bg-navy-surface rounded-2xl border border-border p-6 hover:border-orange-border transition-colors">
+            <summary class="flex cursor-pointer items-center justify-between font-bold text-navy">
               <span>Wat als ik in de toekomst toch hulp nodig heb of iets wil uitbreiden?</span>
-              <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-primary">▼</span>
+              <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-orange">▼</span>
             </summary>
             <p class="mt-4 text-sm text-muted leading-relaxed">
               Dan stuur je me gewoon een WhatsAppje of een e-mail. Kleine vragen beantwoord ik vaak direct als service, en voor grotere aanpassingen of nieuwe pagina's spreken we vooraf een eerlijk uurtarief of een vaste prijs af.
@@ -549,14 +652,14 @@
     </section>
 
     <!-- ================= CONTACT SECTIE ================= -->
-    <section id="contact" class="py-20">
+    <section id="contact" class="py-20 bg-bg">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-12 gap-12">
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
           
           <!-- Linker Kolom: Directe Contactkanalen -->
           <div class="lg:col-span-5 space-y-6">
-            <span class="font-mono text-xs uppercase tracking-widest text-primary font-semibold">Contact</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-fg tracking-tight">
+            <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Contact</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
               Klaar voor een website zonder wurgcontracten?
             </h2>
             <p class="text-muted leading-relaxed">
@@ -569,31 +672,31 @@
                 href="https://wa.me/31619588717?text=Hoi%20Sander%2C%20ik%20heb%20een%20vraag%20over%20een%20website%20%2F%20digitaal%20project." 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="flex items-center gap-4 p-4 rounded-xl bg-surface border border-border hover:border-whatsapp transition-all shadow-sm group"
+                class="flex items-center gap-4 p-4 rounded-2xl bg-surface border border-border hover:border-whatsapp hover:shadow-card transition-all group"
               >
-                <div class="w-11 h-11 rounded-lg bg-[#25D366]/10 text-[#25D366] flex items-center justify-center shrink-0">
+                <div class="w-12 h-12 rounded-xl bg-[#25D366]/10 text-[#25D366] flex items-center justify-center shrink-0">
                   <!-- Officieel WhatsApp Icoon -->
                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.124 1.529 5.855l-1.529 5.581 5.716-1.5c1.681.916 3.609 1.439 5.66 1.439 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/>
                   </svg>
                 </div>
                 <div>
-                  <p class="text-xs font-semibold uppercase tracking-wider text-emerald-700">Snelste reactie • WhatsApp</p>
-                  <p class="text-base font-bold text-fg group-hover:text-primary transition-colors">+31 6 19588717</p>
+                  <p class="text-xs font-bold uppercase tracking-wider text-emerald-700">Snelste reactie • WhatsApp</p>
+                  <p class="text-base font-bold text-navy group-hover:text-orange transition-colors">+31 6 19588717</p>
                 </div>
               </a>
 
               <!-- E-mail Knop -->
               <a 
                 href="mailto:srabruggeman@gmail.com"
-                class="flex items-center gap-4 p-4 rounded-xl bg-surface border border-border hover:border-primary transition-all shadow-sm group"
+                class="flex items-center gap-4 p-4 rounded-2xl bg-surface border border-border hover:border-orange hover:shadow-card transition-all group"
               >
-                <div class="w-11 h-11 rounded-lg bg-primary-light text-primary flex items-center justify-center shrink-0">
+                <div class="w-12 h-12 rounded-xl bg-orange-light text-orange flex items-center justify-center shrink-0">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 </div>
                 <div>
-                  <p class="text-xs font-medium text-muted">Stuur een e-mail</p>
-                  <p class="text-base font-bold text-fg group-hover:text-primary transition-colors">srabruggeman@gmail.com</p>
+                  <p class="text-xs font-semibold text-muted">Stuur een e-mail</p>
+                  <p class="text-base font-bold text-navy group-hover:text-orange transition-colors">srabruggeman@gmail.com</p>
                 </div>
               </a>
 
@@ -602,29 +705,24 @@
                 href="https://www.linkedin.com/in/sander-bruggeman-415596197/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="flex items-center gap-4 p-4 rounded-xl bg-surface border border-border hover:border-[#0A66C2] transition-all shadow-sm group"
+                class="flex items-center gap-4 p-4 rounded-2xl bg-surface border border-border hover:border-[#0A66C2] hover:shadow-card transition-all group"
               >
-                <div class="w-11 h-11 rounded-lg bg-[#0A66C2]/10 text-[#0A66C2] flex items-center justify-center shrink-0">
+                <div class="w-12 h-12 rounded-xl bg-[#0A66C2]/10 text-[#0A66C2] flex items-center justify-center shrink-0">
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
                 </div>
                 <div>
-                  <p class="text-xs font-medium text-muted">Connect via LinkedIn</p>
-                  <p class="text-base font-bold text-fg group-hover:text-primary transition-colors">Sander Bruggeman</p>
+                  <p class="text-xs font-semibold text-muted">Connect via LinkedIn</p>
+                  <p class="text-base font-bold text-navy group-hover:text-[#0A66C2] transition-colors">Sander Bruggeman</p>
                 </div>
               </a>
             </div>
           </div>
 
-          <!-- Rechter Kolom: Contactformulier (Statisch compatibel via FormSubmit / Web3Forms) -->
+          <!-- Rechter Kolom: Contactformulier -->
           <div class="lg:col-span-7">
-            <div class="bg-surface p-8 sm:p-10 rounded-2xl border border-border shadow-sm">
-              <h3 class="text-xl font-bold text-fg mb-6">Stuur direct een bericht</h3>
+            <div class="bg-surface p-8 sm:p-10 rounded-3xl border border-border shadow-elevated">
+              <h3 class="text-2xl font-extrabold text-navy mb-6">Stuur direct een bericht</h3>
               
-              <!-- 
-                Dit formulier gebruikt FormSubmit.co zodat het op GitHub Pages zonder backend direct 
-                naar srabruggeman@gmail.com mailt. De eerste keer dat je het test, ontvang je eenmalig 
-                een bevestigingsmailtje op srabruggeman@gmail.com om het adres te activeren.
-              -->
               <form action="https://formsubmit.co/srabruggeman@gmail.com" method="POST" class="space-y-5">
                 <!-- FormSubmit Configuratie -->
                 <input type="hidden" name="_subject" value="Nieuwe aanvraag via BruggemanDigital.nl" />
@@ -633,29 +731,29 @@
 
                 <div class="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label for="naam" class="block text-sm font-semibold text-fg mb-1.5">Naam *</label>
-                    <input type="text" id="naam" name="Naam" required placeholder="Jouw naam" class="w-full px-4 py-3 rounded-xl bg-bg border border-border focus:outline-none focus:border-primary text-sm" />
+                    <label for="naam" class="block text-sm font-bold text-navy mb-1.5">Naam *</label>
+                    <input type="text" id="naam" name="Naam" required placeholder="Jouw naam" class="w-full px-4 py-3 rounded-xl bg-navy-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all" />
                   </div>
                   <div>
-                    <label for="bedrijf" class="block text-sm font-semibold text-fg mb-1.5">Bedrijfsnaam <span class="text-muted font-normal">(optioneel)</span></label>
-                    <input type="text" id="bedrijf" name="Bedrijf" placeholder="Naam van je bedrijf" class="w-full px-4 py-3 rounded-xl bg-bg border border-border focus:outline-none focus:border-primary text-sm" />
+                    <label for="bedrijf" class="block text-sm font-bold text-navy mb-1.5">Bedrijfsnaam <span class="text-muted font-normal">(optioneel)</span></label>
+                    <input type="text" id="bedrijf" name="Bedrijf" placeholder="Naam van je bedrijf" class="w-full px-4 py-3 rounded-xl bg-navy-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all" />
                   </div>
                 </div>
 
                 <div class="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label for="email" class="block text-sm font-semibold text-fg mb-1.5">E-mailadres *</label>
-                    <input type="email" id="email" name="email" required placeholder="naam@bedrijf.nl" class="w-full px-4 py-3 rounded-xl bg-bg border border-border focus:outline-none focus:border-primary text-sm" />
+                    <label for="email" class="block text-sm font-bold text-navy mb-1.5">E-mailadres *</label>
+                    <input type="email" id="email" name="email" required placeholder="naam@bedrijf.nl" class="w-full px-4 py-3 rounded-xl bg-navy-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all" />
                   </div>
                   <div>
-                    <label for="telefoon" class="block text-sm font-semibold text-fg mb-1.5">Telefoonnummer <span class="text-muted font-normal">(optioneel)</span></label>
-                    <input type="tel" id="telefoon" name="Telefoon" placeholder="06 - 12345678" class="w-full px-4 py-3 rounded-xl bg-bg border border-border focus:outline-none focus:border-primary text-sm" />
+                    <label for="telefoon" class="block text-sm font-bold text-navy mb-1.5">Telefoonnummer <span class="text-muted font-normal">(optioneel)</span></label>
+                    <input type="tel" id="telefoon" name="Telefoon" placeholder="06 - 12345678" class="w-full px-4 py-3 rounded-xl bg-navy-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all" />
                   </div>
                 </div>
 
                 <div>
-                  <label for="onderwerp" class="block text-sm font-semibold text-fg mb-1.5">Waar kan ik je mee helpen?</label>
-                  <select id="onderwerp" name="Onderwerp" class="w-full px-4 py-3 rounded-xl bg-bg border border-border focus:outline-none focus:border-primary text-sm text-fg">
+                  <label for="onderwerp" class="block text-sm font-bold text-navy mb-1.5">Waar kan ik je mee helpen?</label>
+                  <select id="onderwerp" name="Onderwerp" class="w-full px-4 py-3 rounded-xl bg-navy-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm text-navy font-medium transition-all">
                     <option value="Nieuwe WordPress Bedrijfswebsite">Nieuwe WordPress Bedrijfswebsite</option>
                     <option value="Bestaande website vernieuwen">Bestaande website vernieuwen</option>
                     <option value="Ander digitaal project / maatwerk">Ander digitaal project / maatwerk</option>
@@ -664,15 +762,15 @@
                 </div>
 
                 <div>
-                  <label for="bericht" class="block text-sm font-semibold text-fg mb-1.5">Vertel kort over je project of vraag *</label>
-                  <textarea id="bericht" name="Bericht" rows="4" required placeholder="Waar ben je naar op zoek? Heb je al een domeinnaam of voorbeeld in gedachten?" class="w-full px-4 py-3 rounded-xl bg-bg border border-border focus:outline-none focus:border-primary text-sm"></textarea>
+                  <label for="bericht" class="block text-sm font-bold text-navy mb-1.5">Vertel kort over je project of vraag *</label>
+                  <textarea id="bericht" name="Bericht" rows="4" required placeholder="Waar ben je naar op zoek? Heb je al een domeinnaam of voorbeeld in gedachten?" class="w-full px-4 py-3 rounded-xl bg-navy-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all"></textarea>
                 </div>
 
-                <button type="submit" class="w-full py-4 px-6 text-base font-bold text-white bg-primary hover:bg-primary-hover rounded-xl shadow-sm transition-all">
+                <button type="submit" class="w-full py-4 px-6 text-base font-bold text-white bg-orange hover:bg-orange-hover rounded-xl shadow-orange-sm hover:shadow-orange-glow transition-all">
                   Verstuur bericht
                 </button>
                 <p class="text-xs text-muted text-center pt-1">
-                  Je gegevens worden alleen gebruikt om te reageren op je bericht. Zie de <a href="privacy.html" class="underline hover:text-fg">privacyverklaring</a>.
+                  Je gegevens worden alleen gebruikt om te reageren op je bericht. Zie de <a href="privacy.html" class="underline hover:text-navy">privacyverklaring</a>.
                 </p>
               </form>
             </div>
@@ -684,28 +782,27 @@
   </main>
 
   <!-- ================= FOOTER ================= -->
-<footer class="bg-surface border-t border-border py-12">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-sm text-muted">
+  <footer class="bg-navy-dark text-white border-t border-navy-light/40 py-14">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
         <div class="space-y-1">
           <div class="flex items-center gap-3">
-            <img src="logo.svg" alt="Bruggeman Digital" class="h-6 w-auto" onerror="this.style.display='none'" />
-            <span class="font-bold text-fg">Bruggeman Digital</span>
+            <img src="logo.svg" alt="Bruggeman Digital" class="h-8 w-auto brightness-0 invert" onerror="this.style.display='none'" />
           </div>
-          <p class="text-xs text-muted">Handelsnaam van Sander Bruggeman • KVK: 42082488 • Nederland</p>
+          <p class="text-xs text-slate-400">Handelsnaam van Sander Bruggeman • KVK: 42082488 • Nederland</p>
         </div>
-        <div class="flex flex-wrap items-center gap-6">
-          <a href="mailto:srabruggeman@gmail.com" class="hover:text-fg transition-colors">srabruggeman@gmail.com</a>
-          <a href="https://wa.me/31619588717" target="_blank" rel="noopener noreferrer" class="hover:text-fg transition-colors">+31 6 19588717</a>
-          <a href="https://www.linkedin.com/in/sander-bruggeman-415596197/" target="_blank" rel="noopener noreferrer" class="hover:text-fg transition-colors">LinkedIn</a>
+        <div class="flex flex-wrap items-center gap-6 text-sm text-slate-300">
+          <a href="mailto:srabruggeman@gmail.com" class="hover:text-orange transition-colors">srabruggeman@gmail.com</a>
+          <a href="https://wa.me/31619588717" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">+31 6 19588717</a>
+          <a href="https://www.linkedin.com/in/sander-bruggeman-415596197/" target="_blank" rel="noopener noreferrer" class="hover:text-[#0A66C2] transition-colors">LinkedIn</a>
         </div>
       </div>
 
-      <div class="pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+      <div class="pt-6 border-t border-navy-light/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
         <p>© 2026 Bruggeman Digital. Alle rechten voorbehouden.</p>
         <div class="flex items-center gap-6">
-          <a href="privacy.html" class="hover:text-fg underline underline-offset-4">Privacyverklaring</a>
-          <a href="algemene-voorwaarden.html" class="hover:text-fg underline underline-offset-4">Algemene Voorwaarden</a>
+          <a href="privacy.html" class="hover:text-white underline underline-offset-4">Privacyverklaring</a>
+          <a href="algemene-voorwaarden.html" class="hover:text-white underline underline-offset-4">Algemene Voorwaarden</a>
         </div>
       </div>
     </div>
