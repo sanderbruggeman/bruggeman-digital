@@ -331,19 +331,30 @@
           <article class="group bg-surface rounded-2xl border border-border overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-orange-border hover:shadow-card">
             <div>
               <div class="bg-navy-surface p-6 border-b border-border overflow-hidden">
-                <div class="rounded-lg overflow-hidden border border-border shadow-soft bg-surface">
-                  <div class="bg-navy-dark px-3 py-1.5 flex items-center gap-1.5 border-b border-navy-light/40">
-                    <span class="w-2 h-2 rounded-full bg-red-400"></span>
-                    <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
-                    <span class="w-2 h-2 rounded-full bg-green-400"></span>
-                    <span class="text-[10px] text-white/60 font-mono ml-2">fruvyland.nl</span>
+                <a 
+                  href="https://fruvyland.nl" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="block rounded-lg overflow-hidden border border-border shadow-soft bg-surface group/preview focus:outline-none focus:ring-2 focus:ring-orange/30"
+                  title="Bekijk de live website van Fruvyland (opent in een nieuw tabblad)"
+                >
+                  <div class="bg-navy-dark px-3 py-1.5 flex items-center justify-between border-b border-navy-light/40">
+                    <div class="flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-red-400"></span>
+                      <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+                      <span class="w-2 h-2 rounded-full bg-green-400"></span>
+                      <span class="text-[10px] text-white/70 font-mono ml-2">fruvyland.nl</span>
+                    </div>
+                    <span class="text-[10px] text-orange font-mono font-medium flex items-center gap-1 opacity-80 group-hover/preview:opacity-100 transition-opacity">
+                      <span>Live site</span> ↗
+                    </span>
                   </div>
                   <img 
                     src="assets/fruvyland-screenshot.png" 
                     alt="Fruvyland bedrijfswebsite gerealiseerd door Bruggeman Digital" 
-                    class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                    class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover/preview:scale-[1.02]"
                   />
-                </div>
+                </a>
               </div>
               <div class="p-6 sm:p-8">
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -355,6 +366,20 @@
                 <p class="mt-2 text-sm text-muted leading-relaxed">
                   Ontwerp en technische realisatie van een nieuwe bedrijfswebsite in WordPress. Gericht op een professionele online presentatie, snelle laadtijden op mobiel en desktop, en eenvoudig eigen beheer op de hostingomgeving van de klant.
                 </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 sm:px-8 sm:pb-8 pt-0">
+              <div class="pt-5 border-t border-border/80 flex items-center justify-between">
+                <span class="text-xs font-mono text-muted">fruvyland.nl</span>
+                <a 
+                  href="https://fruvyland.nl" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center gap-1.5 text-sm font-bold text-orange hover:text-orange-hover transition-colors"
+                >
+                  <span>Bekijk live website</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
               </div>
             </div>
           </article>
