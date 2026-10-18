@@ -51,14 +51,14 @@
               DEFAULT: '#FF6A2B',
               hover: '#E85819',
               dark: '#D94B0E',
-              light: '#FFF4EF',
+              light: '#FFF3EC',
               border: '#FED7C3'
             },
-            bg: '#F8FAFC',
+            bg: '#F7F6F3',
             surface: '#FFFFFF',
-            fg: '#0F172A',
-            muted: '#475569',
-            border: '#E2E8F0'
+            fg: '#17191C',
+            muted: '#5C616B',
+            border: '#E4E2DD'
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
@@ -78,12 +78,12 @@
 
   <style>
     body {
-      background-color: #F8FAFC;
-      color: #0F172A;
+      background-color: #F7F6F3;
+      color: #17191C;
       font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     }
     .bg-grid-pattern {
-      background-image: radial-gradient(#CBD5E1 1px, transparent 1px);
+      background-image: radial-gradient(#D5D2CD 1px, transparent 1px);
       background-size: 24px 24px;
     }
     details > summary {
@@ -186,7 +186,7 @@
 <body class="antialiased selection:bg-orange selection:text-white">
 
   <!-- ================= HEADER / NAVIGATIE ================= -->
-  <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-border shadow-soft">
+  <header class="sticky top-0 z-50 bg-bg/90 backdrop-blur-md border-b border-border">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <!-- Logo: logo.svg bevat al het beeldmerk en de typografie 'Bruggeman Digital' -->
       <a href="#" class="flex items-center group" aria-label="Bruggeman Digital">
@@ -211,7 +211,7 @@
       </div>
 
       <!-- Mobiele Menu Knop -->
-      <button id="mobile-menu-btn" aria-label="Menu openen" class="md:hidden p-2.5 rounded-xl text-navy hover:bg-navy-surface border border-border">
+      <button id="mobile-menu-btn" aria-label="Menu openen" class="md:hidden p-2.5 rounded-xl text-navy hover:bg-border/40 border border-border">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -219,7 +219,7 @@
     </div>
 
     <!-- Mobiel Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-border px-4 pt-3 pb-6 space-y-3 shadow-lg">
+    <div id="mobile-menu" class="hidden md:hidden bg-bg border-b border-border px-4 pt-3 pb-6 space-y-3 shadow-lg">
       <a href="#werk" class="block py-2 text-base font-semibold text-navy hover:text-orange">Werk</a>
       <a href="#aanpak" class="block py-2 text-base font-semibold text-navy hover:text-orange">Aanpak</a>
       <a href="#investering" class="block py-2 text-base font-semibold text-navy hover:text-orange">Investering</a>
@@ -238,7 +238,7 @@
         <div class="max-w-3xl space-y-6">
           
           <!-- WordPress Specialisatie Tag met Brand Orange accent -->
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface border border-slate-200 shadow-soft">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface border border-border shadow-soft">
             <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#21759B]/10 text-[#21759B]">
               <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12.002 2.002c-5.514 0-9.998 4.486-9.998 9.998 0 5.514 4.484 10 9.998 10 5.514 0 9.998-4.486 9.998-10 0-5.512-4.484-9.998-9.998-9.998zm-8.694 9.998c0-1.26.27-2.456.753-3.537l4.15 11.37c-2.893-1.404-4.903-4.382-4.903-7.833zm8.694 8.694c-.852 0-1.676-.126-2.455-.356l2.607-7.571 2.671 7.319c.018.043.041.08.066.115-.892.317-1.852.493-2.889.493zm1.196-12.765c.523-.027.994-.082.994-.082.468-.055.413-.742-.055-.715 0 0-1.406.11-2.313.11-.853 0-2.286-.11-2.286-.11-.468-.027-.523.688-.055.715 0 0 .442.055.91.082l1.351 3.704-1.898 5.691-3.158-9.395c.523-.027.994-.082.994-.082.468-.055.413-.742-.055-.715 0 0-1.406.11-2.313.11-.162 0-.354-.004-.557-.011 1.552-2.357 4.221-3.914 7.255-3.914 2.261 0 4.321.863 5.867 2.277-.038-.002-.073-.008-.112-.008-.853 0-1.458.742-1.458 1.54 0 .715.413 1.32.853 2.036.33.578.715 1.32.715 2.393 0 .743-.286 1.604-.66 2.806l-.866 2.892-3.162-9.419zm4.316 11.497l2.634-7.614c.492-1.23.655-2.212.655-3.09 0-.318-.021-.614-.06-.889.662 1.213 1.043 2.602 1.043 4.084 0 3.204-1.737 5.999-4.272 7.509z"/>
@@ -264,7 +264,7 @@
               Bespreek jouw project
               <svg class="w-5 h-5 ml-2.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
-            <a href="#werk" class="inline-flex items-center justify-center px-6 py-4 text-base font-semibold text-navy bg-surface hover:bg-navy-surface border border-border hover:border-navy/30 rounded-xl shadow-soft transition-all text-center">
+            <a href="#werk" class="inline-flex items-center justify-center px-6 py-4 text-base font-semibold text-navy bg-surface hover:bg-border/30 border border-border shadow-soft transition-all text-center">
               Bekijk geselecteerd werk ↓
             </a>
           </div>
@@ -305,7 +305,7 @@
     </section>
 
     <!-- ================= GESELECTEERD WERK (SCHAALBAAR PORTFOLIO GRID) ================= -->
-    <section id="werk" class="py-20 md:py-24 border-b border-border bg-surface">
+    <section id="werk" class="py-20 md:py-24 border-b border-border bg-bg">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
@@ -330,7 +330,7 @@
           <!-- PROJECT 1: FRUVYLAND -->
           <article class="group bg-surface rounded-2xl border border-border overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-orange-border hover:shadow-card">
             <div>
-              <div class="bg-navy-surface p-6 border-b border-border overflow-hidden">
+              <div class="bg-bg p-6 border-b border-border overflow-hidden">
                 <a 
                   href="https://fruvyland.nl" 
                   target="_blank" 
@@ -358,9 +358,9 @@
               </div>
               <div class="p-6 sm:p-8">
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-navy-surface border border-border text-navy font-semibold">WordPress</span>
-                  <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-navy-surface border border-border text-navy font-semibold">Maatwerk Design</span>
-                  <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-navy-surface border border-border text-navy font-semibold">Performance</span>
+                  <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-bg border border-border text-navy font-semibold">WordPress</span>
+                  <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-bg border border-border text-navy font-semibold">Maatwerk Design</span>
+                  <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-bg border border-border text-navy font-semibold">Performance</span>
                 </div>
                 <h3 class="text-2xl font-extrabold text-navy">Fruvyland</h3>
                 <p class="mt-2 text-sm text-muted leading-relaxed">
@@ -385,7 +385,7 @@
           </article>
 
           <!-- PROJECT 2: PLACEHOLDER VOOR VOLGEND PROJECT -->
-          <article class="bg-navy-surface/50 rounded-2xl border-2 border-dashed border-border p-8 flex flex-col justify-between min-h-[380px] hover:border-orange/50 transition-colors">
+          <article class="bg-surface/70 rounded-2xl border-2 border-dashed border-border p-8 flex flex-col justify-between min-h-[380px] hover:border-orange/50 transition-colors">
             <div class="space-y-4">
               <span class="font-mono text-xs px-3 py-1 rounded-full bg-surface border border-orange-border text-orange font-bold inline-block">
                 Beschikbaarheid: Nieuw project
@@ -416,7 +416,7 @@
     </section>
 
     <!-- ================= AANPAK / WAAROM BRUGGEMAN DIGITAL ================= -->
-    <section id="aanpak" class="py-20 md:py-24 bg-bg border-b border-border">
+    <section id="aanpak" class="py-20 md:py-24 bg-surface border-b border-border">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-2xl mb-14">
           <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Werkwijze & Visie</span>
@@ -430,7 +430,7 @@
 
         <div class="grid md:grid-cols-3 gap-8">
           <!-- Pijler 1 -->
-          <div class="p-8 rounded-2xl bg-surface border border-border shadow-soft hover:border-orange-border hover:shadow-card hover:-translate-y-1 transition-all duration-300 space-y-4">
+          <div class="p-8 rounded-2xl bg-bg border border-border shadow-soft hover:border-orange-border hover:shadow-card hover:-translate-y-1 transition-all duration-300 space-y-4">
             <div class="w-12 h-12 rounded-xl bg-orange-light text-orange flex items-center justify-center font-bold text-sm">
               01
             </div>
@@ -441,7 +441,7 @@
           </div>
 
           <!-- Pijler 2 -->
-          <div class="p-8 rounded-2xl bg-surface border border-border shadow-soft hover:border-navy/40 hover:shadow-card hover:-translate-y-1 transition-all duration-300 space-y-4">
+          <div class="p-8 rounded-2xl bg-bg border border-border shadow-soft hover:border-navy/40 hover:shadow-card hover:-translate-y-1 transition-all duration-300 space-y-4">
             <div class="w-12 h-12 rounded-xl bg-navy/10 text-navy flex items-center justify-center font-bold text-sm">
               02
             </div>
@@ -452,7 +452,7 @@
           </div>
 
           <!-- Pijler 3 -->
-          <div class="p-8 rounded-2xl bg-surface border border-border shadow-soft hover:border-[#21759B]/40 hover:shadow-card hover:-translate-y-1 transition-all duration-300 space-y-4">
+          <div class="p-8 rounded-2xl bg-bg border border-border shadow-soft hover:border-[#21759B]/40 hover:shadow-card hover:-translate-y-1 transition-all duration-300 space-y-4">
             <div class="w-12 h-12 rounded-xl bg-[#21759B]/10 text-[#21759B] flex items-center justify-center font-bold text-sm">
               03
             </div>
@@ -466,7 +466,7 @@
     </section>
 
     <!-- ================= INVESTERING / ALL-IN RICHTPRIJS ================= -->
-    <section id="investering" class="py-20 md:py-24 border-b border-border bg-surface">
+    <section id="investering" class="py-20 md:py-24 border-b border-border bg-bg">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-2xl mb-12">
           <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Investering & Richtprijzen</span>
@@ -571,7 +571,7 @@
     </section>
 
     <!-- ================= OVER SANDER ================= -->
-    <section id="over-mij" class="py-20 md:py-24 bg-bg border-b border-border">
+    <section id="over-mij" class="py-20 md:py-24 bg-surface border-b border-border">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-12 gap-10 items-center">
           
@@ -621,7 +621,7 @@
     </section>
 
     <!-- ================= VEELGESTELDE VRAGEN ================= -->
-    <section id="faq" class="py-20 md:py-24 border-b border-border bg-surface">
+    <section id="faq" class="py-20 md:py-24 border-b border-border bg-bg">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-10 text-center">
           <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">FAQ</span>
@@ -632,7 +632,7 @@
         </div>
 
         <div class="space-y-4">
-          <details class="group bg-navy-surface rounded-2xl border border-border p-6 hover:border-orange-border transition-colors" open>
+          <details class="group bg-surface rounded-2xl border border-border p-6 hover:border-orange-border transition-colors" open>
             <summary class="flex cursor-pointer items-center justify-between font-bold text-navy text-sm sm:text-base">
               <span>Hoe werkt het beheer en de hosting na oplevering?</span>
               <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-orange">▼</span>
@@ -642,7 +642,7 @@
             </p>
           </details>
 
-          <details class="group bg-navy-surface rounded-2xl border border-border p-6 hover:border-orange-border transition-colors">
+          <details class="group bg-surface rounded-2xl border border-border p-6 hover:border-orange-border transition-colors">
             <summary class="flex cursor-pointer items-center justify-between font-bold text-navy text-sm sm:text-base">
               <span>Waarom werk je zonder verplichte onderhoudsabonnementen?</span>
               <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-orange">▼</span>
@@ -652,7 +652,7 @@
             </p>
           </details>
 
-          <details class="group bg-navy-surface rounded-2xl border border-border p-6 hover:border-orange-border transition-colors">
+          <details class="group bg-surface rounded-2xl border border-border p-6 hover:border-orange-border transition-colors">
             <summary class="flex cursor-pointer items-center justify-between font-bold text-navy text-sm sm:text-base">
               <span>Kan ik later wel bij je terecht voor aanpassingen of uitbreidingen?</span>
               <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-orange">▼</span>
@@ -666,7 +666,7 @@
     </section>
 
     <!-- ================= CONTACT SECTIE ================= -->
-    <section id="contact" class="py-20 md:py-24 bg-bg">
+    <section id="contact" class="py-20 md:py-24 bg-surface">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-12 gap-12">
           
@@ -684,7 +684,7 @@
               <!-- E-mail -->
               <a 
                 href="mailto:srabruggeman@gmail.com"
-                class="flex items-center gap-4 p-4 rounded-2xl bg-surface border border-border hover:border-orange hover:shadow-card transition-all group"
+                class="flex items-center gap-4 p-4 rounded-2xl bg-bg border border-border hover:border-orange hover:shadow-card transition-all group"
               >
                 <div class="w-11 h-11 rounded-xl bg-orange-light text-orange flex items-center justify-center shrink-0">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -700,7 +700,7 @@
                 href="https://wa.me/31619588717" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="flex items-center gap-4 p-4 rounded-2xl bg-surface border border-border hover:border-[#25D366] hover:shadow-card transition-all group"
+                class="flex items-center gap-4 p-4 rounded-2xl bg-bg border border-border hover:border-[#25D366] hover:shadow-card transition-all group"
               >
                 <div class="w-11 h-11 rounded-xl bg-[#25D366]/10 text-[#25D366] flex items-center justify-center shrink-0">
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -718,7 +718,7 @@
                 href="https://www.linkedin.com/in/sander-bruggeman-415596197/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="flex items-center gap-4 p-4 rounded-2xl bg-surface border border-border hover:border-[#0A66C2] hover:shadow-card transition-all group"
+                class="flex items-center gap-4 p-4 rounded-2xl bg-bg border border-border hover:border-[#0A66C2] hover:shadow-card transition-all group"
               >
                 <div class="w-11 h-11 rounded-xl bg-[#0A66C2]/10 text-[#0A66C2] flex items-center justify-center shrink-0">
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
@@ -733,7 +733,7 @@
 
           <!-- Contactformulier -->
           <div class="lg:col-span-7">
-            <div class="bg-surface p-8 sm:p-10 rounded-2xl border border-border shadow-elevated">
+            <div class="bg-bg p-8 sm:p-10 rounded-2xl border border-border shadow-elevated">
               <h3 class="text-2xl font-extrabold text-navy mb-6">Stuur een bericht</h3>
               <form action="https://formsubmit.co/srabruggeman@gmail.com" method="POST" class="space-y-5">
                 <input type="hidden" name="_subject" value="Nieuwe aanvraag via BruggemanDigital.nl" />
@@ -743,28 +743,28 @@
                 <div class="grid sm:grid-cols-2 gap-5">
                   <div>
                     <label for="naam" class="block text-xs font-bold uppercase tracking-wider text-navy mb-2">Naam *</label>
-                    <input type="text" id="naam" name="Naam" required placeholder="Jouw naam" class="w-full px-4 py-3 rounded-xl bg-navy-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all" />
+                    <input type="text" id="naam" name="Naam" required placeholder="Jouw naam" class="w-full px-4 py-3 rounded-xl bg-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all" />
                   </div>
                   <div>
                     <label for="bedrijf" class="block text-xs font-bold uppercase tracking-wider text-navy mb-2">Bedrijfsnaam</label>
-                    <input type="text" id="bedrijf" name="Bedrijf" placeholder="Optioneel" class="w-full px-4 py-3 rounded-xl bg-navy-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all" />
+                    <input type="text" id="bedrijf" name="Bedrijf" placeholder="Optioneel" class="w-full px-4 py-3 rounded-xl bg-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all" />
                   </div>
                 </div>
 
                 <div class="grid sm:grid-cols-2 gap-5">
                   <div>
                     <label for="email" class="block text-xs font-bold uppercase tracking-wider text-navy mb-2">E-mailadres *</label>
-                    <input type="email" id="email" name="email" required placeholder="naam@bedrijf.nl" class="w-full px-4 py-3 rounded-xl bg-navy-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all" />
+                    <input type="email" id="email" name="email" required placeholder="naam@bedrijf.nl" class="w-full px-4 py-3 rounded-xl bg-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all" />
                   </div>
                   <div>
                     <label for="telefoon" class="block text-xs font-bold uppercase tracking-wider text-navy mb-2">Telefoonnummer</label>
-                    <input type="tel" id="telefoon" name="Telefoon" placeholder="Optioneel" class="w-full px-4 py-3 rounded-xl bg-navy-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all" />
+                    <input type="tel" id="telefoon" name="Telefoon" placeholder="Optioneel" class="w-full px-4 py-3 rounded-xl bg-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all" />
                   </div>
                 </div>
 
                 <div>
                   <label for="onderwerp" class="block text-xs font-bold uppercase tracking-wider text-navy mb-2">Onderwerp</label>
-                  <select id="onderwerp" name="Onderwerp" class="w-full px-4 py-3 rounded-xl bg-navy-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm text-navy font-semibold transition-all">
+                  <select id="onderwerp" name="Onderwerp" class="w-full px-4 py-3 rounded-xl bg-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm text-navy font-semibold transition-all">
                     <option value="WordPress Bedrijfswebsite">WordPress Bedrijfswebsite</option>
                     <option value="Ander digitaal project / maatwerk">Ander digitaal project / maatwerk</option>
                     <option value="Algemene vraag / kennismaking">Algemene vraag / kennismaking</option>
@@ -773,7 +773,7 @@
 
                 <div>
                   <label for="bericht" class="block text-xs font-bold uppercase tracking-wider text-navy mb-2">Bericht *</label>
-                  <textarea id="bericht" name="Bericht" rows="4" required placeholder="Korte toelichting op je vraag of project..." class="w-full px-4 py-3 rounded-xl bg-navy-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all"></textarea>
+                  <textarea id="bericht" name="Bericht" rows="4" required placeholder="Korte toelichting op je vraag of project..." class="w-full px-4 py-3 rounded-xl bg-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all"></textarea>
                 </div>
 
                 <button type="submit" class="w-full py-4 px-6 text-base font-bold text-white bg-orange hover:bg-orange-hover rounded-xl shadow-orange-sm hover:shadow-orange-glow transition-all flex items-center justify-center gap-2">
@@ -793,7 +793,7 @@
   </main>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="bg-surface border-t border-border py-12">
+  <footer class="bg-bg border-t border-border py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-sm text-muted">
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
         <div class="space-y-2">
