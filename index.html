@@ -1168,11 +1168,11 @@
           <div>
             <div class="form-card">
               <h3 id="form-heading" style="font-size: 1.35rem; margin-bottom: 1.15rem;">Stuur een bericht</h3>
-              <form id="contact-form" action="https://formsubmit.co/srabruggeman@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="Nieuwe aanvraag via BruggemanDigital.nl" />
-                <input type="hidden" name="_next" value="https://www.bruggemandigital.nl/?bericht=verzonden#contact" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+              <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="191ef716-3d1b-4062-a0fc-8664ae4380ff" />
+                <input type="hidden" name="subject" value="Nieuwe aanvraag via BruggemanDigital.nl" />
+                <input type="hidden" name="from_name" value="Bruggeman Digital Website" />
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
 
                 <div class="form-row-2">
                   <div class="form-field">
@@ -1281,6 +1281,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=2" defer></script>
+  <script src="script.js?v=4" defer></script>
 </body>
 </html>

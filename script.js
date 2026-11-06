@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 60);
   }
 
-  // 4. Contact Form Integration (Robust AJAX with FormSubmit.co + WhatsApp/Mailto fallback)
+  // 4. Contact Form Integration (Web3Forms API + WhatsApp/Mailto fallback)
   const form = document.getElementById('contact-form');
   if (form) {
     if (window.location.search.includes('bericht=verzonden')) {
@@ -132,14 +132,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const bericht = (document.getElementById('bericht')?.value || '').trim();
 
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 4000);
+      const timeoutId = setTimeout(() => controller.abort(), 8000);
 
       try {
         const formData = new FormData(form);
-        const res = await fetch('https://formsubmit.co/ajax/srabruggeman@gmail.com', {
+        const json = JSON.stringify(Object.fromEntries(formData));
+        const res = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          headers: { Accept: 'application/json' },
-          body: formData,
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: json,
           signal: controller.signal,
         });
         clearTimeout(timeoutId);
@@ -149,16 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
           data = await res.json();
         } catch (_) {}
 
-        // Check if successful, or if FormSubmit is in activation confirmation phase
-        const isSuccess =
-          res.ok ||
-          (data &&
-            (data.success === true ||
-              data.success === 'true' ||
-              (typeof data.message === 'string' &&
-                data.message.toLowerCase().includes('activat'))));
-
-        if (isSuccess) {
+        if (res.ok && data && (data.success === true || data.success === 'true')) {
           const formHeading = document.getElementById('form-heading');
           if (formHeading) formHeading.style.display = 'none';
           form.innerHTML = `
@@ -168,17 +163,17 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
               <h4 style="font-size: 1.4rem; margin-bottom: 0.5rem; color: #13294B;">Bericht succesvol verzonden!</h4>
               <p style="font-size: 0.9rem; color: #5C616B; max-width: 42ch; margin: 0 auto 1.25rem; line-height: 1.6;">
-                Bedankt voor je aanvraag. Ik heb je gegevens in goede orde ontvangen en neem uiterlijk binnen één werkdag persoonlijk contact met je op.
+                Bedankt voor je aanvraag${naam ? ', ' + naam : ''}. Ik heb je gegevens in goede orde ontvangen en neem uiterlijk binnen één werkdag persoonlijk contact met je op.
               </p>
               <span style="display: inline-block; font-size: 0.75rem; font-weight: 600; color: #047857; background-color: #ECFDF5; padding: 0.4rem 0.85rem; border-radius: 8px; border: 1px solid #A7F3D0;">
-                Directe bevestiging verstuurd naar je inbox
+                Bevestiging verzonden naar ${email || 'je e-mail'}
               </span>
             </div>
           `;
           return;
         }
 
-        throw new Error('Verzending mislukt via server');
+        throw new Error((data && data.message) || 'Verzending mislukt via server');
       } catch (err) {
         clearTimeout(timeoutId);
         console.warn('Formulier submit fallback geactiveerd:', err);
