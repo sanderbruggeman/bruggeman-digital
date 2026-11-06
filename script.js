@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 60);
   }
 
-  // 4. Contact Form Integration (Preserving FormSubmit.co endpoint & AJAX flow)
+  // 4. Contact Form Integration (Robust AJAX with FormSubmit.co + WhatsApp/Mailto fallback)
   const form = document.getElementById('contact-form');
   if (form) {
     if (window.location.search.includes('bericht=verzonden')) {
@@ -114,6 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       e.preventDefault();
       const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.innerHTML : '<span>Bericht versturen</span>';
+
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.style.opacity = '0.8';
@@ -121,22 +123,42 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.innerHTML = `<span>Verzenden...</span>`;
       }
 
+      // Collect form field values for potential fallback
+      const naam = (document.getElementById('naam')?.value || '').trim();
+      const bedrijf = (document.getElementById('bedrijf')?.value || '').trim();
+      const email = (document.getElementById('email')?.value || '').trim();
+      const telefoon = (document.getElementById('telefoon')?.value || '').trim();
+      const onderwerp = (document.getElementById('onderwerp')?.value || '').trim();
+      const bericht = (document.getElementById('bericht')?.value || '').trim();
+
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 4000);
+
       try {
         const formData = new FormData(form);
         const res = await fetch('https://formsubmit.co/ajax/srabruggeman@gmail.com', {
           method: 'POST',
           headers: { Accept: 'application/json' },
           body: formData,
+          signal: controller.signal,
         });
+        clearTimeout(timeoutId);
 
-        const data = await res.json();
-        if (
+        let data = null;
+        try {
+          data = await res.json();
+        } catch (_) {}
+
+        // Check if successful, or if FormSubmit is in activation confirmation phase
+        const isSuccess =
           res.ok ||
           (data &&
-            (data.success === 'true' ||
-              data.success === true ||
-              (data.message && data.message.includes('Activate'))))
-        ) {
+            (data.success === true ||
+              data.success === 'true' ||
+              (typeof data.message === 'string' &&
+                data.message.toLowerCase().includes('activat'))));
+
+        if (isSuccess) {
           const formHeading = document.getElementById('form-heading');
           if (formHeading) formHeading.style.display = 'none';
           form.innerHTML = `
@@ -153,11 +175,63 @@ document.addEventListener('DOMContentLoaded', () => {
               </span>
             </div>
           `;
-        } else {
-          throw new Error('Verzending mislukt');
+          return;
         }
+
+        throw new Error('Verzending mislukt via server');
       } catch (err) {
-        form.submit();
+        clearTimeout(timeoutId);
+        console.warn('Formulier submit fallback geactiveerd:', err);
+
+        // Pre-fill WhatsApp message text
+        const waText = encodeURIComponent(
+          `Hallo Sander,\n\nIk stuur een bericht via je website (Bruggeman Digital):\n` +
+          `• Naam: ${naam}\n` +
+          (bedrijf ? `• Bedrijf: ${bedrijf}\n` : '') +
+          `• E-mail: ${email}\n` +
+          (telefoon ? `• Telefoon: ${telefoon}\n` : '') +
+          `• Onderwerp: ${onderwerp}\n\n` +
+          `Bericht:\n${bericht}`
+        );
+
+        // Pre-fill Mailto link
+        const mailSubject = encodeURIComponent(`Nieuwe aanvraag via website: ${onderwerp || naam}`);
+        const mailBody = encodeURIComponent(
+          `Naam: ${naam}\nBedrijf: ${bedrijf}\nE-mail: ${email}\nTelefoon: ${telefoon}\nOnderwerp: ${onderwerp}\n\nBericht:\n${bericht}`
+        );
+
+        // Reset submit button
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '1';
+          submitBtn.style.cursor = 'pointer';
+          submitBtn.innerHTML = originalBtnText;
+        }
+
+        // Show friendly in-place fallback notice above form (preserves all typed input)
+        let errorNotice = document.getElementById('form-error-notice');
+        if (!errorNotice) {
+          errorNotice = document.createElement('div');
+          errorNotice.id = 'form-error-notice';
+          form.insertBefore(errorNotice, form.firstChild);
+        }
+
+        errorNotice.style.cssText =
+          'margin-bottom: 1.25rem; padding: 1.15rem; border-radius: 12px; background-color: #FFF7ED; border: 1px solid #FFEDD5; color: #9A3412; font-size: 0.88rem;';
+        errorNotice.innerHTML = `
+          <strong style="display: block; font-size: 0.95rem; margin-bottom: 0.35rem; color: #C2410C;">Verbinding met mailserver tijdelijk vertraagd</strong>
+          <p style="margin-bottom: 0.85rem; line-height: 1.5; color: #7C2D12;">
+            Je ingevulde gegevens zijn bewaard. Je kunt direct met 1 klik contact opnemen via WhatsApp of e-mail:
+          </p>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <a href="https://wa.me/31619588717?text=${waText}" target="_blank" rel="noopener noreferrer" class="btn btn--orange" style="padding: 0.45rem 0.9rem; font-size: 0.82rem; text-decoration: none;">
+              Stuur via WhatsApp ↗
+            </a>
+            <a href="mailto:srabruggeman@gmail.com?subject=${mailSubject}&body=${mailBody}" class="btn btn--surface" style="padding: 0.45rem 0.9rem; font-size: 0.82rem; text-decoration: none;">
+              Stuur via E-mail ↗
+            </a>
+          </div>
+        `;
       }
     });
   }
