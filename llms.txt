@@ -1,0 +1,59 @@
+# Bruggeman Digital — Digital Partner voor Ondernemers & MKB
+
+> Bruggeman Digital (`https://www.bruggemandigital.nl`) helpt zelfstandigen en het MKB met praktische AI-toepassingen, procesautomatiseringen, bedrijfswebsites, webapplicaties en overzichtelijke dashboards. Opgericht door Sander Bruggeman (AI Automation Builder). Ingericht op de eigen accounts van de klant, heldere prijsafspraken vooraf en géén verplichte maandelijkse onderhoudsabonnementen.
+
+---
+
+## Kernbeloftes & Werkwijze
+
+1. **Geen Standaard Keurslijf:** De genoemde tools en platformen (zoals n8n, Claude, WordPress of Looker Studio) laten zien waar Sander veel ervaring mee heeft, maar vormen geen beperking. Elke oplossing wordt afgestemd op het vraagstuk en de bestaande werkwijze van de ondernemer.
+2. **Voor Zelfstandigen & MKB:** Zowel voor zelfstandig ondernemers en kleine teams als voor groeiende MKB-bedrijven.
+3. **Gewoon in Eigen Beheer:** Oplossingen worden ingericht op de eigen accounts, cloud-omgevingen en domeinnaam van de klant. Geen vendor lock-in of verplichte maandabonnementen.
+4. **Gratis Gesprek (30 min) & Transparante Prijzen:** Vrijblijvend kennismaken en sparren (30 minuten), gevolgd door een heldere prijsafspraak vooraf of flexibele ondersteuning op uurbasis (€ 75,- ex. btw / uur).
+
+---
+
+## De 4 Onderwerpen (Diensten)
+
+### 01. AI & Slimme Toepassingen
+Praktische inzet van AI om terugkerend denk- en schrijfwerk makkelijker te maken, zoals het voorbereiden van concept-offertes, het samenvatten van documenten of e-mailondersteuning. Veilig ingericht via zakelijke API-omgevingen.
+- **Ervaring met o.a.:** Claude (Anthropic), Google Gemini, ChatGPT (OpenAI).
+
+### 02. Procesautomatisering
+Losse programma's, formulieren, mailboxen en overzichten met elkaar laten praten zodat handmatig overtypen en kopiëren wordt beperkt.
+- **Ervaring met o.a.:** n8n, Google Cloud, Microsoft Azure en API-koppelingen op maat.
+
+### 03. Websites & Webapplicaties
+Van een verzorgde bedrijfswebsite die je zelf kunt aanpassen tot een praktische webapplicatie, intern hulpmiddel of klantportaal op je eigen domein en hosting.
+- **Ervaring met o.a.:** WordPress, Lovable, GitHub en maatwerk webontwikkeling.
+
+### 04. Dashboards & Data-Overzicht
+Van losse spreadsheets naar één helder overzicht van omzet, aanvragen en voortgang, of het slimmer inrichten en koppelen van bestaande spreadsheets.
+- **Ervaring met o.a.:** Google Looker Studio, Microsoft Excel, Google Sheets.
+
+---
+
+## Richtprijzen, Trajecten & Uurtarief (ex. btw)
+
+- **Vrijblijvende kennismaking / sparsessie (30 min):** Gratis
+- **AI & Automatisering Sprint (richtprijs):** € 1.750,- ex. btw
+- **All-In Bedrijfswebsite of Webapp (richtprijs):** € 2.000,- ex. btw
+- **Data & KPI Dashboard Setup (richtprijs):** € 1.250,- ex. btw
+- **Maatwerk & Flexibele Hulp op Uurbasis:** Vaste prijsafspraak op maat of € 75,- ex. btw per uur op afroep (zonder verplicht abonnement)
+
+---
+
+## Bedrijfs- & Contactgegevens
+
+- **Handelsnaam:** Bruggeman Digital
+- **Oprichter & Eigenaar:** Sander Bruggeman (AI Automation Builder)
+- **Website:** https://www.bruggemandigital.nl/
+- **E-mail:** srabruggeman@gmail.com
+- **WhatsApp / Telefoon:** +31 6 19588717 (`https://wa.me/31619588717`)
+- **LinkedIn:** https://www.linkedin.com/in/sander-bruggeman-415596197/
+- **Vestigingsadres:** Strandweg 24B, 3151HV Hoek van Holland, Nederland
+- **Werkgebied:** Nederland
+- **KVK-nummer:** 42082488
+- **Btw-identificatienummer:** NL005480999B44
+- **Privacyverklaring:** https://www.bruggemandigital.nl/privacy.html
+- **Algemene Voorwaarden:** https://www.bruggemandigital.nl/algemene-voorwaarden.html

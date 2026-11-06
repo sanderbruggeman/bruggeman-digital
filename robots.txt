@@ -1,3 +1,24 @@
 User-agent: *
 Allow: /
+
+# AI & Generative Search Crawlers (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://www.bruggemandigital.nl/sitemap.xml
+# LLMs Context File: https://www.bruggemandigital.nl/llms.txt

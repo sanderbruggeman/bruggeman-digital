@@ -1,7 +1,7 @@
 {
-  "name": "Bruggeman Digital",
+  "name": "Bruggeman Digital — Digital Partner voor het MKB",
   "short_name": "Bruggeman Digital",
-  "description": "Professionele WordPress-bedrijfswebsites voor het MKB.",
+  "description": "Slimme AI-automatisering, weboplossingen en data-dashboards voor het MKB. 100% in eigen beheer.",
   "icons": [
     {
       "src": "icon-192.png",
@@ -16,6 +16,6 @@
   ],
   "start_url": "/",
   "theme_color": "#13294B",
-  "background_color": "#FFFFFF",
+  "background_color": "#F7F6F3",
   "display": "standalone"
 }

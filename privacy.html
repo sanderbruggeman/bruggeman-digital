@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="nl" class="scroll-smooth">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacyverklaring | Bruggeman Digital</title>
-  <meta name="description" content="Privacyverklaring van Bruggeman Digital. Lees hoe wij veilig en zonder tracking-cookies omgaan met jouw persoonsgegevens." />
+  <title>Privacyverklaring (AVG) | Bruggeman Digital</title>
+  <meta name="description" content="Privacyverklaring van Bruggeman Digital. Lees hoe wij veilig, AVG-conform en zonder tracking-cookies omgaan met bedrijfs- en persoonsgegevens." />
   <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://www.bruggemandigital.nl/privacy.html" />
+
   <!-- Favicon & Touch Icons -->
   <link rel="icon" href="favicon.ico" sizes="32x32" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -15,176 +17,206 @@
   <link rel="manifest" href="site.webmanifest" />
   <meta name="theme-color" content="#13294B" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: {
-              DEFAULT: '#13294B',
-              dark: '#0B1B33',
-              deep: '#071324',
-              light: '#1E3A66',
-              surface: '#F4F7FB'
-            },
-            orange: {
-              DEFAULT: '#FF6A2B',
-              hover: '#E85819',
-              dark: '#D94B0E',
-              light: '#FFF4EF',
-              border: '#FED7C3'
-            },
-            bg: '#F7F6F3',
-            surface: '#FFFFFF',
-            fg: '#17191C',
-            muted: '#5C616B',
-            border: '#E4E2DD'
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          },
-          boxShadow: {
-            'soft': '0 2px 15px -3px rgba(19, 41, 75, 0.05), 0 4px 6px -2px rgba(19, 41, 75, 0.03)',
-            'card': '0 10px 25px -5px rgba(19, 41, 75, 0.06), 0 8px 10px -6px rgba(19, 41, 75, 0.04)',
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    body {
-      background-color: #F7F6F3;
-      color: #17191C;
-      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-    }
-  </style>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="antialiased selection:bg-orange selection:text-white">
+<body id="top">
 
-  <!-- Header -->
-  <header class="bg-bg/90 backdrop-blur-md border-b border-border sticky top-0 z-50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-18 flex items-center justify-between">
-      <a href="index.html" class="flex items-center" aria-label="Bruggeman Digital">
-        <img src="logo.svg" alt="Bruggeman Digital" class="h-7 md:h-8 w-auto object-contain" onerror="this.style.display='none'" />
+  <!-- ================= HEADER / NAVIGATIE ================= -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="header-brand" aria-label="Bruggeman Digital">
+        <img src="assets/brand-mark-header.svg" alt="" width="28" height="28" />
+        <span>Bruggeman <span style="font-weight: 400;">Digital</span><span style="color: var(--orange);">.</span></span>
       </a>
-      <a href="index.html" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-navy hover:text-orange transition-colors">
-        ← Terug naar de hoofdpagina
-      </a>
+
+      <nav class="nav-links" aria-label="Hoofdnavigatie">
+        <a href="index.html#diensten" class="nav-link">Diensten</a>
+        <a href="index.html#prijzen" class="nav-link">Prijzen</a>
+        <a href="index.html#werk" class="nav-link">Werk</a>
+        <a href="index.html#werkwijze" class="nav-link">Werkwijze</a>
+        <a href="index.html#over-mij" class="nav-link">Over mij</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html#contact" class="btn btn--orange">
+          <span>Project bespreken</span>
+          <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" aria-label="Menu openen" aria-expanded="false" aria-controls="mobile-menu" class="mobile-menu-toggle">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-nav">
+      <div class="container">
+        <nav class="mobile-nav-list" aria-label="Mobiele navigatie">
+          <a href="index.html#diensten" class="mobile-nav-link">Diensten</a>
+          <a href="index.html#prijzen" class="mobile-nav-link">Richtprijzen &amp; Trajecten</a>
+          <a href="index.html#werk" class="mobile-nav-link">Werk &amp; Voorbeelden</a>
+          <a href="index.html#werkwijze" class="mobile-nav-link">Werkwijze</a>
+          <a href="index.html#over-mij" class="mobile-nav-link">Over mij</a>
+          <a href="index.html#faq" class="mobile-nav-link">FAQ</a>
+          <a href="index.html#contact" class="btn btn--orange" style="width: 100%; margin-top: 0.5rem;">
+            <span>Project bespreken</span>
+          </a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <!-- Content -->
-  <main class="py-12 sm:py-16">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-surface p-6 sm:p-10 rounded-2xl border border-border shadow-card space-y-7">
-        <div class="border-b border-border pb-5">
-          <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Juridisch & Privacy</span>
-          <h1 class="mt-1 text-2xl sm:text-3xl font-extrabold text-navy tracking-tight">Privacyverklaring</h1>
-          <p class="mt-1.5 text-xs sm:text-sm text-muted">Laatst bijgewerkt: oktober 2026 • Volledig conform de Algemene Verordening Gegevensbescherming (AVG / GDPR)</p>
+  <!-- ================= MAIN LEGAL CONTENT ================= -->
+  <main class="section">
+    <div class="container" style="max-width: 780px;">
+      <div style="margin-bottom: 1.25rem;">
+        <a href="index.html" style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 700; color: var(--navy-light);">
+          ← Terug naar de hoofdpagina
+        </a>
+      </div>
+
+      <article class="pillar-card" style="gap: 1.75rem; padding: clamp(1.5rem, 3.5vw, 2.5rem);">
+        <div style="border-bottom: 1px solid var(--border-solid); padding-bottom: 1.25rem;">
+          <span class="section-label">Juridisch &amp; Privacy</span>
+          <h1 class="section-title" style="margin-top: 0.5rem;">Privacyverklaring</h1>
+          <p style="margin-top: 0.4rem; font-size: 0.82rem; color: var(--muted);">
+            Laatst bijgewerkt: november 2026 • Volledig conform de Algemene Verordening Gegevensbescherming (AVG / GDPR)
+          </p>
         </div>
 
-        <section class="space-y-3 text-sm text-muted leading-relaxed">
-          <h2 class="text-lg sm:text-xl font-bold text-navy">1. Wie ben ik en bedrijfsgegevens</h2>
+        <section style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--muted); line-height: 1.65;">
+          <h2 style="font-size: 1.18rem; color: var(--navy);">1. Wie ben ik en bedrijfsgegevens</h2>
           <p>
-            Bruggeman Digital hecht de hoogste waarde aan de bescherming van jouw persoonsgegevens. Ik verwerk uitsluitend gegevens die noodzakelijk zijn voor het uitvoeren van mijn dienstverlening en maak op deze website <strong>geen gebruik van tracking-cookies, advertentiepixels of tracking-scripts van derden</strong>.
+            Bruggeman Digital hecht grote waarde aan de bescherming van jouw persoons- en bedrijfsgegevens. Ik verwerk uitsluitend gegevens die noodzakelijk zijn voor het uitvoeren van mijn dienstverlening (AI-toepassingen, procesautomatisering, websites, webapplicaties en dashboards) en maak op deze website <strong style="color: var(--navy);">geen gebruik van tracking-cookies, advertentiepixels of tracking-scripts van derden</strong>.
           </p>
-          <ul class="list-disc pl-5 space-y-1.5 text-navy font-semibold text-xs sm:text-sm">
+          <ul style="padding-left: 1.25rem; list-style: disc; color: var(--navy); font-weight: 600; font-size: 0.86rem; display: flex; flex-direction: column; gap: 0.3rem;">
             <li><strong>Handelsnaam:</strong> Bruggeman Digital</li>
-            <li><strong>Rechtsvorm & Eigenaar:</strong> Eenmanszaak van Sander Bruggeman</li>
-            <li><strong>Kamer van Koophandel (KVK):</strong> 42082488</li>
+            <li><strong>Rechtsvorm &amp; Eigenaar:</strong> Eenmanszaak van Sander Bruggeman</li>
+            <li><strong>Kamer van Koophandel (KVK):</strong> 42082488 (SBI 62100 &amp; 62200)</li>
             <li><strong>Btw-identificatienummer:</strong> NL005480999B44</li>
             <li><strong>Vestigingsadres:</strong> Strandweg 24B, 3151HV Hoek van Holland (Nederland)</li>
-            <li><strong>E-mailadres:</strong> <a href="mailto:srabruggeman@gmail.com" class="text-orange underline hover:text-orange-hover">srabruggeman@gmail.com</a></li>
-            <li><strong>WhatsApp:</strong> <a href="https://wa.me/31619588717" target="_blank" rel="noopener noreferrer" class="text-orange underline hover:text-orange-hover">+31 6 19588717</a></li>
+            <li><strong>E-mailadres:</strong> <a href="mailto:srabruggeman@gmail.com" style="color: var(--orange); text-decoration: underline;">srabruggeman@gmail.com</a></li>
+            <li><strong>WhatsApp:</strong> <a href="https://wa.me/31619588717" target="_blank" rel="noopener noreferrer" style="color: var(--orange); text-decoration: underline;">+31 6 19588717</a></li>
           </ul>
         </section>
 
-        <section class="space-y-3 text-sm text-muted leading-relaxed">
-          <h2 class="text-lg sm:text-xl font-bold text-navy">2. Welke persoonsgegevens verwerk ik en waarom?</h2>
-          <p>Ik verwerk alleen persoonsgegevens die je zelf actief aan mij verstrekt wanneer je contact opneemt via het contactformulier, e-mail, WhatsApp of LinkedIn, of wanneer er een zakelijke overeenkomst tot stand komt:</p>
-          <ul class="list-disc pl-5 space-y-1 text-navy font-medium text-xs sm:text-sm">
+        <section style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--muted); line-height: 1.65;">
+          <h2 style="font-size: 1.18rem; color: var(--navy);">2. Welke persoonsgegevens verwerk ik en waarom?</h2>
+          <p>
+            Ik verwerk alleen persoonsgegevens die je zelf actief aan mij verstrekt wanneer je contact opneemt via het contactformulier, e-mail, WhatsApp of LinkedIn, of wanneer er een zakelijke overeenkomst tot stand komt:
+          </p>
+          <ul style="padding-left: 1.25rem; list-style: disc; color: var(--navy); font-weight: 500; font-size: 0.86rem; display: flex; flex-direction: column; gap: 0.25rem;">
             <li>Voor- en achternaam en eventuele bedrijfsnaam</li>
             <li>E-mailadres en telefoonnummer</li>
             <li>De inhoud van jouw projectaanvraag of vraag</li>
             <li>Facturatie-, adres- en bankgegevens (uitsluitend bij een formele opdracht)</li>
           </ul>
-          <p>
-            <strong>Wettelijke grondslagen (artikel 6 lid 1 AVG):</strong>
-          </p>
-          <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm">
+          <p><strong style="color: var(--navy);">Wettelijke grondslagen (artikel 6 lid 1 AVG):</strong></p>
+          <ul style="padding-left: 1.25rem; list-style: disc; font-size: 0.86rem; display: flex; flex-direction: column; gap: 0.25rem;">
             <li><strong>Toestemming (sub a):</strong> Voor het beantwoorden van berichten die je via het contactformulier verstuurt.</li>
-            <li><strong>Noodzakelijk voor de uitvoering van een overeenkomst (sub b):</strong> Voor het opstellen van offertes en het realiseren van websiteprojecten.</li>
-            <li><strong>Wettelijke verplichting (sub c):</strong> Voor het naleven van de wettelijke fiscale administratieplicht van de Belastingdienst (artikel 52 Algemene wet inzake rijksbelastingen).</li>
+            <li><strong>Uitvoering van een overeenkomst (sub b):</strong> Voor het opstellen van offertes en het realiseren van AI-, automatiserings-, web- of dashboardprojecten.</li>
+            <li><strong>Wettelijke verplichting (sub c):</strong> Voor het naleven van de wettelijke fiscale administratieplicht van de Belastingdienst (artikel 52 AWR).</li>
           </ul>
         </section>
 
-        <section class="space-y-3 text-sm text-muted leading-relaxed">
-          <h2 class="text-lg sm:text-xl font-bold text-navy">3. Geen tracking-cookies (Cookie-wetgeving & AVG)</h2>
+        <section style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--muted); line-height: 1.65;">
+          <h2 style="font-size: 1.18rem; color: var(--navy);">3. Dataprivacy &amp; Eigendom bij Projecten</h2>
+          <p>
+            Wanneer Bruggeman Digital een AI-toepassing, automatiseringsworkflow, website of dashboard voor jouw bedrijf inricht, gebeurt dit rechtstreeks op de eigen accounts en cloud-omgevingen van de opdrachtgever. Zakelijke API-koppelingen (zoals Anthropic Claude, Google Gemini en OpenAI) en cloud-omgevingen worden zodanig geconfigureerd dat bedrijfsdata van de klant niet wordt gebruikt om publieke AI-modellen te trainen.
+          </p>
+        </section>
+
+        <section style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--muted); line-height: 1.65;">
+          <h2 style="font-size: 1.18rem; color: var(--navy);">4. Geen tracking-cookies (Cookie-wetgeving &amp; AVG)</h2>
           <p>
             Deze website is volledig cookie-vrij op het gebied van tracking en advertenties. Er worden géén marketingcookies, Google Analytics trackers of social-media pixels geplaatst. Een cookiemelding is daarom conform de Telecommunicatiewet en AVG-richtlijnen niet van toepassing.
           </p>
         </section>
 
-        <section class="space-y-3 text-sm text-muted leading-relaxed">
-          <h2 class="text-lg sm:text-xl font-bold text-navy">4. Delen met derden (Verwerkers)</h2>
-          <p>Persoonsgegevens worden nooit verkocht of voor marketingdoeleinden aan derden verstrekt. Voor de technische hosting en formulierafhandeling maak ik uitsluitend gebruik van betrouwbare partijen:</p>
-          <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm">
+        <section style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--muted); line-height: 1.65;">
+          <h2 style="font-size: 1.18rem; color: var(--navy);">5. Delen met derden (Verwerkers)</h2>
+          <p>
+            Persoonsgegevens worden nooit verkocht of voor marketingdoeleinden aan derden verstrekt. Voor de technische hosting en formulierafhandeling maak ik uitsluitend gebruik van betrouwbare partijen:
+          </p>
+          <ul style="padding-left: 1.25rem; list-style: disc; font-size: 0.86rem; display: flex; flex-direction: column; gap: 0.25rem;">
             <li><strong>GitHub Pages (GitHub Inc.):</strong> Voor de statische hosting via beveiligde HTTPS-verbinding (verwerkt uitsluitend technische serverlogs).</li>
-            <li><strong>FormSubmit.co & Google (Gmail):</strong> Voor het veilig transporteren en ontvangen van berichten uit het contactformulier.</li>
-            <li><strong>WhatsApp (Meta) & LinkedIn:</strong> Uitsluitend wanneer je er zelf actief voor kiest om mij via deze communicatiekanalen te benaderen.</li>
+            <li><strong>FormSubmit.co &amp; Google (Gmail):</strong> Voor het veilig transporteren en ontvangen van berichten uit het contactformulier.</li>
+            <li><strong>WhatsApp (Meta) &amp; LinkedIn:</strong> Uitsluitend wanneer je er zelf actief voor kiest om mij via deze communicatiekanalen te benaderen.</li>
           </ul>
         </section>
 
-        <section class="space-y-3 text-sm text-muted leading-relaxed">
-          <h2 class="text-lg sm:text-xl font-bold text-navy">5. Bewaartermijnen</h2>
+        <section style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--muted); line-height: 1.65;">
+          <h2 style="font-size: 1.18rem; color: var(--navy);">6. Bewaartermijnen &amp; Jouw privacyrechten onder de AVG</h2>
           <p>
             Contactaanvragen en correspondentie zonder vervolgopdracht worden uiterlijk binnen 1 jaar na het laatste contactmoment verwijderd. Klantgegevens en factuuradministratie worden conform de wettelijke fiscale bewaartermijn van de Belastingdienst 7 jaar bewaard.
           </p>
-        </section>
-
-        <section class="space-y-3 text-sm text-muted leading-relaxed">
-          <h2 class="text-lg sm:text-xl font-bold text-navy">6. Jouw privacyrechten onder de AVG</h2>
           <p>
-            Onder de AVG heb je recht op:
-          </p>
-          <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm">
-            <li>Inzage in jouw opgeslagen persoonsgegevens (art. 15 AVG);</li>
-            <li>Correctie of aanvulling van onjuiste gegevens (art. 16 AVG);</li>
-            <li>Verwijdering van gegevens wanneer deze niet langer nodig zijn (art. 17 AVG);</li>
-            <li>Beperking van de gegevensverwerking (art. 18 AVG);</li>
-            <li>Dataportabiliteit / overdraagbaarheid (art. 20 AVG);</li>
-            <li>Bezwaar tegen gegevensverwerking (art. 21 AVG);</li>
-            <li>Het indienen van een klacht bij de toezichthouder: de <strong>Autoriteit Persoonsgegevens (AP)</strong>.</li>
-          </ul>
-          <p>
-            Voor vragen of uitoefening van jouw rechten kun je te allen tijde contact opnemen via <a href="mailto:srabruggeman@gmail.com" class="text-orange underline hover:text-orange-hover">srabruggeman@gmail.com</a>.
+            Onder de AVG heb je recht op inzage, correctie, verwijdering, beperking, dataportabiliteit en bezwaar, evenals het indienen van een klacht bij de <strong>Autoriteit Persoonsgegevens (AP)</strong>. Neem voor vragen contact op via <a href="mailto:srabruggeman@gmail.com" style="color: var(--orange); text-decoration: underline;">srabruggeman@gmail.com</a>.
           </p>
         </section>
-      </div>
+      </article>
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-bg border-t border-border py-10 sm:py-12">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
-      <div class="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 text-center sm:text-left">
-        <div class="flex items-center justify-center sm:justify-start gap-2">
-          <img src="logo.svg" alt="Bruggeman Digital" class="h-6 w-auto" onerror="this.style.display='none'" />
+  <!-- ================= DEEP NAVY FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="footer-brand" aria-label="Bruggeman Digital">
+            <img src="assets/brand-mark-footer.svg" alt="" width="28" height="28" />
+            <span>Bruggeman <span style="font-weight: 400;">Digital</span><span style="color: var(--orange);">.</span></span>
+          </a>
+          <p style="margin-top: 0.75rem; max-width: 42ch;">
+            Praktische digitale partner voor zelfstandigen en het MKB. Heldere afspraken vooraf &amp; gewoon in eigen beheer.
+          </p>
+          <p class="mono" style="margin-top: 0.65rem; font-size: 0.74rem; color: #94A3B8;">
+            Strandweg 24B, 3151HV Hoek van Holland • KVK: 42082488 • Btw: NL005480999B44
+          </p>
         </div>
-        <span>Strandweg 24B, 3151HV Hoek van Holland • KVK: 42082488 • Btw-id: NL005480999B44</span>
+
+        <div>
+          <p class="footer-title">Navigatie</p>
+          <ul class="footer-list">
+            <li><a href="index.html#diensten">Diensten</a></li>
+            <li><a href="index.html#prijzen">Richtprijzen &amp; Trajecten</a></li>
+            <li><a href="index.html#werk">Werk &amp; Voorbeelden</a></li>
+            <li><a href="index.html#werkwijze">Werkwijze</a></li>
+            <li><a href="index.html#over-mij">Over Sander</a></li>
+            <li><a href="index.html#faq">Veelgestelde vragen</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-title">Contact</p>
+          <ul class="footer-list">
+            <li><a href="mailto:srabruggeman@gmail.com">srabruggeman@gmail.com</a></li>
+            <li><a href="https://wa.me/31619588717" target="_blank" rel="noopener noreferrer">WhatsApp: +31 6 19588717</a></li>
+            <li><a href="https://www.linkedin.com/in/sander-bruggeman-415596197/" target="_blank" rel="noopener noreferrer">LinkedIn — Sander Bruggeman</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="flex items-center gap-6 font-semibold">
-        <a href="index.html" class="hover:text-navy underline underline-offset-4">Home</a>
-        <a href="algemene-voorwaarden.html" class="hover:text-navy underline underline-offset-4">Algemene Voorwaarden</a>
+
+      <div class="footer-bottom">
+        <p>© 2026 Bruggeman Digital • Alle tarieven excl. 21% btw</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.65rem 1.25rem;">
+          <a href="privacy.html" style="color: #FFFFFF; font-weight: 600;">Privacyverklaring</a>
+          <a href="algemene-voorwaarden.html">Algemene Voorwaarden</a>
+          <a href="llms.txt" class="mono">llms.txt</a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>

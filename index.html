@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="nl" class="scroll-smooth">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- Primary SEO Meta Tags -->
-  <title>WordPress Bedrijfswebsite Laten Maken | Bruggeman Digital</title>
-  <meta name="description" content="Professionele WordPress-bedrijfswebsite laten maken voor jouw bedrijf? Vaste investering (€ 2.000,- ex. btw), 100% jouw eigendom en géén verplicht maandabonnement. Bekijk mijn werk & richtprijzen." />
+
+  <!-- Primary SEO & GEO Meta Tags -->
+  <title>Bruggeman Digital | AI, Automatisering, Websites & Dashboards voor Ondernemers & MKB</title>
+  <meta name="description" content="Praktische digitale oplossingen voor zelfstandigen en het MKB. Hulp bij AI-toepassingen, procesautomatisering (o.a. n8n), websites, webapps en dashboards. Duidelijke prijsafspraak vooraf & in eigen beheer." />
   <meta name="author" content="Sander Bruggeman - Bruggeman Digital" />
-  <meta name="keywords" content="WordPress website laten maken, bedrijfswebsite laten maken, freelance WordPress specialist, WordPress MKB, website zonder abonnement, Bruggeman Digital" />
+  <meta name="keywords" content="AI automatisering MKB, procesautomatisering zelfstandigen en MKB, n8n ervaring Nederland, WordPress website laten maken, Looker Studio dashboard, webapplicatie op maat, Digital Partner MKB Rotterdam, Amsterdam, Utrecht, Randstad, Bruggeman Digital" />
   <link rel="canonical" href="https://www.bruggemandigital.nl/" />
+
+  <!-- Geo & Local Business Meta -->
+  <meta name="geo.region" content="NL-ZH" />
+  <meta name="geo.placename" content="Rotterdam, Randstad, Nederland" />
 
   <!-- Favicon & Touch Icons -->
   <link rel="icon" href="favicon.ico" sizes="32x32" />
@@ -23,143 +27,140 @@
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.bruggemandigital.nl/" />
-  <meta property="og:title" content="WordPress Bedrijfswebsite Laten Maken | Bruggeman Digital" />
-  <meta property="og:description" content="Professionele WordPress-bedrijfswebsites voor het MKB. Vaste investering, 100% eigendom op jouw eigen hosting en géén verplichte maandcontracten." />
-  <meta property="og:image" content="https://www.bruggemandigital.nl/assets/fruvyland-screenshot.png" />
+  <meta property="og:title" content="Bruggeman Digital | AI, Automatisering, Websites & Dashboards" />
+  <meta property="og:description" content="Praktische AI-toepassingen, automatiseringen, websites en dashboards voor zelfstandigen en het MKB. Heldere prijsafspraak vooraf, zonder verplichte maandcontracten." />
+  <meta property="og:image" content="https://www.bruggemandigital.nl/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="nl_NL" />
   <meta property="og:site_name" content="Bruggeman Digital" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://www.bruggemandigital.nl/" />
-  <meta name="twitter:title" content="WordPress Bedrijfswebsite Laten Maken | Bruggeman Digital" />
-  <meta name="twitter:description" content="Professionele WordPress-bedrijfswebsites voor het MKB. Vaste investering, 100% eigendom en geen maandabonnement." />
-  <meta name="twitter:image" content="https://www.bruggemandigital.nl/assets/fruvyland-screenshot.png" />
+  <meta name="twitter:title" content="Bruggeman Digital | Digital Partner voor Ondernemers & MKB" />
+  <meta name="twitter:description" content="Praktische AI-automatisering, weboplossingen en dashboards. Heldere afspraken vooraf & gewoon in eigen beheer." />
+  <meta name="twitter:image" content="https://www.bruggemandigital.nl/assets/og-image.png" />
 
-  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- LLM Discovery Link -->
+  <link rel="alternate" type="text/plain" href="https://www.bruggemandigital.nl/llms.txt" title="LLMs Context & Pricing Documentation" />
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: {
-              DEFAULT: '#13294B',
-              dark: '#0B1B33',
-              deep: '#071324',
-              light: '#1E3A66',
-              surface: '#F4F7FB'
-            },
-            orange: {
-              DEFAULT: '#FF6A2B',
-              hover: '#E85819',
-              dark: '#D94B0E',
-              light: '#FFF3EC',
-              border: '#FED7C3'
-            },
-            bg: '#F7F6F3',
-            surface: '#FFFFFF',
-            fg: '#17191C',
-            muted: '#5C616B',
-            border: '#E4E2DD'
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          },
-          boxShadow: {
-            'soft': '0 2px 15px -3px rgba(19, 41, 75, 0.05), 0 4px 6px -2px rgba(19, 41, 75, 0.03)',
-            'card': '0 10px 25px -5px rgba(19, 41, 75, 0.06), 0 8px 10px -6px rgba(19, 41, 75, 0.04)',
-            'elevated': '0 20px 35px -8px rgba(19, 41, 75, 0.10), 0 10px 15px -5px rgba(19, 41, 75, 0.05)',
-            'orange-sm': '0 4px 14px 0 rgba(255, 106, 43, 0.25)',
-            'orange-glow': '0 10px 25px -4px rgba(255, 106, 43, 0.35)',
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Google Fonts: Plus Jakarta Sans, Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
-  <style>
-    body {
-      background-color: #F7F6F3;
-      color: #17191C;
-      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-    }
-    .bg-grid-pattern {
-      background-image: radial-gradient(#D5D2CD 1px, transparent 1px);
-      background-size: 24px 24px;
-    }
-    details > summary {
-      list-style: none;
-    }
-    details > summary::-webkit-details-marker {
-      display: none;
-    }
-  </style>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 
-  <!-- Structured Data (JSON-LD) -->
+  <!-- Rich JSON-LD Structured Data (@graph) for SEO & Generative Engine Optimization (GEO) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "ProfessionalService",
+        "@type": ["ProfessionalService", "LocalBusiness"],
         "@id": "https://www.bruggemandigital.nl/#organization",
         "name": "Bruggeman Digital",
-        "url": "https://www.bruggemandigital.nl",
-        "logo": "https://www.bruggemandigital.nl/logo.svg",
+        "alternateName": "Bruggeman Digital — Digital Partner voor Ondernemers & MKB",
+        "url": "https://www.bruggemandigital.nl/",
+        "logo": "https://www.bruggemandigital.nl/favicon.svg",
         "image": "https://www.bruggemandigital.nl/assets/sander-portrait.jpg",
-        "description": "Freelance specialist in professionele WordPress-bedrijfswebsites en digitale maatwerkprojecten voor het MKB zonder verplichte maandelijkse onderhoudscontracten.",
+        "description": "Digital Partner voor zelfstandigen en het MKB in Nederland. Ontwerp en bouw van praktische AI-toepassingen, procesautomatisering, websites, webapplicaties en dashboards. Ingericht op eigen accounts zonder verplichte maandabonnementen.",
         "founder": {
-          "@type": "Person",
-          "name": "Sander Bruggeman",
-          "sameAs": ["https://www.linkedin.com/in/sander-bruggeman-415596197/"]
+          "@id": "https://www.bruggemandigital.nl/#sander-bruggeman"
         },
-        "priceRange": "€€",
+        "priceRange": "€1250 - €2000",
         "currenciesAccepted": "EUR",
         "paymentAccepted": "Factuur, Bankoverschrijving",
         "email": "srabruggeman@gmail.com",
+        "telephone": "+31619588717",
         "vatID": "NL005480999B44",
+        "iso6523Code": "0106:42082488",
+        "isicV4": "6201, 6202",
+        "knowsLanguage": ["nl", "en"],
+        "knowsAbout": [
+          "AI-toepassingen & integraties",
+          "Procesautomatisering",
+          "Web development & webapplicaties",
+          "Business dashboards & data-overzichten",
+          "Claude AI",
+          "Google Gemini",
+          "ChatGPT / OpenAI",
+          "n8n",
+          "WordPress",
+          "Lovable",
+          "GitHub",
+          "Google Looker Studio",
+          "Microsoft Excel & Google Sheets",
+          "Google Cloud & Microsoft Azure"
+        ],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Strandweg 24B",
           "postalCode": "3151HV",
           "addressLocality": "Hoek van Holland",
+          "addressRegion": "Zuid-Holland",
           "addressCountry": "NL"
         },
-        "areaServed": {
-          "@type": "Country",
-          "name": "Nederland"
-        },
+        "areaServed": [
+          { "@type": "City", "name": "Rotterdam" },
+          { "@type": "City", "name": "Amsterdam" },
+          { "@type": "City", "name": "Utrecht" },
+          { "@type": "AdministrativeArea", "name": "Randstad" },
+          { "@type": "Country", "name": "Nederland" }
+        ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "WordPress Diensten",
+          "@id": "https://www.bruggemandigital.nl/#offercatalog",
+          "name": "Richtprijzen, Projecttrajecten & Maatwerk",
           "itemListElement": [
             {
               "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "All-In WordPress Bedrijfswebsite",
-                "description": "Complete bedrijfswebsite in WordPress inclusief maatwerk ontwerp, mobiele optimalisatie, SEO-basis en livegang op eigen hosting."
-              },
+              "name": "AI & Automatisering Sprint (richtprijs)",
+              "description": "Het automatiseren of slim koppelen van een concreet werkproces (bijv. met AI of workflow-automatisering zoals n8n), ingericht op je eigen accounts inclusief overdracht.",
+              "price": "1750.00",
+              "priceCurrency": "EUR"
+            },
+            {
+              "@type": "Offer",
+              "name": "All-In Bedrijfswebsite of Webapp (richtprijs)",
+              "description": "Compleet verzorgde bedrijfswebsite (bijv. in WordPress) of een webapplicatie op maat, mobielvriendelijk en opgeleverd op je eigen domein en hosting.",
               "price": "2000.00",
               "priceCurrency": "EUR"
             },
             {
               "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "WordPress Maatwerk & Digitale Projecten",
-                "description": "Maatwerk webapplicaties, technische optimalisatie en digitale concepten voor zakelijke opdrachtgevers."
-              }
+              "name": "Data & KPI Dashboard Setup (richtprijs)",
+              "description": "Overzichtelijk dashboard (bijv. in Looker Studio) dat je bestaande spreadsheets of databronnen bundelt tot heldere stuurinformatie.",
+              "price": "1250.00",
+              "priceCurrency": "EUR"
+            },
+            {
+              "@type": "Offer",
+              "name": "Maatwerk & Flexibele Ondersteuning op Afroep",
+              "description": "Prijsafspraak vooraf voor kleinere of grotere vraagstukken, of flexibele hulp op afroep tegen een uurtarief van € 75,- ex. btw zonder verplicht abonnement.",
+              "price": "75.00",
+              "priceCurrency": "EUR"
             }
           ]
         }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.bruggemandigital.nl/#sander-bruggeman",
+        "name": "Sander Bruggeman",
+        "jobTitle": "AI Automation Builder & Oprichter Bruggeman Digital",
+        "image": "https://www.bruggemandigital.nl/assets/sander-portrait.jpg",
+        "url": "https://www.bruggemandigital.nl/",
+        "worksFor": [
+          { "@id": "https://www.bruggemandigital.nl/#organization" },
+          { "@type": "Organization", "name": "Nmbrs" }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/sander-bruggeman-415596197/"
+        ],
+        "knowsLanguage": ["nl", "en"]
       },
       {
         "@type": "FAQPage",
@@ -167,26 +168,42 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Hoe werkt het beheer en de hosting na oplevering?",
+            "name": "Zit ik vast aan specifieke software of een standaardpakket?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "De website wordt geïnstalleerd op jouw eigen hostingpakket en domeinnaam. Daardoor staat het abonnement rechtstreeks op naam van jouw bedrijf en betaal je enkel de reguliere hostingkosten aan de provider (meestal enkele euro's per maand). Heb je nog geen hosting? Dan adviseer ik je graag en richt ik dit volledig voor je in."
+              "text": "Nee. De genoemde tools (zoals n8n, WordPress of Looker Studio) zijn voorbeelden waar ik veel ervaring mee heb. We kijken altijd eerst naar jouw vraagstuk en de software die je al gebruikt, en kiezen samen een oplossing die daarbij past."
             }
           },
           {
             "@type": "Question",
-            "name": "Waarom werk je zonder verplichte onderhoudsabonnementen?",
+            "name": "Hoe werkt het eigendom en beheer na oplevering?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Een degelijk opgebouwde WordPress-website met een schone technische basis heeft geen duur maandelijks onderhoudscontract nodig. Je betaalt eenmalig voor de ontwikkeling en bent daarna 100% eigenaar en volledig vrij."
+              "text": "Ik richt de oplossing in op jouw eigen accounts en domeinnaam (of help je bij het aanmaken daarvan). Na oplevering heb je zelf alle inloggegevens en beheerdersrechten."
             }
           },
           {
             "@type": "Question",
-            "name": "Kan ik later wel bij je terecht voor aanpassingen of uitbreidingen?",
+            "name": "Waarom werk je zonder verplichte maandelijkse onderhoudsabonnementen?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Uiteraard. Teksten en afbeeldingen kun je eenvoudig zelf wijzigen in WordPress. Wil je op termijn een nieuwe pagina, extra functionaliteit of technische ondersteuning? Dan kun je mij altijd flexibel op afroep- of projectbasis inschakelen."
+              "text": "Voor de meeste zelfstandigen en MKB-bedrijven is een vast maandelijks bureaucontract helemaal niet nodig. Je betaalt voor het bouwen en opleveren, en schakelt mij daarna alleen in wanneer je echt iets wilt aanpassen of uitbreiden."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hoe zit het met privacy bij het gebruik van AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Wanneer we AI koppelen aan bedrijfsprocessen, gebruiken we zakelijke API-omgevingen zodat je gegevens netjes afgeschermd blijven en niet worden gebruikt om openbare modellen te trainen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan ik je ook inschakelen voor een kleiner vraagstuk of aanpassing achteraf?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Zeker. Niet elke vraag past in een vast pakket. We kunnen vooraf een passende prijs afspreken, of ik help je flexibel op uurtarief (€ 75,- ex. btw per uur)."
             }
           }
         ]
@@ -195,662 +212,1015 @@
   }
   </script>
 </head>
-<body class="antialiased selection:bg-orange selection:text-white">
+<body id="top">
 
-  <!-- ================= HEADER / NAVIGATIE ================= -->
-  <header class="sticky top-0 z-50 bg-bg/90 backdrop-blur-md border-b border-border">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-18 flex items-center justify-between">
-      <!-- Logo: logo.svg bevat al het beeldmerk en de typografie 'Bruggeman Digital' -->
-      <a href="#" class="flex items-center group" aria-label="Bruggeman Digital">
-        <img src="logo.svg" alt="Bruggeman Digital" class="h-7 md:h-8 w-auto object-contain transition-opacity group-hover:opacity-90" onerror="this.style.display='none'" />
+  <!-- ================= 1. HEADER / NAVIGATIE ================= -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="#top" class="header-brand" aria-label="Bruggeman Digital">
+        <img src="assets/brand-mark-header.svg" alt="" width="28" height="28" />
+        <span>Bruggeman <span style="font-weight: 400;">Digital</span><span style="color: var(--orange);">.</span></span>
       </a>
 
-      <!-- Desktop Menu -->
-      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-muted">
-        <a href="#werk" class="hover:text-navy transition-colors">Werk</a>
-        <a href="#aanpak" class="hover:text-navy transition-colors">Aanpak</a>
-        <a href="#investering" class="hover:text-navy transition-colors">Investering</a>
-        <a href="#over-mij" class="hover:text-navy transition-colors">Over mij</a>
-        <a href="#faq" class="hover:text-navy transition-colors">FAQ</a>
+      <nav class="nav-links" aria-label="Hoofdnavigatie">
+        <a href="#diensten" class="nav-link">Diensten</a>
+        <a href="#prijzen" class="nav-link">Prijzen</a>
+        <a href="#werk" class="nav-link">Werk</a>
+        <a href="#werkwijze" class="nav-link">Werkwijze</a>
+        <a href="#over-mij" class="nav-link">Over mij</a>
+        <a href="#faq" class="nav-link">FAQ</a>
       </nav>
 
-      <!-- CTA Knop in Brand Orange -->
-      <div class="hidden md:flex items-center">
-        <a href="#contact" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-orange hover:bg-orange-hover rounded-xl shadow-orange-sm hover:shadow-orange-glow hover:-translate-y-0.5 transition-all whitespace-nowrap">
-          <span>Contact opnemen</span>
-          <svg class="w-4 h-4 ml-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn--orange">
+          <span>Project bespreken</span>
+          <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
       </div>
 
-      <!-- Mobiele Menu Knop -->
-      <button id="mobile-menu-btn" aria-label="Menu openen" class="md:hidden p-2.5 rounded-xl text-navy hover:bg-border/40 border border-border">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <button id="mobile-menu-btn" aria-label="Menu openen" aria-expanded="false" aria-controls="mobile-menu" class="mobile-menu-toggle">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
     </div>
 
-    <!-- Mobiel Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-bg border-b border-border px-4 pt-3 pb-6 space-y-3 shadow-lg">
-      <a href="#werk" class="block py-2 text-base font-semibold text-navy hover:text-orange">Werk</a>
-      <a href="#aanpak" class="block py-2 text-base font-semibold text-navy hover:text-orange">Aanpak</a>
-      <a href="#investering" class="block py-2 text-base font-semibold text-navy hover:text-orange">Investering</a>
-      <a href="#over-mij" class="block py-2 text-base font-semibold text-navy hover:text-orange">Over mij</a>
-      <a href="#faq" class="block py-2 text-base font-semibold text-navy hover:text-orange">Veelgestelde vragen</a>
-      <a href="#contact" class="block w-full text-center py-3 mt-2 text-base font-bold text-white bg-orange hover:bg-orange-hover rounded-xl shadow-orange-sm">
-        Contact opnemen
-      </a>
+    <div id="mobile-menu" class="mobile-nav">
+      <div class="container">
+        <nav class="mobile-nav-list" aria-label="Mobiele navigatie">
+          <a href="#diensten" class="mobile-nav-link">Diensten</a>
+          <a href="#prijzen" class="mobile-nav-link">Richtprijzen &amp; Trajecten</a>
+          <a href="#werk" class="mobile-nav-link">Werk &amp; Voorbeelden</a>
+          <a href="#werkwijze" class="mobile-nav-link">Werkwijze</a>
+          <a href="#over-mij" class="mobile-nav-link">Over mij</a>
+          <a href="#faq" class="mobile-nav-link">FAQ</a>
+          <a href="#contact" class="btn btn--orange" style="width: 100%; margin-top: 0.5rem;">
+            <span>Project bespreken</span>
+          </a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main>
-    <!-- ================= HERO SECTIE (Typografisch, Ruimtelijk & Zakelijk) ================= -->
-    <section class="relative py-14 sm:py-18 lg:py-24 border-b border-border bg-grid-pattern overflow-hidden">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          
-          <!-- Linker Kolom: Propositie & CTA's (lg:col-span-7) -->
-          <div class="lg:col-span-7 space-y-5 sm:space-y-6">
-            
-            <!-- WordPress Specialisatie Tag met Brand Orange accent -->
-            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface border border-border shadow-soft">
-              <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#21759B]/10 text-[#21759B]">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12.002 2.002c-5.514 0-9.998 4.486-9.998 9.998 0 5.514 4.484 10 9.998 10 5.514 0 9.998-4.486 9.998-10 0-5.512-4.484-9.998-9.998-9.998zm-8.694 9.998c0-1.26.27-2.456.753-3.537l4.15 11.37c-2.893-1.404-4.903-4.382-4.903-7.833zm8.694 8.694c-.852 0-1.676-.126-2.455-.356l2.607-7.571 2.671 7.319c.018.043.041.08.066.115-.892.317-1.852.493-2.889.493zm1.196-12.765c.523-.027.994-.082.994-.082.468-.055.413-.742-.055-.715 0 0-1.406.11-2.313.11-.853 0-2.286-.11-2.286-.11-.468-.027-.523.688-.055.715 0 0 .442.055.91.082l1.351 3.704-1.898 5.691-3.158-9.395c.523-.027.994-.082.994-.082.468-.055.413-.742-.055-.715 0 0-1.406.11-2.313.11-.162 0-.354-.004-.557-.011 1.552-2.357 4.221-3.914 7.255-3.914 2.261 0 4.321.863 5.867 2.277-.038-.002-.073-.008-.112-.008-.853 0-1.458.742-1.458 1.54 0 .715.413 1.32.853 2.036.33.578.715 1.32.715 2.393 0 .743-.286 1.604-.66 2.806l-.866 2.892-3.162-9.419zm4.316 11.497l2.634-7.614c.492-1.23.655-2.212.655-3.09 0-.318-.021-.614-.06-.889.662 1.213 1.043 2.602 1.043 4.084 0 3.204-1.737 5.999-4.272 7.509z"/>
-                </svg>
-              </span>
-              <span class="text-xs font-bold uppercase tracking-wider text-navy">WordPress Specialist voor Bedrijven & MKB</span>
-              <span class="w-1.5 h-1.5 rounded-full bg-orange"></span>
+    <!-- ================= 2. HERO SECTIE ================= -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Linker Kolom -->
+          <div>
+            <div class="hero-eyebrow">
+              <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+              <span>Voor zelfstandigen &amp; MKB • Nederland</span>
             </div>
 
-            <!-- H1 Kop -->
-            <h1 class="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold tracking-tight text-navy leading-[1.28]">
-              Professionele bedrijfswebsites, <span class="text-orange relative inline-block">in volledig eigen beheer<span class="absolute left-0 bottom-1 w-full h-2 bg-orange/15 -z-10 rounded"></span></span>.
+            <h1 class="hero-title">
+              Slimme automatisering, websites en dashboards, <span class="hero-highlight">gewoon in eigen beheer</span>.
             </h1>
 
-            <!-- Subkop -->
-            <p class="text-base sm:text-lg text-muted leading-relaxed max-w-xl font-normal">
-              Ik ontwerp en ontwikkel snelle, verzorgde WordPress-websites voor het MKB. Een heldere eenmalige investering zonder verplichte onderhoudscontracten. Na oplevering is de website 100% jouw eigendom, op je eigen domein en hosting.
+            <p class="hero-lead">
+              Ik help ondernemers en het MKB met het praktisch inzetten van AI, het koppelen van werkprocessen, overzichtelijke websites en heldere dashboards. Afgestemd op hoe jij werkt, met een duidelijke prijsafspraak vooraf.
             </p>
 
-            <!-- CTA Knoppen -->
-            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-1">
-              <a href="#contact" class="inline-flex items-center justify-center px-6 py-3.5 text-sm sm:text-base font-bold text-white bg-orange hover:bg-orange-hover rounded-xl shadow-orange-sm hover:shadow-orange-glow hover:-translate-y-0.5 transition-all text-center">
-                Bespreek jouw project
-                <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            <div class="hero-ctas">
+              <a href="#contact" class="btn btn--orange btn--lg">
+                <span>Plan gratis gesprek (30 min)</span>
+                <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
-              <a href="#werk" class="inline-flex items-center justify-center px-5 py-3.5 text-sm sm:text-base font-semibold text-navy bg-surface hover:bg-border/30 border border-border shadow-soft transition-all text-center">
-                Bekijk geselecteerd werk ↓
+              <a href="#diensten" class="btn btn--surface btn--lg">
+                <span>Bekijk waarmee ik help ↓</span>
               </a>
             </div>
 
-            <!-- Kernpunten (Rustig, betrouwbaar en zakelijk) -->
-            <div class="pt-5 border-t border-border/80 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
-              <div class="flex items-center gap-2.5 bg-surface px-3.5 py-2.5 rounded-xl border border-border shadow-soft">
-                <span class="w-5 h-5 rounded-full bg-orange-light text-orange flex items-center justify-center shrink-0 font-bold text-xs">
-                  ✓
-                </span>
-                <div>
-                  <strong class="block text-navy font-bold">Vaste projectprijs</strong>
-                  <span class="text-muted text-xs">Geen onverwachte kosten</span>
-                </div>
-              </div>
-              <div class="flex items-center gap-2.5 bg-surface px-3.5 py-2.5 rounded-xl border border-border shadow-soft">
-                <span class="w-5 h-5 rounded-full bg-orange-light text-orange flex items-center justify-center shrink-0 font-bold text-xs">
-                  ✓
-                </span>
-                <div>
-                  <strong class="block text-navy font-bold">Vrije hostingkeuze</strong>
-                  <span class="text-muted text-xs">100% eigendom op eigen domein</span>
-                </div>
-              </div>
-              <div class="flex items-center gap-2.5 bg-surface px-3.5 py-2.5 rounded-xl border border-border shadow-soft">
-                <span class="w-5 h-5 rounded-full bg-orange-light text-orange flex items-center justify-center shrink-0 font-bold text-xs">
-                  ✓
-                </span>
-                <div>
-                  <strong class="block text-navy font-bold">Direct contact</strong>
-                  <span class="text-muted text-xs">Rechtstreeks met Sander</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Rechter Kolom: Merkillustratie & Zekerheden (lg:col-span-5) -->
-          <div class="lg:col-span-5 relative mt-6 lg:mt-0 flex justify-center">
-            <!-- Achtergrond gloed -->
-            <div class="absolute -inset-4 bg-gradient-to-tr from-orange/15 to-navy/10 rounded-3xl blur-2xl -z-10 opacity-70"></div>
-            
-            <div class="relative w-full max-w-sm sm:max-w-md bg-surface p-4 sm:p-5 rounded-2xl sm:rounded-3xl border border-border shadow-elevated">
-              
-              <!-- Bovenbalk: Duidelijke MKB-waarde (doorlooptijd & status) -->
-              <div class="flex items-center justify-between pb-3.5 mb-3 border-b border-border/80 text-xs">
-                <div class="flex items-center gap-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <span class="font-bold text-navy">Binnen 2 - 3 weken online</span>
-                </div>
-                <span class="font-mono text-[11px] font-semibold text-orange bg-orange-light px-2.5 py-0.5 rounded-full border border-orange/20">All-in service</span>
-              </div>
-
-              <!-- Illustratie container -->
-              <div class="relative rounded-xl sm:rounded-2xl overflow-hidden bg-[#FAF9F5] border border-border/50 p-2 sm:p-3 flex items-center justify-center">
-                <img 
-                  src="assets/hero-illustration.png" 
-                  alt="Bruggeman Digital - WordPress Systeem & Digitale Maatwerkoplossingen" 
-                  class="w-full h-auto max-h-[340px] object-contain transition-transform duration-500 hover:scale-[1.02]"
-                  loading="eager"
-                  width="1122" 
-                  height="1402"
-                />
-              </div>
-
-              <!-- Onderbalk: 100% Eigendom & Geen contract -->
-              <div class="pt-3.5 mt-3 border-t border-border/80 flex items-center justify-between text-xs">
-                <div class="flex items-center gap-1.5 font-bold text-navy">
-                  <span class="text-orange font-bold">✓</span>
-                  <span>100% Jouw eigendom</span>
-                </div>
-                <span class="text-muted text-[11px]">Géén maandelijks abonnement</span>
-              </div>
-
+            <div class="hero-checks">
+              <span class="hero-check-item"><span class="hero-check-icon">✓</span> Duidelijke afspraken vooraf</span>
+              <span class="hero-check-item"><span class="hero-check-icon">✓</span> Op je eigen accounts</span>
+              <span class="hero-check-item"><span class="hero-check-icon">✓</span> Rechtstreeks met Sander</span>
+              <span class="hero-check-item"><span class="hero-check-icon">✓</span> Geen verplichte contracten</span>
             </div>
           </div>
 
-        </div>
-      </div>
-    </section>
+          <!-- Rechter Kolom: Rustige, visuele hub-illustratie (100% vector, zonder tekst-drukte) -->
+          <div class="hero-visual-wrap">
+            <div class="hero-visual-backdrop"></div>
+            <div class="hero-hub-card" aria-label="Visueel overzicht: AI, Automatisering, Websites en Dashboards verbonden">
 
-    <!-- ================= GESELECTEERD WERK (SCHAALBAAR PORTFOLIO GRID) ================= -->
-    <section id="werk" class="py-14 sm:py-18 lg:py-20 border-b border-border bg-bg">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 gap-4">
-          <div>
-            <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Portfolio</span>
-            <h2 class="mt-1.5 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy tracking-tight">
-              Geselecteerd werk
-            </h2>
-          </div>
-          <p class="text-muted text-sm sm:text-base max-w-md">
-            Recente projecten ontworpen en technisch gerealiseerd voor zakelijke opdrachtgevers.
-          </p>
-        </div>
+              <!-- Verbindingslijnen (SVG) op de achtergrond -->
+              <svg class="hero-hub-lines" viewBox="0 0 470 392" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Subtiele cirkels rond het midden -->
+                <circle cx="235" cy="196" r="66" stroke="#D5E0F0" stroke-width="1.5" stroke-dasharray="4 4" />
+                <circle cx="235" cy="196" r="96" stroke="#E6EEF8" stroke-width="1" />
 
-        <!-- 
-          PORTFOLIO GRID (2 Kolommen)
-          Om later een nieuw project toe te voegen: kopieer het <article> blok van Fruvyland 
-          en vervang het tijdelijke placeholder-blok hieronder.
-        -->
-        <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
-          
-          <!-- PROJECT 1: FRUVYLAND -->
-          <article class="group bg-surface rounded-2xl border border-border overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-orange-border hover:shadow-card">
-            <div>
-              <div class="bg-bg p-5 sm:p-6 border-b border-border overflow-hidden">
-                <a 
-                  href="https://fruvyland.nl" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  class="block rounded-lg overflow-hidden border border-border shadow-soft bg-surface group/preview focus:outline-none focus:ring-2 focus:ring-orange/30"
-                  title="Bekijk de live website van Fruvyland (opent in een nieuw tabblad)"
-                >
-                  <div class="bg-navy-dark px-3 py-1.5 flex items-center justify-between border-b border-navy-light/40">
-                    <div class="flex items-center gap-1.5">
-                      <span class="w-2 h-2 rounded-full bg-red-400"></span>
-                      <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
-                      <span class="w-2 h-2 rounded-full bg-green-400"></span>
-                      <span class="text-[10px] text-white/70 font-mono ml-2">fruvyland.nl</span>
+                <!-- Vloeiende verbindingslijnen vanuit het midden naar de 4 kaarten -->
+                <path d="M 190 180 C 138 180, 112 174, 112 148" stroke="#13294B" stroke-width="2" stroke-linecap="round" opacity="0.32" />
+                <path d="M 280 180 C 332 180, 358 174, 358 148" stroke="#13294B" stroke-width="2" stroke-linecap="round" opacity="0.32" />
+                <path d="M 190 212 C 138 212, 112 218, 112 244" stroke="#13294B" stroke-width="2" stroke-linecap="round" opacity="0.32" />
+                <path d="M 280 212 C 332 212, 358 218, 358 244" stroke="#13294B" stroke-width="2" stroke-linecap="round" opacity="0.32" />
+
+                <!-- Oranje verbindingspunten -->
+                <circle cx="190" cy="180" r="4" fill="#FF6A2B" />
+                <circle cx="112" cy="148" r="4" fill="#FF6A2B" />
+
+                <circle cx="280" cy="180" r="4" fill="#FF6A2B" />
+                <circle cx="358" cy="148" r="4" fill="#FF6A2B" />
+
+                <circle cx="190" cy="212" r="4" fill="#FF6A2B" />
+                <circle cx="112" cy="244" r="4" fill="#FF6A2B" />
+
+                <circle cx="280" cy="212" r="4" fill="#FF6A2B" />
+                <circle cx="358" cy="244" r="4" fill="#FF6A2B" />
+              </svg>
+
+              <!-- 2x2 Grid van rustige visuele kaarten -->
+              <div class="hero-hub-grid">
+
+                <!-- 1. AI & Slimme Hulp -->
+                <div class="hh-node">
+                  <div class="hh-graphic hh-graphic--ai" aria-hidden="true">
+                    <div class="hh-ai-sparkle">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z" fill="#FF6A2B"/>
+                        <circle cx="19" cy="5" r="2" fill="#13294B"/>
+                      </svg>
                     </div>
-                    <span class="text-[10px] text-orange font-mono font-medium flex items-center gap-1 opacity-80 group-hover/preview:opacity-100 transition-opacity">
-                      <span>Live site</span> ↗
-                    </span>
+                    <div class="hh-mini-lines">
+                      <span class="w-80"></span>
+                      <span class="w-55"></span>
+                    </div>
                   </div>
-                  <img 
-                    src="assets/fruvyland-screenshot.png" 
-                    alt="Fruvyland bedrijfswebsite gerealiseerd door Bruggeman Digital" 
-                    class="w-full h-52 sm:h-60 object-cover object-top transition-transform duration-500 group-hover/preview:scale-[1.02]"
-                  />
-                </a>
-              </div>
-              <div class="p-5 sm:p-7">
-                <div class="flex flex-wrap gap-2 mb-3.5">
-                  <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-bg border border-border text-navy font-semibold">WordPress</span>
-                  <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-bg border border-border text-navy font-semibold">Maatwerk Design</span>
-                  <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-bg border border-border text-navy font-semibold">Performance</span>
+                  <span class="hh-label">AI-toepassingen</span>
                 </div>
-                <h3 class="text-xl sm:text-2xl font-extrabold text-navy">Fruvyland</h3>
-                <p class="mt-2 text-sm text-muted leading-relaxed">
-                  Ontwerp en technische realisatie van een nieuwe bedrijfswebsite in WordPress. Gericht op een professionele online presentatie, snelle laadtijden op mobiel en desktop, en eenvoudig eigen beheer op de hostingomgeving van de klant.
-                </p>
-              </div>
-            </div>
-            <div class="px-5 pb-5 sm:px-7 sm:pb-7 pt-0">
-              <div class="pt-4 border-t border-border/80 flex items-center justify-between">
-                <span class="text-xs font-mono text-muted">fruvyland.nl</span>
-                <a 
-                  href="https://fruvyland.nl" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  class="inline-flex items-center gap-1.5 text-sm font-bold text-orange hover:text-orange-hover transition-colors"
-                >
-                  <span>Bekijk live website</span>
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                </a>
-              </div>
-            </div>
-          </article>
 
-          <!-- PROJECT 2: PLACEHOLDER VOOR VOLGEND PROJECT -->
-          <article class="bg-surface/70 rounded-2xl border-2 border-dashed border-border p-6 sm:p-7 flex flex-col justify-between min-h-[320px] sm:min-h-[340px] hover:border-orange/50 transition-colors">
-            <div class="space-y-3.5">
-              <span class="font-mono text-xs px-3 py-1 rounded-full bg-surface border border-orange-border text-orange font-bold inline-block">
-                Beschikbaarheid: Nieuw project
-              </span>
-              <h3 class="text-xl sm:text-2xl font-extrabold text-navy">Ruimte voor een nieuw project</h3>
-              <p class="text-sm text-muted leading-relaxed">
-                Momenteel heb ik ruimte voor het aannemen van een nieuw websiteproject of digitaal maatwerktraject. Zoek je een betrouwbare partner voor het vernieuwen van je online presentatie?
-              </p>
-              <ul class="space-y-2 text-xs text-muted pt-1">
-                <li class="flex items-center gap-2">
-                  <span class="text-orange font-bold">✓</span> Korte doorlooptijd & directe oplevering
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-orange font-bold">✓</span> Vaste projectprijs vooraf afgestemd
-                </li>
-              </ul>
+                <!-- 2. Automatisering -->
+                <div class="hh-node">
+                  <div class="hh-graphic hh-graphic--flow" aria-hidden="true">
+                    <div class="hh-flow-nodes">
+                      <span class="hh-dot hh-dot--navy"></span>
+                      <span class="hh-line"></span>
+                      <span class="hh-dot hh-dot--orange"></span>
+                      <span class="hh-line"></span>
+                      <span class="hh-dot hh-dot--green">✓</span>
+                    </div>
+                    <div class="hh-mini-lines">
+                      <span class="w-70"></span>
+                      <span class="w-45"></span>
+                    </div>
+                  </div>
+                  <span class="hh-label">Automatisering</span>
+                </div>
+
+                <!-- 3. Websites & Apps -->
+                <div class="hh-node">
+                  <div class="hh-graphic hh-graphic--web" aria-hidden="true">
+                    <div class="hh-browser">
+                      <div class="hh-browser-top">
+                        <i></i><i></i><i></i>
+                      </div>
+                      <div class="hh-browser-body">
+                        <div class="hh-browser-hero"></div>
+                        <div class="hh-browser-btn"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="hh-label">Websites &amp; Apps</span>
+                </div>
+
+                <!-- 4. Dashboards & Inzicht -->
+                <div class="hh-node">
+                  <div class="hh-graphic hh-graphic--chart" aria-hidden="true">
+                    <div class="hh-bars">
+                      <span style="height: 38%"></span>
+                      <span style="height: 58%"></span>
+                      <span style="height: 48%"></span>
+                      <span class="hh-bar-accent" style="height: 92%"></span>
+                    </div>
+                  </div>
+                  <span class="hh-label">Dashboards</span>
+                </div>
+
+              </div>
+
+              <!-- Centraal Bruggeman Digital Icoon -->
+              <div class="hero-hub-center" aria-hidden="true">
+                <img src="assets/brand-mark-header.svg" alt="" width="76" height="76" />
+              </div>
+
             </div>
-            <div class="pt-5 border-t border-border/80 flex items-center justify-between">
-              <span class="text-xs font-mono text-muted">Volgende oplevering: jouw bedrijf?</span>
-              <a href="#contact" class="text-sm font-bold text-orange hover:text-orange-hover flex items-center gap-1 transition-colors">
-                <span>Kennismaken</span> →
-              </a>
-            </div>
-          </article>
+          </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ================= AANPAK / WAAROM BRUGGEMAN DIGITAL ================= -->
-    <section id="aanpak" class="py-14 sm:py-18 lg:py-20 bg-surface border-b border-border">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl mb-10 sm:mb-12">
-          <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Werkwijze & Visie</span>
-          <h2 class="mt-1.5 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy tracking-tight">
-            Geen afhankelijkheid, wel vakmanschap
-          </h2>
-          <p class="mt-2.5 text-sm sm:text-base text-muted leading-relaxed">
-            Veel bedrijven betalen maandelijks doorlopende bureaukosten voor een website waar inhoudelijk zelden iets aan verandert. Ik kies voor een transparant model waarbij jij na oplevering volledig onafhankelijk bent.
-          </p>
+    <!-- ================= 3. TECH STACK CAROUSEL ================= -->
+    <section class="tech-section" aria-label="Voorbeelden van tools waar ik ervaring mee heb">
+      <div class="container">
+        <div class="tech-carousel-header">
+          <span class="tech-label">Een greep uit de tools &amp; platformen waar ik ervaring mee heb</span>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
-          <!-- Pijler 1 -->
-          <div class="p-6 sm:p-7 rounded-2xl bg-bg border border-border shadow-soft hover:border-orange-border hover:shadow-card hover:-translate-y-1 transition-all duration-300 space-y-3.5">
-            <div class="w-11 h-11 rounded-xl bg-orange-light text-orange flex items-center justify-center font-bold text-sm">
-              01
+        <div class="tech-carousel-viewport">
+          <div class="tech-carousel-track">
+            <!-- Set 1 -->
+            <div class="tech-pill">
+              <img src="assets/logos/claude.svg" alt="Claude" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">Claude</span>
             </div>
-            <h3 class="text-lg sm:text-xl font-bold text-navy">Vrije keuze in hosting & domein</h3>
-            <p class="text-sm text-muted leading-relaxed">
-              De website wordt ontwikkeld en opgeleverd op jouw eigen hostingpakket en domeinnaam. Je hebt zelf alle beheerdersrechten. Uiteraard adviseer en ondersteun ik je volledig bij het kiezen en instellen van een geschikte Nederlandse provider.
-            </p>
-          </div>
+            <div class="tech-pill">
+              <img src="assets/logos/gemini.svg" alt="Google Gemini" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">Google Gemini</span>
+            </div>
+            <div class="tech-pill">
+              <img src="assets/logos/chatgpt.svg" alt="ChatGPT" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">ChatGPT</span>
+            </div>
+            <div class="tech-pill">
+              <img src="assets/logos/n8n.svg" alt="n8n" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">n8n</span>
+            </div>
+            <div class="tech-pill">
+              <img src="assets/logos/lovable.svg" alt="Lovable" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">Lovable</span>
+            </div>
+            <div class="tech-pill">
+              <img src="assets/logos/wordpress.svg" alt="WordPress" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">WordPress</span>
+            </div>
+            <div class="tech-pill">
+              <img src="assets/logos/github.svg" alt="GitHub" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">GitHub</span>
+            </div>
+            <div class="tech-pill">
+              <img src="assets/logos/looker.svg" alt="Looker Studio" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">Looker Studio</span>
+            </div>
+            <div class="tech-pill">
+              <img src="assets/logos/sheets.svg" alt="Google Sheets" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">Google Sheets</span>
+            </div>
+            <div class="tech-pill">
+              <img src="assets/logos/excel.svg" alt="Microsoft Excel" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">Excel</span>
+            </div>
+            <div class="tech-pill">
+              <img src="assets/logos/google-cloud.svg" alt="Google Cloud" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">Google Cloud</span>
+            </div>
+            <div class="tech-pill">
+              <img src="assets/logos/azure.svg" alt="Microsoft Azure" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">Azure</span>
+            </div>
 
-          <!-- Pijler 2 -->
-          <div class="p-6 sm:p-7 rounded-2xl bg-bg border border-border shadow-soft hover:border-navy/40 hover:shadow-card hover:-translate-y-1 transition-all duration-300 space-y-3.5">
-            <div class="w-11 h-11 rounded-xl bg-navy/10 text-navy flex items-center justify-center font-bold text-sm">
-              02
+            <!-- Set 2 (Duplicate for seamless infinite loop) -->
+            <div class="tech-pill" aria-hidden="true">
+              <img src="assets/logos/claude.svg" alt="" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">Claude</span>
             </div>
-            <h3 class="text-lg sm:text-xl font-bold text-navy">Geen verplicht abonnement</h3>
-            <p class="text-sm text-muted leading-relaxed">
-              Je betaalt eenmalig voor het ontwerpen en bouwen van de website. Daarna zit je nergens aan vast. Heb je op een later moment ondersteuning nodig of wil je de site uitbreiden? Dan help ik je graag flexibel op afroep.
-            </p>
-          </div>
-
-          <!-- Pijler 3 -->
-          <div class="p-6 sm:p-7 rounded-2xl bg-bg border border-border shadow-soft hover:border-[#21759B]/40 hover:shadow-card hover:-translate-y-1 transition-all duration-300 space-y-3.5">
-            <div class="w-11 h-11 rounded-xl bg-[#21759B]/10 text-[#21759B] flex items-center justify-center font-bold text-sm">
-              03
+            <div class="tech-pill" aria-hidden="true">
+              <img src="assets/logos/gemini.svg" alt="" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">Google Gemini</span>
             </div>
-            <h3 class="text-lg sm:text-xl font-bold text-navy">Gebouwd op WordPress</h3>
-            <p class="text-sm text-muted leading-relaxed">
-              Ik werk met WordPress: het meest beproefde en gebruikte CMS ter wereld. Geen gesloten softwaresysteem waar alleen één ontwikkelaar in kan werken, maar een open standaard waarin je zelf eenvoudig teksten en beelden aanpast.
-            </p>
+            <div class="tech-pill" aria-hidden="true">
+              <img src="assets/logos/chatgpt.svg" alt="" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">ChatGPT</span>
+            </div>
+            <div class="tech-pill" aria-hidden="true">
+              <img src="assets/logos/n8n.svg" alt="" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">n8n</span>
+            </div>
+            <div class="tech-pill" aria-hidden="true">
+              <img src="assets/logos/lovable.svg" alt="" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">Lovable</span>
+            </div>
+            <div class="tech-pill" aria-hidden="true">
+              <img src="assets/logos/wordpress.svg" alt="" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">WordPress</span>
+            </div>
+            <div class="tech-pill" aria-hidden="true">
+              <img src="assets/logos/github.svg" alt="" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">GitHub</span>
+            </div>
+            <div class="tech-pill" aria-hidden="true">
+              <img src="assets/logos/looker.svg" alt="" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">Looker Studio</span>
+            </div>
+            <div class="tech-pill" aria-hidden="true">
+              <img src="assets/logos/sheets.svg" alt="" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">Google Sheets</span>
+            </div>
+            <div class="tech-pill" aria-hidden="true">
+              <img src="assets/logos/excel.svg" alt="" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">Excel</span>
+            </div>
+            <div class="tech-pill" aria-hidden="true">
+              <img src="assets/logos/google-cloud.svg" alt="" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">Google Cloud</span>
+            </div>
+            <div class="tech-pill" aria-hidden="true">
+              <img src="assets/logos/azure.svg" alt="" class="tech-logo" width="19" height="19" />
+              <span class="tech-name">Azure</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= INVESTERING / ALL-IN RICHTPRIJS ================= -->
-    <section id="investering" class="py-14 sm:py-18 lg:py-20 border-b border-border bg-bg">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl mb-8 sm:mb-10">
-          <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Investering & Richtprijzen</span>
-          <h2 class="mt-1.5 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy tracking-tight">
-            Heldere afspraken vooraf
-          </h2>
-          <p class="mt-2.5 text-sm sm:text-base text-muted leading-relaxed">
-            Elk bedrijf heeft andere wensen, maar ik geef graag vooraf duidelijkheid over de investering voor een compleet verzorgd traject.
+    <!-- ================= 4. DE 4 PIJLERS ================= -->
+    <section id="diensten" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Diensten</span>
+          <h2 class="section-title">Waar ik je mee kan helpen</h2>
+          <p class="section-subtitle">
+            Geen standaard keurslijf: we kijken eerst naar jouw vraagstuk en kiezen dan de aanpak of tool die daar het beste bij past.
           </p>
         </div>
 
-        <div class="grid lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
-          
-          <!-- Hoofdkaart: All-In WordPress Bedrijfswebsite -->
-          <div class="lg:col-span-7 bg-surface p-6 sm:p-8 rounded-2xl border-2 border-orange-border shadow-card flex flex-col justify-between">
+        <div class="pillars-grid">
+          <!-- PIJLER 01 -->
+          <article class="pillar-card">
             <div>
-              <div class="flex flex-wrap items-baseline justify-between gap-4 pb-5 mb-5 border-b border-border">
-                <div>
-                  <span class="font-mono text-xs uppercase tracking-wider text-orange font-bold">Compleet Traject</span>
-                  <h3 class="text-xl sm:text-2xl font-extrabold text-navy mt-1">All-In Bedrijfswebsite</h3>
-                </div>
-                <div class="text-left sm:text-right">
-                  <span class="text-xs text-muted block font-semibold">Vaste richtprijs</span>
-                  <span class="text-2xl sm:text-3xl font-extrabold text-navy">€ 2.000,-</span>
-                  <span class="text-xs text-muted block">ex. btw • eenmalig</span>
-                </div>
+              <div class="pillar-header">
+                <span class="pillar-num">01</span>
+                <h3 class="pillar-title">AI &amp; Slimme Toepassingen</h3>
               </div>
-
-              <p class="text-sm text-muted leading-relaxed mb-5">
-                Een kant-en-klare, professionele WordPress-website voor bedrijven die online representatief voor de dag willen komen zonder doorlopende bureaukosten.
+              <p class="pillar-desc">
+                Praktische inzet van AI om terugkerend denk- en schrijfwerk makkelijker te maken, zoals het voorbereiden van concept-offertes, het samenvatten van documenten of het ordenen van binnenkomende berichten.
               </p>
-
-              <ul class="grid sm:grid-cols-2 gap-3 text-sm text-navy font-semibold">
-                <li class="flex items-start gap-2.5">
-                  <span class="text-orange font-bold">✓</span>
-                  <span>Ontwerp passend bij jouw huisstijl</span>
+              <ul class="pillar-list">
+                <li class="pillar-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Slimme ondersteuning bij aanvragen, documenten en e-mail</span>
                 </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="text-orange font-bold">✓</span>
-                  <span>Volledige technische realisatie in WordPress</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="text-orange font-bold">✓</span>
-                  <span>Responsive voor mobiel, tablet & desktop</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="text-orange font-bold">✓</span>
-                  <span>Technische SEO-basis & snelle laadtijd</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="text-orange font-bold">✓</span>
-                  <span>Installatie op jouw eigen domein & hosting</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="text-orange font-bold">✓</span>
-                  <span>100% eigendom & korte beheer-instructie</span>
+                <li class="pillar-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Veilig ingericht zodat je bedrijfsgegevens afgeschermd blijven</span>
                 </li>
               </ul>
             </div>
 
-            <div class="mt-6 pt-5 border-t border-border flex flex-col sm:flex-row sm:items-center justify-between gap-3.5">
-              <p class="text-xs text-muted">
-                Compactere one-pager of juist een grotere site nodig? Je ontvangt altijd vooraf een vaste prijsafspraak.
-              </p>
-              <a href="#contact" class="shrink-0 inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white bg-orange hover:bg-orange-hover rounded-xl shadow-orange-sm hover:shadow-orange-glow transition-all">
-                Offerte aanvragen →
-              </a>
+            <div class="pillar-footer">
+              <span class="pillar-exp-note">Ervaring met o.a. <strong>Claude, Gemini &amp; ChatGPT</strong></span>
             </div>
-          </div>
+          </article>
 
-          <!-- Zijkaart: Andere Digitale Projecten & Maatwerk -->
-          <div class="lg:col-span-5 bg-navy-dark text-white p-6 sm:p-8 rounded-2xl border border-navy-light/40 flex flex-col justify-between shadow-elevated relative overflow-hidden">
-            <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-orange/15 rounded-full blur-2xl pointer-events-none"></div>
-            <div class="space-y-3.5 relative z-10">
-              <span class="font-mono text-xs uppercase tracking-wider text-orange font-bold">Breder inzetbaar</span>
-              <h3 class="text-xl sm:text-2xl font-extrabold text-white">Andere digitale projecten & maatwerk</h3>
-              <p class="text-sm text-slate-300 leading-relaxed">
-                Naast het ontwikkelen van WordPress-bedrijfswebsites ben ik vanuit Bruggeman Digital ook beschikbaar voor bredere digitale vraagstukken.
+          <!-- PIJLER 02 -->
+          <article class="pillar-card">
+            <div>
+              <div class="pillar-header">
+                <span class="pillar-num">02</span>
+                <h3 class="pillar-title">Procesautomatisering</h3>
+              </div>
+              <p class="pillar-desc">
+                Losse programma's, formulieren, mailboxen en overzichten met elkaar laten praten zodat je minder tijd kwijt bent aan handmatig overtypen en kopiëren.
               </p>
-              <ul class="space-y-2 text-sm text-slate-300 pt-1">
-                <li class="flex items-center gap-2">
-                  <span class="text-orange font-bold">•</span> Maatwerk webapplicaties & prototypes
+              <ul class="pillar-list">
+                <li class="pillar-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Koppelingen tussen je bestaande systemen en administratie</span>
                 </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-orange font-bold">•</span> Technische optimalisatie van bestaande sites
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-orange font-bold">•</span> Meedenken en bouwen aan digitale concepten
+                <li class="pillar-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Ingericht op je eigen omgeving met lage maandlasten</span>
                 </li>
               </ul>
             </div>
 
-            <div class="mt-6 pt-5 border-t border-white/15 relative z-10">
-              <a href="#contact" class="inline-flex items-center text-sm font-bold text-white hover:text-orange transition-colors">
-                Bespreek de mogelijkheden →
-              </a>
+            <div class="pillar-footer">
+              <span class="pillar-exp-note">Ervaring met o.a. <strong>n8n, cloud &amp; API-koppelingen</strong></span>
             </div>
-          </div>
+          </article>
 
+          <!-- PIJLER 03 -->
+          <article class="pillar-card">
+            <div>
+              <div class="pillar-header">
+                <span class="pillar-num">03</span>
+                <h3 class="pillar-title">Websites &amp; Webapplicaties</h3>
+              </div>
+              <p class="pillar-desc">
+                Van een heldere, verzorgde bedrijfswebsite tot een praktische webapplicatie, intern hulpmiddel of portaal op maat — gewoon op je eigen domeinnaam en hosting.
+              </p>
+              <ul class="pillar-list">
+                <li class="pillar-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Websites die je na oplevering zelf eenvoudig kunt bijwerken</span>
+                </li>
+                <li class="pillar-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Maatwerk webtools en applicaties voor specifieke werkprocessen</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pillar-footer">
+              <span class="pillar-exp-note">Ervaring met o.a. <strong>WordPress, Lovable &amp; maatwerk code</strong></span>
+            </div>
+          </article>
+
+          <!-- PIJLER 04 -->
+          <article class="pillar-card">
+            <div>
+              <div class="pillar-header">
+                <span class="pillar-num">04</span>
+                <h3 class="pillar-title">Dashboards &amp; Data-Overzicht</h3>
+              </div>
+              <p class="pillar-desc">
+                Van losse spreadsheets en verschillende lijstjes naar één helder overzicht van je belangrijkste cijfers, zonder dat je vastzit aan dure rapportagesoftware.
+              </p>
+              <ul class="pillar-list">
+                <li class="pillar-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Overzichtelijk inzicht in omzet, aanvragen en voortgang</span>
+                </li>
+                <li class="pillar-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Structureren en koppelen van je bestaande spreadsheets</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pillar-footer">
+              <span class="pillar-exp-note">Ervaring met o.a. <strong>Looker Studio, Excel &amp; Sheets</strong></span>
+            </div>
+          </article>
+        </div>
+
+        <!-- 3 Herkenbare Situaties -->
+        <div class="mkb-profiles-grid">
+          <div class="mkb-profile-card">
+            <h3 class="mkb-profile-title">Zelfstandigen &amp; Kleine Teams</h3>
+            <p class="mkb-profile-desc">
+              Slimmer werken zonder extra personeel: een professionele website of handige automatisering die terugkerend werk scheelt.
+            </p>
+          </div>
+          <div class="mkb-profile-card">
+            <h3 class="mkb-profile-title">Zakelijke Dienstverlening &amp; Bureaus</h3>
+            <p class="mkb-profile-desc">
+              Minder tijd kwijt aan klantaanvragen, concept-offertes, e-mailopvolging en terugkerende rapportages.
+            </p>
+          </div>
+          <div class="mkb-profile-card">
+            <h3 class="mkb-profile-title">Handel &amp; Groeiend MKB</h3>
+            <p class="mkb-profile-desc">
+              Van versnipperde Excel-bestanden en handmatig overtikwerk naar gekoppelde processen en één centraal overzicht.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= OVER SANDER ================= -->
-    <section id="over-mij" class="py-14 sm:py-18 lg:py-20 bg-surface border-b border-border">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-12 gap-8 lg:gap-10 items-center">
-          
-          <!-- Portretfoto -->
-          <div class="md:col-span-4 flex justify-center">
-            <div class="relative group">
-              <div class="absolute -inset-2 bg-gradient-to-tr from-orange to-navy rounded-3xl blur-md opacity-25 group-hover:opacity-40 transition-opacity"></div>
-              <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-4 border-surface shadow-elevated bg-surface">
-                <img 
-                  src="assets/sander-portrait.jpg" 
-                  alt="Sander Bruggeman - Oprichter Bruggeman Digital" 
-                  class="w-full h-full object-cover"
-                />
+    <!-- ================= 5. INVESTERING & RICHTPRIJZEN ================= -->
+    <section id="prijzen" class="section section--surface">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Trajecten &amp; Richtprijzen</span>
+          <h2 class="section-title">Transparante prijzen &amp; maatwerk</h2>
+          <p class="section-subtitle">
+            Hieronder zie je drie veelgekozen trajecten als richtlijn. Omdat elke situatie anders is, stemmen we de precieze invulling en prijs altijd vooraf samen af.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- PAKKET 1 -->
+          <article class="price-card">
+            <div>
+              <div class="price-header">
+                <span class="price-eyebrow">Richtprijs • AI &amp; Automatisering</span>
+                <h3 class="price-title">AI &amp; Automatisering Sprint</h3>
+                <div class="price-amount-wrap">
+                  <span class="price-amount">€ 1.750,-</span>
+                  <span class="price-vat">ex. btw</span>
+                </div>
               </div>
+
+              <ul class="price-list">
+                <li class="price-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Automatiseren of slim koppelen van een concreet werkproces</span>
+                </li>
+                <li class="price-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Bijv. met n8n en AI, of passend bij je huidige software</span>
+                </li>
+                <li class="price-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Veilige inrichting op je eigen accounts</span>
+                </li>
+                <li class="price-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Inclusief persoonlijke overdracht &amp; uitleg</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#contact" data-package-select="AI & Automatisering Sprint (richtprijs € 1.750,-)" class="btn btn--surface" style="width: 100%;">
+              <span>Bespreek mogelijkheden →</span>
+            </a>
+          </article>
+
+          <!-- PAKKET 2 (Featured in Deep Navy) -->
+          <article class="price-card price-card--featured">
+            <div>
+              <div class="price-header">
+                <span class="price-eyebrow price-eyebrow--featured">Richtprijs • Meest Gekozen</span>
+                <h3 class="price-title">All-In Website of Webapp</h3>
+                <div class="price-amount-wrap">
+                  <span class="price-amount">€ 2.000,-</span>
+                  <span class="price-vat">ex. btw</span>
+                </div>
+              </div>
+
+              <ul class="price-list">
+                <li class="price-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Bedrijfswebsite (bijv. WordPress) óf webapplicatie op maat</span>
+                </li>
+                <li class="price-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Verzorgd ontwerp, mobielvriendelijk &amp; goed vindbaar</span>
+                </li>
+                <li class="price-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Livegang op je eigen domein en hosting</span>
+                </li>
+                <li class="price-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Volledig jouw eigendom en zelf te beheren</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#contact" data-package-select="All-In Bedrijfswebsite / Webapp (richtprijs € 2.000,-)" class="btn btn--orange" style="width: 100%;">
+              <span>Project bespreken →</span>
+            </a>
+          </article>
+
+          <!-- PAKKET 3 -->
+          <article class="price-card">
+            <div>
+              <div class="price-header">
+                <span class="price-eyebrow">Richtprijs • Data &amp; Inzicht</span>
+                <h3 class="price-title">Data &amp; KPI Dashboard Setup</h3>
+                <div class="price-amount-wrap">
+                  <span class="price-amount">€ 1.250,-</span>
+                  <span class="price-vat">ex. btw</span>
+                </div>
+              </div>
+
+              <ul class="price-list">
+                <li class="price-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Overzichtelijk dashboard (bijv. in Looker Studio)</span>
+                </li>
+                <li class="price-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Bundeling van je bestaande spreadsheets of databronnen</span>
+                </li>
+                <li class="price-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Helder inzicht in omzet, aanvragen en KPI's</span>
+                </li>
+                <li class="price-list-item">
+                  <span class="pillar-check">✓</span>
+                  <span>Geen verplichte maandelijkse licentiekosten</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#contact" data-package-select="Data & KPI Dashboard Setup (richtprijs € 1.250,-)" class="btn btn--surface" style="width: 100%;">
+              <span>Bespreek mogelijkheden →</span>
+            </a>
+          </article>
+        </div>
+
+        <!-- Soft Blue Maatwerk & Flexibele Hulplijn Banner -->
+        <div class="custom-quote-banner">
+          <div>
+            <h3 class="custom-quote-title">Kleiner vraagstuk, andere wens of hulp op uurbasis?</h3>
+            <p class="custom-quote-desc">
+              Niet elke vraag past in een vast pakket. Ik denk graag vrijblijvend mee over een passende oplossing op maat, of help je flexibel op afroep voor <strong style="color: var(--navy);">€ 75,- ex. btw / uur</strong> (zonder vast maandcontract).
+            </p>
+          </div>
+          <a href="#contact" data-package-select="Vrijblijvende kennismaking / sparsessie (30 min)" class="btn btn--navy" style="flex-shrink: 0;">
+            <span>Plan 30-min gesprek →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. WERK & PRAKTIJKVOORBEELDEN ================= -->
+    <section id="werk" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Werk &amp; Voorbeelden</span>
+          <h2 class="section-title">Eerder werk &amp; praktijkvoorbeelden</h2>
+        </div>
+
+        <div class="work-stack">
+          <!-- LIVE CASE: FRUVYLAND -->
+          <article class="fruvyland-card">
+            <div class="fruvyland-preview-side">
+              <a
+                href="https://fruvyland.nl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="browser-window"
+                title="Bekijk fruvyland.nl"
+              >
+                <div class="browser-topbar">
+                  <div class="browser-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                    <span class="browser-url">fruvyland.nl</span>
+                  </div>
+                  <span class="browser-live-label">Live site ↗</span>
+                </div>
+                <img
+                  src="assets/fruvyland-screenshot.png"
+                  alt="Fruvyland bedrijfswebsite gerealiseerd door Bruggeman Digital"
+                  class="browser-screenshot"
+                  width="960"
+                  height="540"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
+            <div class="fruvyland-info-side">
+              <span class="case-eyebrow">Live Case • Bedrijfswebsite</span>
+              <h3 style="font-size: 1.5rem; margin-bottom: 0.65rem;">Fruvyland</h3>
+              <p class="pillar-desc" style="margin-bottom: 1.25rem;">
+                Ontwerp en technische realisatie van een overzichtelijke WordPress-bedrijfswebsite op eigen hosting. Sleutelklaar opgeleverd zodat de klant de website eenvoudig zelf beheert.
+              </p>
+              <div>
+                <a
+                  href="https://fruvyland.nl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 700; color: var(--orange);"
+                >
+                  <span>Bekijk fruvyland.nl</span>
+                  <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 VISUELE PRAKTIJKVOORBEELDEN -->
+          <div class="blueprints-grid">
+            <!-- Voorbeeld 1 met visueel workflow-schema -->
+            <article class="blueprint-card">
+              <div class="blueprint-visual" aria-hidden="true">
+                <div class="blueprint-nodes">
+                  <div class="bp-node">
+                    <div class="bp-node-icon">
+                      <svg width="15" height="15" fill="none" stroke="#13294B" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
+                    <span class="bp-node-label">Aanvraag</span>
+                  </div>
+                  <span class="bp-connector">→</span>
+                  <div class="bp-node">
+                    <div class="bp-node-icon">
+                      <img src="assets/logos/n8n.svg" alt="" width="15" height="15" />
+                    </div>
+                    <span class="bp-node-label">Workflow</span>
+                  </div>
+                  <span class="bp-connector">→</span>
+                  <div class="bp-node">
+                    <div class="bp-node-icon">
+                      <img src="assets/logos/claude.svg" alt="" width="15" height="15" />
+                    </div>
+                    <span class="bp-node-label">AI-hulp</span>
+                  </div>
+                  <span class="bp-connector">→</span>
+                  <div class="bp-node">
+                    <div class="bp-node-icon">
+                      <svg width="15" height="15" fill="none" stroke="#10B981" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <span class="bp-node-label">Concept</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blueprint-body">
+                <div>
+                  <span class="case-eyebrow">Praktijkvoorbeeld • AI &amp; Automatisering</span>
+                  <h3 style="font-size: 1.25rem; margin-bottom: 0.6rem;">
+                    Slimme Intake- &amp; Offertevoorbereiding
+                  </h3>
+                  <p class="pillar-desc" style="margin-bottom: 0;">
+                    Binnenkomende klantaanvragen worden automatisch gestructureerd en klaargezet als conceptvoorstel, zodat jij alleen nog hoeft te controleren en versturen.
+                  </p>
+                </div>
+
+                <a href="#contact" data-package-select="AI & Automatisering Sprint (richtprijs € 1.750,-)" style="font-size: 0.88rem; font-weight: 700; color: var(--orange);">
+                  Vergelijkbare toepassing bespreken →
+                </a>
+              </div>
+            </article>
+
+            <!-- Voorbeeld 2 met visuele KPI-dashboard preview -->
+            <article class="blueprint-card">
+              <div class="blueprint-visual" aria-hidden="true">
+                <div class="bp-dashboard-preview">
+                  <div class="bp-kpi-box">
+                    <span class="bp-kpi-label">Omzet YTD</span>
+                    <span class="bp-kpi-val">€ 428k</span>
+                    <span class="bp-kpi-trend">▲ +14,2%</span>
+                  </div>
+                  <div class="bp-kpi-box">
+                    <span class="bp-kpi-label">Brutomarge</span>
+                    <span class="bp-kpi-val">36,4%</span>
+                    <span class="bp-kpi-trend">▲ +2,1%</span>
+                  </div>
+                  <div class="bp-kpi-box">
+                    <span class="bp-kpi-label">Aanvragen</span>
+                    <span class="bp-kpi-val">28,5%</span>
+                    <span class="bp-kpi-trend">● Actueel</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blueprint-body">
+                <div>
+                  <span class="case-eyebrow">Praktijkvoorbeeld • Dashboards</span>
+                  <h3 style="font-size: 1.25rem; margin-bottom: 0.6rem;">
+                    Centraal Management Dashboard
+                  </h3>
+                  <p class="pillar-desc" style="margin-bottom: 0;">
+                    Bundeling van losse Excel- en Google Sheets-bestanden naar één overzichtelijk dashboard (bijv. in Looker Studio), zodat je cijfers altijd op één plek staan.
+                  </p>
+                </div>
+
+                <a href="#contact" data-package-select="Data & KPI Dashboard Setup (richtprijs € 1.250,-)" style="font-size: 0.88rem; font-weight: 700; color: var(--orange);">
+                  Dashboard bespreken →
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. WERKWIJZE (DEEP NAVY BLUE SECTION) ================= -->
+    <section id="werkwijze" class="section section--navy">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Werkwijze</span>
+          <h2 class="section-title">Samen kijken wat werkt, stap voor stap</h2>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-num">STAP 01</span>
+            <h3 class="step-title">Vrijblijvend Sparren (30 min)</h3>
+            <p class="step-desc">
+              We bespreken waar je tegenaan loopt en hoe je nu werkt. Daarna maak ik een helder en haalbaar voorstel met duidelijke prijsafspraken.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-num">STAP 02</span>
+            <h3 class="step-title">Bouwen op Jouw Omgeving</h3>
+            <p class="step-desc">
+              Ik ontwikkel en test de oplossing op je eigen accounts en omgeving (of help je stap voor stap bij het opzetten daarvan).
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-num">STAP 03</span>
+            <h3 class="step-title">Overdracht &amp; Hulp op Afroep</h3>
+            <p class="step-desc">
+              Je krijgt een rustige uitleg zodat je er zelf mee verder kunt. Zit je later met een vraag of uitbreiding, dan help ik je gewoon op afroep.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 8. OVER SANDER BRUGGEMAN ================= -->
+    <section id="over-mij" class="section">
+      <div class="container about-container">
+        <div class="about-grid">
+          <div class="portrait-wrap">
+            <div class="portrait-frame">
+              <img
+                src="assets/sander-portrait.jpg"
+                alt="Sander Bruggeman - Oprichter Bruggeman Digital"
+                class="portrait-img"
+                width="440"
+                height="440"
+                loading="lazy"
+              />
             </div>
           </div>
 
-          <!-- Bio -->
-          <div class="md:col-span-8 space-y-3.5">
-            <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Over Bruggeman Digital</span>
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy tracking-tight">
-              Direct samenwerken met de ontwikkelaar
+          <div>
+            <span class="section-label">Over mij</span>
+            <h2 class="section-title" style="margin-bottom: 0.85rem;">
+              Rechtstreeks schakelen met de bouwer
             </h2>
-            <p class="text-muted text-sm sm:text-base leading-relaxed">
-              Mijn naam is Sander Bruggeman. Met Bruggeman Digital help ik ondernemers en bedrijven aan een verzorgde, betrouwbare online presentatie zonder onnodige tussenlagen.
+            <p style="font-size: 0.96rem; color: var(--muted); margin-bottom: 0.85rem;">
+              Mijn naam is Sander Bruggeman. Naast mijn werk als <strong style="color: var(--navy);">AI Automation Builder bij Nmbrs</strong> help ik met Bruggeman Digital zelfstandigen en MKB-bedrijven met uiteenlopende digitale vraagstukken — van slimme automatiseringen tot websites en dashboards.
             </p>
-            <p class="text-muted text-sm sm:text-base leading-relaxed">
-              Wanneer je met mij samenwerkt, schakel je rechtstreeks met degene die jouw project technisch opzet en oplevert. Dat zorgt voor heldere communicatie, realistische planningen en een oplossing die technisch goed in elkaar zit.
+            <p style="font-size: 0.96rem; color: var(--muted);">
+              Ik geloof niet in één standaardoplossing voor iedereen. Je schakelt altijd 1-op-1 met mij: we kijken nuchter wat er voor jouw bedrijf écht handig is, zonder grote beloftes of dure maandcontracten.
             </p>
-            <div class="pt-1.5">
-              <a 
-                href="https://www.linkedin.com/in/sander-bruggeman-415596197/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-surface border border-border hover:border-[#0A66C2] text-sm font-bold text-navy transition-all shadow-soft group"
+
+            <div class="about-meta">
+              <a
+                href="https://www.linkedin.com/in/sander-bruggeman-415596197/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn--surface"
               >
-                <svg class="w-4 h-4 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg width="16" height="16" fill="#0A66C2" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                 </svg>
-                <span class="group-hover:text-[#0A66C2] transition-colors">Bekijk mijn achtergrond op LinkedIn</span>
+                <span>LinkedIn profiel</span>
               </a>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ================= VEELGESTELDE VRAGEN ================= -->
-    <section id="faq" class="py-14 sm:py-18 lg:py-20 border-b border-border bg-bg">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="mb-8 sm:mb-10 text-center">
-          <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">FAQ</span>
-          <h2 class="mt-1.5 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy tracking-tight">
-            Veelgestelde vragen
-          </h2>
-          <p class="mt-2 text-sm text-muted">Duidelijkheid vooraf over beheer, eigendom en kosten.</p>
+    <!-- ================= 9. VEELGESTELDE VRAGEN (FAQ) ================= -->
+    <section id="faq" class="section section--surface">
+      <div class="container faq-wrap">
+        <div class="section-header" style="text-align: center;">
+          <span class="section-label">FAQ</span>
+          <h2 class="section-title">Veelgestelde vragen</h2>
         </div>
 
-        <div class="space-y-3.5">
-          <details class="group bg-surface rounded-2xl border border-border p-5 sm:p-6 hover:border-orange-border transition-colors" open>
-            <summary class="flex cursor-pointer items-center justify-between font-bold text-navy text-sm sm:text-base">
-              <span>Hoe werkt het beheer en de hosting na oplevering?</span>
-              <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-orange">▼</span>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Zit ik vast aan specifieke tools of een standaardpakket?</span>
+              <span class="faq-chevron" aria-hidden="true">▼</span>
             </summary>
-            <p class="mt-2.5 text-sm text-muted leading-relaxed">
-              De website wordt geïnstalleerd op jouw eigen hostingpakket en domeinnaam. Daardoor staat het abonnement rechtstreeks op naam van jouw bedrijf en betaal je enkel de reguliere hostingkosten aan de provider (meestal circa € 5,- tot € 15,- per maand). Heb je nog geen hosting? Dan adviseer ik je graag en richt ik dit volledig technisch voor je in.
-            </p>
+            <div class="faq-answer">
+              Nee, absoluut niet. De tools op deze website (zoals n8n, WordPress of Looker Studio) laten vooral zien waar ik veel ervaring mee heb. Ik kan veel breder meedenken en sluit graag aan op de software of werkwijze die je al gebruikt.
+            </div>
           </details>
 
-          <details class="group bg-surface rounded-2xl border border-border p-5 sm:p-6 hover:border-orange-border transition-colors">
-            <summary class="flex cursor-pointer items-center justify-between font-bold text-navy text-sm sm:text-base">
-              <span>Waarom werk je zonder verplichte onderhoudsabonnementen?</span>
-              <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-orange">▼</span>
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Voor wie zijn jouw diensten bedoeld?</span>
+              <span class="faq-chevron" aria-hidden="true">▼</span>
             </summary>
-            <p class="mt-2.5 text-sm text-muted leading-relaxed">
-              Een degelijk opgebouwde WordPress-website met een schone technische basis heeft geen duur maandelijks onderhoudscontract nodig. Je betaalt eenmalig voor de ontwikkeling en bent daarna 100% eigenaar en volledig vrij.
-            </p>
+            <div class="faq-answer">
+              Ik help zowel zelfstandig ondernemers en kleine teams als groeiende MKB-bedrijven. Of je nu een eerste professionele website nodig hebt, losse lijstjes wilt structureren of een terugkerend proces wilt automatiseren: we stemmen de omvang af op jouw situatie.
+            </div>
           </details>
 
-          <details class="group bg-surface rounded-2xl border border-border p-5 sm:p-6 hover:border-orange-border transition-colors">
-            <summary class="flex cursor-pointer items-center justify-between font-bold text-navy text-sm sm:text-base">
-              <span>Kan ik later wel bij je terecht voor aanpassingen of uitbreidingen?</span>
-              <span class="ml-4 shrink-0 transition duration-200 group-open:rotate-180 text-orange">▼</span>
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Hoe werkt het eigendom en beheer na oplevering?</span>
+              <span class="faq-chevron" aria-hidden="true">▼</span>
             </summary>
-            <p class="mt-2.5 text-sm text-muted leading-relaxed">
-              Uiteraard. Teksten en afbeeldingen kun je eenvoudig zelf wijzigen in WordPress. Wil je op termijn een nieuwe pagina, extra functionaliteit of technische ondersteuning? Dan kun je mij altijd flexibel op afroep- of projectbasis inschakelen.
-            </p>
+            <div class="faq-answer">
+              Alles wordt ingericht op jouw eigen accounts en domeinnaam. Na oplevering heb je zelf alle inloggegevens en beheerdersrechten, zodat je nooit afhankelijk bent van mij om bij je eigen spullen te kunnen.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Hoe zit het met AVG en privacy bij het gebruik van AI?</span>
+              <span class="faq-chevron" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              Wanneer we AI koppelen aan bedrijfsprocessen, maken we gebruik van zakelijke API-koppelingen (bijvoorbeeld van Claude, Google of OpenAI) en veilige cloud-omgevingen, zodat je gegevens niet worden gebruikt om openbare AI-modellen te trainen.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Kan ik later wel bij je terecht voor vragen of aanpassingen?</span>
+              <span class="faq-chevron" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              Uiteraard. Je zit niet vast aan een maandelijks abonnement, maar als je later iets wilt uitbreiden of ergens hulp bij nodig hebt, kun je mij altijd inschakelen op afroep (€ 75,- ex. btw per uur) of voor een vaste prijsafspraak.
+            </div>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- ================= CONTACT SECTIE ================= -->
-    <section id="contact" class="py-14 sm:py-18 lg:py-20 bg-surface">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
-          
-          <!-- Contactgegevens (Uitsluitend WhatsApp, e-mail en LinkedIn) -->
-          <div class="lg:col-span-5 space-y-5">
-            <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Contact</span>
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy tracking-tight">
-              Kennismaken of een project bespreken?
-            </h2>
-            <p class="text-sm sm:text-base text-muted leading-relaxed">
-              Stuur een bericht via het formulier of neem rechtstreeks contact op via onderstaande kanalen. Ik reageer doorgaans binnen één werkdag.
+    <!-- ================= 10. CONTACT SECTIE ================= -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <div>
+            <span class="section-label">Contact</span>
+            <h2 class="section-title">Vrijblijvend kennismaken of sparren?</h2>
+            <p style="margin-top: 0.65rem; font-size: 0.96rem; color: var(--muted);">
+              Ik sta altijd open om mee te denken over een nieuw idee of praktisch vraagstuk. Stuur gerust een berichtje of plan een gratis gesprek — ik reageer doorgaans binnen één werkdag.
             </p>
 
-            <div class="space-y-3 pt-1">
-              <!-- E-mail -->
-              <a 
-                href="mailto:srabruggeman@gmail.com"
-                class="flex items-center gap-4 p-3.5 sm:p-4 rounded-2xl bg-bg border border-border hover:border-orange hover:shadow-card transition-all group"
-              >
-                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-orange-light text-orange flex items-center justify-center shrink-0">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <div class="contact-channels">
+              <a href="mailto:srabruggeman@gmail.com" class="channel-card">
+                <div class="channel-icon" style="background-color: var(--navy-tint); color: var(--navy);">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 </div>
                 <div>
-                  <p class="text-xs font-semibold text-muted">E-mail</p>
-                  <p class="text-sm sm:text-base font-bold text-navy group-hover:text-orange transition-colors">srabruggeman@gmail.com</p>
+                  <span style="display: block; font-size: 0.75rem; color: var(--muted);">E-mail</span>
+                  <strong style="font-size: 0.95rem; color: var(--navy);">srabruggeman@gmail.com</strong>
                 </div>
               </a>
 
-              <!-- WhatsApp (uitsluitend WhatsApp) -->
-              <a 
-                href="https://wa.me/31619588717" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="flex items-center gap-4 p-3.5 sm:p-4 rounded-2xl bg-bg border border-border hover:border-[#25D366] hover:shadow-card transition-all group"
-              >
-                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#25D366]/10 text-[#25D366] flex items-center justify-center shrink-0">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <a href="https://wa.me/31619588717" target="_blank" rel="noopener noreferrer" class="channel-card">
+                <div class="channel-icon" style="background-color: rgba(37, 211, 102, 0.12); color: #25D366;">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.124 1.529 5.855l-1.529 5.581 5.716-1.5c1.681.916 3.609 1.439 5.66 1.439 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/>
                   </svg>
                 </div>
                 <div>
-                  <p class="text-xs font-bold uppercase tracking-wider text-emerald-700">Direct via WhatsApp</p>
-                  <p class="text-sm sm:text-base font-bold text-navy group-hover:text-orange transition-colors">+31 6 19588717 (WhatsApp)</p>
+                  <span style="display: block; font-size: 0.75rem; color: var(--muted);">WhatsApp</span>
+                  <strong style="font-size: 0.95rem; color: var(--navy);">+31 6 19588717</strong>
                 </div>
               </a>
 
-              <!-- LinkedIn -->
-              <a 
-                href="https://www.linkedin.com/in/sander-bruggeman-415596197/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="flex items-center gap-4 p-3.5 sm:p-4 rounded-2xl bg-bg border border-border hover:border-[#0A66C2] hover:shadow-card transition-all group"
-              >
-                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#0A66C2]/10 text-[#0A66C2] flex items-center justify-center shrink-0">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              <a href="https://www.linkedin.com/in/sander-bruggeman-415596197/" target="_blank" rel="noopener noreferrer" class="channel-card">
+                <div class="channel-icon" style="background-color: rgba(10, 102, 194, 0.1); color: #0A66C2;">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
                 </div>
                 <div>
-                  <p class="text-xs font-semibold text-muted">LinkedIn</p>
-                  <p class="text-sm sm:text-base font-bold text-navy group-hover:text-[#0A66C2] transition-colors">Sander Bruggeman</p>
+                  <span style="display: block; font-size: 0.75rem; color: var(--muted);">LinkedIn</span>
+                  <strong style="font-size: 0.95rem; color: var(--navy);">Sander Bruggeman</strong>
                 </div>
               </a>
             </div>
+
+            <div class="verkenning-card">
+              <p class="verkenning-title">Gratis kennismaking &amp; sparsessie (30 min)</p>
+              <p class="verkenning-desc">
+                Nog niet precies zeker wat je nodig hebt? In een vrijblijvend gesprek van 30 minuten denken we samen door wat handig is voor jouw situatie en wat wel of niet de moeite waard is om te bouwen.
+              </p>
+            </div>
           </div>
 
-          <!-- Contactformulier -->
-          <div class="lg:col-span-7">
-            <div class="bg-bg p-6 sm:p-8 rounded-2xl border border-border shadow-elevated">
-              <h3 id="form-heading" class="text-xl sm:text-2xl font-extrabold text-navy mb-5">Stuur een bericht</h3>
-              <form id="contact-form" action="https://formsubmit.co/srabruggeman@gmail.com" method="POST" class="space-y-4">
+          <!-- Contactformulier (FormSubmit.co behouden) -->
+          <div>
+            <div class="form-card">
+              <h3 id="form-heading" style="font-size: 1.35rem; margin-bottom: 1.15rem;">Stuur een bericht</h3>
+              <form id="contact-form" action="https://formsubmit.co/srabruggeman@gmail.com" method="POST">
                 <input type="hidden" name="_subject" value="Nieuwe aanvraag via BruggemanDigital.nl" />
                 <input type="hidden" name="_next" value="https://www.bruggemandigital.nl/?bericht=verzonden#contact" />
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="text" name="_honey" style="display:none" />
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
-                <div class="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label for="naam" class="block text-xs font-bold uppercase tracking-wider text-navy mb-1.5">Naam *</label>
-                    <input type="text" id="naam" name="Naam" required placeholder="Jouw naam" class="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all" />
+                <div class="form-row-2">
+                  <div class="form-field">
+                    <label for="naam" class="form-label">Naam *</label>
+                    <input type="text" id="naam" name="Naam" required placeholder="Jouw naam" class="form-input" />
                   </div>
-                  <div>
-                    <label for="bedrijf" class="block text-xs font-bold uppercase tracking-wider text-navy mb-1.5">Bedrijfsnaam</label>
-                    <input type="text" id="bedrijf" name="Bedrijf" placeholder="Optioneel" class="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all" />
+                  <div class="form-field">
+                    <label for="bedrijf" class="form-label">Bedrijfsnaam</label>
+                    <input type="text" id="bedrijf" name="Bedrijf" placeholder="Optioneel" class="form-input" />
                   </div>
                 </div>
 
-                <div class="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label for="email" class="block text-xs font-bold uppercase tracking-wider text-navy mb-1.5">E-mailadres *</label>
-                    <input type="email" id="email" name="email" required placeholder="naam@bedrijf.nl" class="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all" />
+                <div class="form-row-2">
+                  <div class="form-field">
+                    <label for="email" class="form-label">E-mailadres *</label>
+                    <input type="email" id="email" name="email" required placeholder="naam@bedrijf.nl" class="form-input" />
                   </div>
-                  <div>
-                    <label for="telefoon" class="block text-xs font-bold uppercase tracking-wider text-navy mb-1.5">Telefoonnummer</label>
-                    <input type="tel" id="telefoon" name="Telefoon" placeholder="Optioneel" class="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all" />
+                  <div class="form-field">
+                    <label for="telefoon" class="form-label">Telefoonnummer</label>
+                    <input type="tel" id="telefoon" name="Telefoon" placeholder="Optioneel" class="form-input" />
                   </div>
                 </div>
 
-                <div>
-                  <label for="onderwerp" class="block text-xs font-bold uppercase tracking-wider text-navy mb-1.5">Onderwerp</label>
-                  <select id="onderwerp" name="Onderwerp" class="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm text-navy font-semibold transition-all">
-                    <option value="WordPress Bedrijfswebsite">WordPress Bedrijfswebsite</option>
-                    <option value="Ander digitaal project / maatwerk">Ander digitaal project / maatwerk</option>
-                    <option value="Algemene vraag / kennismaking">Algemene vraag / kennismaking</option>
+                <div class="form-field">
+                  <label for="onderwerp" class="form-label">Waar gaat je vraag over?</label>
+                  <select id="onderwerp" name="Onderwerp" class="form-input" style="font-weight: 600; color: var(--navy);">
+                    <option value="Vrijblijvende kennismaking / sparsessie (30 min)" selected>Vrijblijvende kennismaking / sparsessie (30 min)</option>
+                    <option value="All-In Bedrijfswebsite / Webapp (richtprijs € 2.000,-)">All-In Bedrijfswebsite / Webapp (richtprijs € 2.000,-)</option>
+                    <option value="AI & Automatisering Sprint (richtprijs € 1.750,-)">AI &amp; Automatisering Sprint (richtprijs € 1.750,-)</option>
+                    <option value="Data & KPI Dashboard Setup (richtprijs € 1.250,-)">Data &amp; KPI Dashboard Setup (richtprijs € 1.250,-)</option>
+                    <option value="Anders / Maatwerk of hulp op uurbasis (€ 75,-/u)">Anders / Maatwerk of hulp op uurbasis (€ 75,-/u)</option>
                   </select>
                 </div>
 
-                <div>
-                  <label for="bericht" class="block text-xs font-bold uppercase tracking-wider text-navy mb-1.5">Bericht *</label>
-                  <textarea id="bericht" name="Bericht" rows="3" required placeholder="Korte toelichting op je vraag of project..." class="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-surface border border-border focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/20 text-sm transition-all"></textarea>
+                <div class="form-field">
+                  <label for="bericht" class="form-label">Bericht *</label>
+                  <textarea id="bericht" name="Bericht" rows="3" required placeholder="Korte toelichting op je vraag of idee..." class="form-input"></textarea>
                 </div>
 
-                <!-- AVG / GDPR Toestemmingscheckbox -->
-                <div class="flex items-start gap-2.5 pt-1 text-xs text-muted">
-                  <input 
-                    type="checkbox" 
-                    id="privacy-akkoord" 
-                    name="Privacy_Akkoord" 
-                    required 
-                    class="mt-0.5 h-4 w-4 rounded border-border text-orange focus:ring-orange/30 accent-[#FF6A2B] cursor-pointer shrink-0" 
-                  />
-                  <label for="privacy-akkoord" class="cursor-pointer leading-relaxed">
-                    Ik ga akkoord met de verwerking van mijn contactgegevens om te reageren op dit bericht, conform de <a href="privacy.html" target="_blank" rel="noopener noreferrer" class="text-navy font-semibold underline hover:text-orange">privacyverklaring</a>. *
+                <div class="form-consent">
+                  <input type="checkbox" id="privacy-akkoord" name="Privacy_Akkoord" required />
+                  <label for="privacy-akkoord" style="cursor: pointer; line-height: 1.5;">
+                    Ik ga akkoord met de verwerking van mijn gegevens conform de <a href="privacy.html" target="_blank" rel="noopener noreferrer" style="color: var(--navy); font-weight: 600; text-decoration: underline;">privacyverklaring</a>. *
                   </label>
                 </div>
 
-                <button type="submit" class="w-full py-3.5 px-6 text-sm sm:text-base font-bold text-white bg-orange hover:bg-orange-hover rounded-xl shadow-orange-sm hover:shadow-orange-glow transition-all flex items-center justify-center gap-2">
+                <button type="submit" class="btn btn--orange btn--lg" style="width: 100%;">
                   <span>Bericht versturen</span>
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </button>
               </form>
             </div>
@@ -861,212 +1231,56 @@
     </section>
   </main>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="bg-bg border-t border-border pt-14 pb-10 sm:pt-16 sm:pb-12 text-muted">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-      
-      <!-- Hoofdsectie: 4 Kolommen -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
-        
-        <!-- Kolom 1: Bedrijf, Missie & Vestigingsadres (lg:col-span-4) -->
-        <div class="lg:col-span-4 space-y-4">
-          <a href="#" class="inline-block group" aria-label="Bruggeman Digital">
-            <img src="logo.svg" alt="Bruggeman Digital" class="h-7 w-auto transition-opacity group-hover:opacity-90" onerror="this.style.display='none'" />
+  <!-- ================= DEEP NAVY FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#top" class="footer-brand" aria-label="Bruggeman Digital">
+            <img src="assets/brand-mark-footer.svg" alt="" width="28" height="28" />
+            <span>Bruggeman <span style="font-weight: 400;">Digital</span><span style="color: var(--orange);">.</span></span>
           </a>
-          <p class="text-xs sm:text-sm text-muted leading-relaxed">
-            Professionele WordPress-bedrijfswebsites voor het MKB. Vaste all-in investering, 100% eigendom op je eigen hosting en zonder verplichte maandcontracten.
+          <p style="margin-top: 0.75rem; max-width: 42ch;">
+            Praktische digitale partner voor zelfstandigen en het MKB. Heldere afspraken vooraf &amp; gewoon in eigen beheer.
           </p>
-          <div class="pt-2 text-xs space-y-1 text-muted border-t border-border/70">
-            <p class="font-semibold text-navy">Bruggeman Digital <span class="font-normal text-muted">• Sander Bruggeman</span></p>
-            <p>Strandweg 24B, 3151HV Hoek van Holland</p>
-            <p class="font-mono text-[11px] text-muted">KVK: 42082488 • Btw-id: NL005480999B44</p>
-          </div>
+          <p class="mono" style="margin-top: 0.65rem; font-size: 0.74rem; color: #94A3B8;">
+            Strandweg 24B, 3151HV Hoek van Holland • KVK: 42082488 • Btw: NL005480999B44
+          </p>
         </div>
 
-        <!-- Kolom 2: Snelle navigatie (lg:col-span-2) -->
-        <div class="lg:col-span-2 space-y-3">
-          <p class="text-xs font-bold uppercase tracking-wider text-navy">Navigatie</p>
-          <ul class="space-y-2 text-xs sm:text-sm">
-            <li><a href="#werk" class="hover:text-orange transition-colors">Werk & Projecten</a></li>
-            <li><a href="#aanpak" class="hover:text-orange transition-colors">Aanpak</a></li>
-            <li><a href="#investering" class="hover:text-orange transition-colors">Investering</a></li>
-            <li><a href="#over-mij" class="hover:text-orange transition-colors">Over Sander</a></li>
-            <li><a href="#faq" class="hover:text-orange transition-colors">Veelgestelde vragen</a></li>
-            <li><a href="#contact" class="hover:text-orange font-semibold text-navy transition-colors">Contact opnemen</a></li>
+        <div>
+          <p class="footer-title">Navigatie</p>
+          <ul class="footer-list">
+            <li><a href="#diensten">Diensten</a></li>
+            <li><a href="#prijzen">Richtprijzen &amp; Trajecten</a></li>
+            <li><a href="#werk">Werk &amp; Voorbeelden</a></li>
+            <li><a href="#werkwijze">Werkwijze</a></li>
+            <li><a href="#over-mij">Over Sander</a></li>
+            <li><a href="#faq">Veelgestelde vragen</a></li>
           </ul>
         </div>
 
-        <!-- Kolom 3: Specialisatie & Zekerheden (lg:col-span-3) -->
-        <div class="lg:col-span-3 space-y-3">
-          <p class="text-xs font-bold uppercase tracking-wider text-navy">Specialisatie & Waarborg</p>
-          <ul class="space-y-2 text-xs sm:text-sm">
-            <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-orange shrink-0"></span>
-              <span>WordPress Bedrijfswebsites</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-orange shrink-0"></span>
-              <span>Maatwerk & Webkoppelingen</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-orange shrink-0"></span>
-              <span>100% Eigendom (Geen lock-in)</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-orange shrink-0"></span>
-              <span>Hoge snelheid & SEO-basis</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-orange shrink-0"></span>
-              <span>AVG-conform & Cookie-vrij</span>
-            </li>
+        <div>
+          <p class="footer-title">Contact</p>
+          <ul class="footer-list">
+            <li><a href="mailto:srabruggeman@gmail.com">srabruggeman@gmail.com</a></li>
+            <li><a href="https://wa.me/31619588717" target="_blank" rel="noopener noreferrer">WhatsApp: +31 6 19588717</a></li>
+            <li><a href="https://www.linkedin.com/in/sander-bruggeman-415596197/" target="_blank" rel="noopener noreferrer">LinkedIn — Sander Bruggeman</a></li>
           </ul>
         </div>
-
-        <!-- Kolom 4: Contact & Bereikbaarheid (lg:col-span-3) -->
-        <div class="lg:col-span-3 space-y-3">
-          <p class="text-xs font-bold uppercase tracking-wider text-navy">Direct Contact</p>
-          <p class="text-xs text-muted leading-relaxed">
-            Vraag of nieuw project? Ik reageer doorgaans binnen één werkdag via WhatsApp of e-mail.
-          </p>
-          <div class="space-y-2.5 pt-1 text-xs sm:text-sm">
-            <a 
-              href="https://wa.me/31619588717" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="flex items-center gap-2.5 text-navy hover:text-emerald-600 transition-colors group font-semibold"
-            >
-              <span class="w-6 h-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-200 group-hover:bg-emerald-600 group-hover:text-white transition-all">
-                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.124 1.529 5.855l-1.529 5.581 5.716-1.5c1.681.916 3.609 1.439 5.66 1.439 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
-              </span>
-              <span>WhatsApp</span>
-            </a>
-
-            <a 
-              href="mailto:srabruggeman@gmail.com" 
-              class="flex items-center gap-2.5 text-navy hover:text-orange transition-colors group font-semibold"
-            >
-              <span class="w-6 h-6 rounded-lg bg-orange-light text-orange flex items-center justify-center shrink-0 border border-orange/20 group-hover:bg-orange group-hover:text-white transition-all">
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              </span>
-              <span>srabruggeman@gmail.com</span>
-            </a>
-
-            <a 
-              href="https://www.linkedin.com/in/sander-bruggeman-415596197/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="flex items-center gap-2.5 text-navy hover:text-[#0A66C2] transition-colors group font-semibold"
-            >
-              <span class="w-6 h-6 rounded-lg bg-[#0A66C2]/10 text-[#0A66C2] flex items-center justify-center shrink-0 border border-[#0A66C2]/20 group-hover:bg-[#0A66C2] group-hover:text-white transition-all">
-                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-              </span>
-              <span>LinkedIn</span>
-            </a>
-          </div>
-          <p class="text-[11px] text-muted pt-1">Tarieven excl. 21% btw</p>
-        </div>
-
       </div>
 
-      <!-- Onderbalk: Copyright, Juridische links & Terug naar boven -->
-      <div class="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
-        <p>© 2026 Bruggeman Digital • Sander Bruggeman. Alle rechten voorbehouden.</p>
-        <div class="flex items-center gap-6 font-medium">
-          <a href="privacy.html" class="hover:text-navy underline underline-offset-4 transition-colors">Privacyverklaring</a>
-          <a href="algemene-voorwaarden.html" class="hover:text-navy underline underline-offset-4 transition-colors">Algemene Voorwaarden</a>
-          <a href="#" class="text-navy hover:text-orange font-semibold flex items-center gap-1 transition-colors" title="Terug naar boven">
-            <span>Omhoog</span>
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
-          </a>
+      <div class="footer-bottom">
+        <p>© 2026 Bruggeman Digital • Alle tarieven excl. 21% btw</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.65rem 1.25rem;">
+          <a href="privacy.html">Privacyverklaring</a>
+          <a href="algemene-voorwaarden.html">Algemene Voorwaarden</a>
+          <a href="llms.txt" class="mono">llms.txt</a>
         </div>
       </div>
-
     </div>
   </footer>
 
-  <!-- Scripts: Mobiel Menu & Contactformulier -->
-  <script>
-    // Mobiel menu toggle
-    const btn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-    menu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => menu.classList.add('hidden'));
-    });
-
-    // Contactformulier AJAX verzending & terugkoppelingsfeedback
-    const form = document.getElementById('contact-form');
-    if (form) {
-      // Check of bezoeker is teruggestuurd na traditionele submit
-      if (window.location.search.includes('bericht=verzonden')) {
-        const successNotice = document.createElement('div');
-        successNotice.className = 'mb-5 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm flex items-start gap-3';
-        successNotice.innerHTML = `
-          <span class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
-          <div>
-            <strong class="block font-bold">Bedankt voor je bericht!</strong>
-            <span class="text-xs text-emerald-700">Ik heb je aanvraag ontvangen en neem binnen één werkdag contact met je op.</span>
-          </div>
-        `;
-        form.parentNode.insertBefore(successNotice, form);
-      }
-
-      form.addEventListener('submit', async (e) => {
-        if (!form.checkValidity()) return;
-        
-        e.preventDefault();
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalBtnHtml = submitBtn.innerHTML;
-        submitBtn.disabled = true;
-        submitBtn.classList.add('opacity-80', 'cursor-not-allowed');
-        submitBtn.innerHTML = `
-          <span>Verzenden...</span>
-          <svg class="animate-spin w-4 h-4 ml-1.5" viewBox="0 0 24 24" fill="none">
-            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
-          </svg>
-        `;
-
-        try {
-          const formData = new FormData(form);
-          const res = await fetch('https://formsubmit.co/ajax/srabruggeman@gmail.com', {
-            method: 'POST',
-            headers: { 'Accept': 'application/json' },
-            body: formData
-          });
-
-          const data = await res.json();
-          if (res.ok || (data && (data.success === 'true' || data.success === true || (data.message && data.message.includes('Activate'))))) {
-            const formHeading = document.getElementById('form-heading');
-            if (formHeading) formHeading.style.display = 'none';
-            form.innerHTML = `
-              <div class="py-8 px-4 text-center space-y-4">
-                <div class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center shadow-soft">
-                  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <h4 class="text-xl sm:text-2xl font-extrabold text-navy">Bericht succesvol verzonden!</h4>
-                <p class="text-sm text-muted max-w-md mx-auto leading-relaxed">
-                  Bedankt voor je aanvraag. Ik heb je gegevens in goede orde ontvangen en neem uiterlijk binnen één werkdag persoonlijk contact met je op.
-                </p>
-                <div class="pt-2">
-                  <span class="inline-block text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-200">
-                    Directe bevestiging verstuurd naar je inbox
-                  </span>
-                </div>
-              </div>
-            `;
-          } else {
-            throw new Error('Verzending mislukt');
-          }
-        } catch (err) {
-          // Bij network error of offline fallback: verzend via standaard HTTP POST
-          form.submit();
-        }
-      });
-    }
-  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>

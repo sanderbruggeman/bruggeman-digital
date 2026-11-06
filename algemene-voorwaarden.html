@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="nl" class="scroll-smooth">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Algemene Voorwaarden | Bruggeman Digital</title>
-  <meta name="description" content="Algemene voorwaarden van Bruggeman Digital voor het ontwerpen en ontwikkelen van WordPress bedrijfswebsites en digitale projecten." />
+  <meta name="description" content="Algemene voorwaarden van Bruggeman Digital voor AI-toepassingen, procesautomatisering, websites en dashboards voor zelfstandigen en het MKB." />
   <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://www.bruggemandigital.nl/algemene-voorwaarden.html" />
+
   <!-- Favicon & Touch Icons -->
   <link rel="icon" href="favicon.ico" sizes="32x32" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -15,160 +17,187 @@
   <link rel="manifest" href="site.webmanifest" />
   <meta name="theme-color" content="#13294B" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: {
-              DEFAULT: '#13294B',
-              dark: '#0B1B33',
-              deep: '#071324',
-              light: '#1E3A66',
-              surface: '#F4F7FB'
-            },
-            orange: {
-              DEFAULT: '#FF6A2B',
-              hover: '#E85819',
-              dark: '#D94B0E',
-              light: '#FFF4EF',
-              border: '#FED7C3'
-            },
-            bg: '#F7F6F3',
-            surface: '#FFFFFF',
-            fg: '#17191C',
-            muted: '#5C616B',
-            border: '#E4E2DD'
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          },
-          boxShadow: {
-            'soft': '0 2px 15px -3px rgba(19, 41, 75, 0.05), 0 4px 6px -2px rgba(19, 41, 75, 0.03)',
-            'card': '0 10px 25px -5px rgba(19, 41, 75, 0.06), 0 8px 10px -6px rgba(19, 41, 75, 0.04)',
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    body {
-      background-color: #F7F6F3;
-      color: #17191C;
-      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-    }
-  </style>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="antialiased selection:bg-orange selection:text-white">
+<body id="top">
 
-  <!-- Header -->
-  <header class="bg-bg/90 backdrop-blur-md border-b border-border sticky top-0 z-50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-18 flex items-center justify-between">
-      <a href="index.html" class="flex items-center" aria-label="Bruggeman Digital">
-        <img src="logo.svg" alt="Bruggeman Digital" class="h-7 md:h-8 w-auto object-contain" onerror="this.style.display='none'" />
+  <!-- ================= HEADER / NAVIGATIE ================= -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="header-brand" aria-label="Bruggeman Digital">
+        <img src="assets/brand-mark-header.svg" alt="" width="28" height="28" />
+        <span>Bruggeman <span style="font-weight: 400;">Digital</span><span style="color: var(--orange);">.</span></span>
       </a>
-      <a href="index.html" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-navy hover:text-orange transition-colors">
-        ← Terug naar de hoofdpagina
-      </a>
+
+      <nav class="nav-links" aria-label="Hoofdnavigatie">
+        <a href="index.html#diensten" class="nav-link">Diensten</a>
+        <a href="index.html#prijzen" class="nav-link">Prijzen</a>
+        <a href="index.html#werk" class="nav-link">Werk</a>
+        <a href="index.html#werkwijze" class="nav-link">Werkwijze</a>
+        <a href="index.html#over-mij" class="nav-link">Over mij</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html#contact" class="btn btn--orange">
+          <span>Project bespreken</span>
+          <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" aria-label="Menu openen" aria-expanded="false" aria-controls="mobile-menu" class="mobile-menu-toggle">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-nav">
+      <div class="container">
+        <nav class="mobile-nav-list" aria-label="Mobiele navigatie">
+          <a href="index.html#diensten" class="mobile-nav-link">Diensten</a>
+          <a href="index.html#prijzen" class="mobile-nav-link">Richtprijzen &amp; Trajecten</a>
+          <a href="index.html#werk" class="mobile-nav-link">Werk &amp; Voorbeelden</a>
+          <a href="index.html#werkwijze" class="mobile-nav-link">Werkwijze</a>
+          <a href="index.html#over-mij" class="mobile-nav-link">Over mij</a>
+          <a href="index.html#faq" class="mobile-nav-link">FAQ</a>
+          <a href="index.html#contact" class="btn btn--orange" style="width: 100%; margin-top: 0.5rem;">
+            <span>Project bespreken</span>
+          </a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <!-- Content -->
-  <main class="py-12 sm:py-16">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-surface p-6 sm:p-10 rounded-2xl border border-border shadow-card space-y-7">
-        <div class="border-b border-border pb-5">
-          <span class="font-mono text-xs uppercase tracking-widest text-orange font-bold">Juridisch & Voorwaarden</span>
-          <h1 class="mt-1 text-2xl sm:text-3xl font-extrabold text-navy tracking-tight">Algemene Voorwaarden</h1>
-          <p class="mt-1.5 text-xs sm:text-sm text-muted">Bruggeman Digital • Oktober 2026 • Zakelijke dienstverlening B2B</p>
+  <!-- ================= MAIN LEGAL CONTENT ================= -->
+  <main class="section">
+    <div class="container" style="max-width: 780px;">
+      <div style="margin-bottom: 1.25rem;">
+        <a href="index.html" style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 700; color: var(--navy-light);">
+          ← Terug naar de hoofdpagina
+        </a>
+      </div>
+
+      <article class="pillar-card" style="gap: 1.75rem; padding: clamp(1.5rem, 3.5vw, 2.5rem);">
+        <div style="border-bottom: 1px solid var(--border-solid); padding-bottom: 1.25rem;">
+          <span class="section-label">Juridisch &amp; Voorwaarden</span>
+          <h1 class="section-title" style="margin-top: 0.5rem;">Algemene Voorwaarden</h1>
+          <p style="margin-top: 0.4rem; font-size: 0.82rem; color: var(--muted);">
+            Bruggeman Digital • November 2026 • Zakelijke dienstverlening B2B (SBI 62100 &amp; 62200)
+          </p>
         </div>
 
-        <section class="space-y-3 text-sm text-muted leading-relaxed">
-          <h2 class="text-lg sm:text-xl font-bold text-navy">Artikel 1. Definities en Toepasselijkheid</h2>
+        <section style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--muted); line-height: 1.65;">
+          <h2 style="font-size: 1.18rem; color: var(--navy);">Artikel 1. Definities en Toepasselijkheid</h2>
           <p>
-            Deze algemene voorwaarden zijn van toepassing op alle offertes, werkzaamheden en overeenkomsten tussen <strong>Bruggeman Digital</strong> (eenmanszaak van Sander Bruggeman, ingeschreven bij de Kamer van Koophandel onder nummer <strong>42082488</strong>, gevestigd aan de Strandweg 24B, 3151HV te Hoek van Holland, hierna: opdrachtnemer) en de zakelijke klant (hierna: opdrachtgever).
+            Deze algemene voorwaarden zijn van toepassing op alle offertes, werkzaamheden en overeenkomsten tussen <strong style="color: var(--navy);">Bruggeman Digital</strong> (eenmanszaak van Sander Bruggeman, ingeschreven bij de Kamer van Koophandel onder nummer <strong style="color: var(--navy);">42082488</strong>, gevestigd aan de Strandweg 24B, 3151HV te Hoek van Holland, hierna: opdrachtnemer) en de zakelijke klant (hierna: opdrachtgever).
           </p>
         </section>
 
-        <section class="space-y-3 text-sm text-muted leading-relaxed">
-          <h2 class="text-lg sm:text-xl font-bold text-navy">Artikel 2. Offertes en Vaste Prijsafspraken</h2>
+        <section style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--muted); line-height: 1.65;">
+          <h2 style="font-size: 1.18rem; color: var(--navy);">Artikel 2. Offertes, Prijsafspraken en Uurtarief op Afroep</h2>
           <p>
-            Alle offertes zijn vrijblijvend en 30 dagen geldig. Alle vermelde tarieven en prijzen zijn in euro's en exclusief 21% btw conform de geldende Nederlandse belastingwetgeving. Wanneer een vaste projectprijs wordt afgesproken, omvat deze alle werkzaamheden zoals omschreven in het projectvoorstel. Meerwerk (extra pagina's of functionaliteiten buiten de oorspronkelijke afspraak) wordt altijd vooraf besproken en apart overeengekomen.
+            Alle offertes zijn vrijblijvend en 30 dagen geldig. Alle vermelde tarieven en prijzen zijn in euro's en exclusief 21% btw conform de geldende Nederlandse belastingwetgeving. Wanneer een vaste projectprijs wordt afgesproken, omvat deze alle werkzaamheden zoals omschreven in het projectvoorstel. Aanvullende wensen of ad-hoc uitbreidingen achteraf worden altijd vooraf besproken en uitgevoerd tegen een vaste prijsafspraak of het flexibele uurtarief van € 75,- ex. btw op afroep.
           </p>
         </section>
 
-        <section class="space-y-3 text-sm text-muted leading-relaxed">
-          <h2 class="text-lg sm:text-xl font-bold text-navy">Artikel 3. Uitvoering, Aanlevering & Feedback</h2>
+        <section style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--muted); line-height: 1.65;">
+          <h2 style="font-size: 1.18rem; color: var(--navy);">Artikel 3. Uitvoering, Aanlevering &amp; Feedback</h2>
           <p>
-            Opdrachtgever levert benodigde materialen (zoals logo's, teksten, afbeeldingen en toegang tot de eigen hosting/domeinnaam) tijdig aan en garandeert dat hierop geen auteursrechten van derden worden geschonden. In de vaste projectprijs zijn standaard feedbackrondes inbegrepen voordat de website definitief wordt opgeleverd.
+            Opdrachtgever levert benodigde materialen en toegang tot de eigen hosting, domeinnaam of cloud-/softwareomgevingen tijdig aan en garandeert dat hierop geen rechten van derden worden geschonden. In een projecttraject zijn standaard feedbackrondes en een heldere overdrachtsinstructie inbegrepen voordat het project definitief wordt opgeleverd.
           </p>
         </section>
 
-        <section class="space-y-3 text-sm text-muted leading-relaxed">
-          <h2 class="text-lg sm:text-xl font-bold text-navy">Artikel 4. Oplevering, Eigendom & Geen Verplicht Abonnement</h2>
+        <section style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--muted); line-height: 1.65;">
+          <h2 style="font-size: 1.18rem; color: var(--navy);">Artikel 4. Oplevering, Eigendom &amp; Geen Verplicht Abonnement</h2>
           <p>
-            Na volledige betaling van de factuur wordt de ontwikkelde website opgeleverd op de door opdrachtgever gekozen hostingomgeving en krijgt opdrachtgever het volledige eigendoms- en beheersrecht over de website.
+            Na volledige betaling van de factuur wordt het ontwikkelde project (website, webapplicatie, AI-integratie, automatiseringsworkflow of dashboard) opgeleverd op de eigen omgeving van opdrachtgever en krijgt opdrachtgever het volledige eigendoms- en beheersrecht.
           </p>
           <p>
-            Bruggeman Digital hanteert <strong>geen verplicht onderhouds- of hostingabonnement</strong>. Dit betekent dat opdrachtgever na oplevering zelf verantwoordelijk is voor het aanhouden van zijn webhosting, domeinnaam, het maken van back-ups en het bijwerken van WordPress en plugins, tenzij partijen hiervoor apart werkzaamheden op afroep- of projectbasis afspreken.
-          </p>
-        </section>
-
-        <section class="space-y-3 text-sm text-muted leading-relaxed">
-          <h2 class="text-lg sm:text-xl font-bold text-navy">Artikel 5. Betalingsvoorwaarden & Belastingdienst</h2>
-          <p>
-            Tenzij schriftelijk anders overeengekomen, wordt bij websiteprojecten 50% van het totaalbedrag gefactureerd bij akkoord op het voorstel (vóór aanvang) en de resterende 50% bij oplevering / livegang van de website. De betalingstermijn bedraagt 14 dagen na factuurdatum. Facturen worden elektronisch verstrekt en voldoen aan alle wettelijke factuurvereisten van de Belastingdienst (inclusief vermelding van KVK- en Btw-identificatienummer).
+            Bruggeman Digital hanteert <strong style="color: var(--navy);">geen verplicht onderhouds- of hostingabonnement</strong>. Opdrachtgever is na oplevering zelf vrij in het beheer van de eigen accounts, tenzij partijen apart werkzaamheden op afroep- of projectbasis afspreken.
           </p>
         </section>
 
-        <section class="space-y-3 text-sm text-muted leading-relaxed">
-          <h2 class="text-lg sm:text-xl font-bold text-navy">Artikel 6. Garantie en Aansprakelijkheid</h2>
+        <section style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--muted); line-height: 1.65;">
+          <h2 style="font-size: 1.18rem; color: var(--navy);">Artikel 5. Betalingsvoorwaarden &amp; Belastingdienst</h2>
           <p>
-            Bruggeman Digital garandeert dat de website bij oplevering naar behoren functioneert. Eventuele technische gebreken die binnen 30 dagen na livegang worden ontdekt (en niet zijn veroorzaakt door eigen aanpassingen van opdrachtgever of derden), worden kosteloos hersteld.
-          </p>
-          <p>
-            De aansprakelijkheid van Bruggeman Digital is te allen tijde beperkt tot directe schade en maximaal tot het factuurbedrag van de betreffende opdracht. Bruggeman Digital is niet aansprakelijk voor indirecte schade, zoals gederfde winst, gevolgschade of storingen bij de externe hostingprovider van opdrachtgever.
+            Tenzij schriftelijk anders overeengekomen, wordt bij vaste projecten 50% van het totaalbedrag gefactureerd bij akkoord op het voorstel (vóór aanvang) en de resterende 50% bij oplevering. De betalingstermijn bedraagt 14 dagen na factuurdatum.
           </p>
         </section>
 
-        <section class="space-y-3 text-sm text-muted leading-relaxed">
-          <h2 class="text-lg sm:text-xl font-bold text-navy">Artikel 7. Referentiegebruik</h2>
+        <section style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--muted); line-height: 1.65;">
+          <h2 style="font-size: 1.18rem; color: var(--navy);">Artikel 6. Garantie en Aansprakelijkheid</h2>
           <p>
-            Bruggeman Digital behoudt het recht om een screenshot en korte omschrijving van de opgeleverde website te tonen in het eigen portfolio op bruggemandigital.nl, tenzij opdrachtgever hier vooraf schriftelijk bezwaar tegen maakt.
+            Bruggeman Digital garandeert dat het project bij oplevering naar behoren functioneert. Eventuele technische gebreken die binnen 30 dagen na oplevering worden ontdekt (en niet zijn veroorzaakt door eigen aanpassingen van opdrachtgever of derden), worden kosteloos hersteld. De aansprakelijkheid van Bruggeman Digital is te allen tijde beperkt tot directe schade en maximaal tot het factuurbedrag van de betreffende opdracht.
           </p>
         </section>
 
-        <section class="space-y-3 text-sm text-muted leading-relaxed">
-          <h2 class="text-lg sm:text-xl font-bold text-navy">Artikel 8. Toepasselijk recht</h2>
+        <section style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--muted); line-height: 1.65;">
+          <h2 style="font-size: 1.18rem; color: var(--navy);">Artikel 7. Toepasselijk recht</h2>
           <p>
             Op alle overeenkomsten tussen Bruggeman Digital en opdrachtgever is uitsluitend Nederlands recht van toepassing.
           </p>
         </section>
-      </div>
+      </article>
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-bg border-t border-border py-10 sm:py-12">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
-      <div class="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 text-center sm:text-left">
-        <div class="flex items-center justify-center sm:justify-start gap-2">
-          <img src="logo.svg" alt="Bruggeman Digital" class="h-6 w-auto" onerror="this.style.display='none'" />
+  <!-- ================= DEEP NAVY FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="footer-brand" aria-label="Bruggeman Digital">
+            <img src="assets/brand-mark-footer.svg" alt="" width="28" height="28" />
+            <span>Bruggeman <span style="font-weight: 400;">Digital</span><span style="color: var(--orange);">.</span></span>
+          </a>
+          <p style="margin-top: 0.75rem; max-width: 42ch;">
+            Praktische digitale partner voor zelfstandigen en het MKB. Heldere afspraken vooraf &amp; gewoon in eigen beheer.
+          </p>
+          <p class="mono" style="margin-top: 0.65rem; font-size: 0.74rem; color: #94A3B8;">
+            Strandweg 24B, 3151HV Hoek van Holland • KVK: 42082488 • Btw: NL005480999B44
+          </p>
         </div>
-        <span>Strandweg 24B, 3151HV Hoek van Holland • KVK: 42082488 • Btw-id: NL005480999B44</span>
+
+        <div>
+          <p class="footer-title">Navigatie</p>
+          <ul class="footer-list">
+            <li><a href="index.html#diensten">Diensten</a></li>
+            <li><a href="index.html#prijzen">Richtprijzen &amp; Trajecten</a></li>
+            <li><a href="index.html#werk">Werk &amp; Voorbeelden</a></li>
+            <li><a href="index.html#werkwijze">Werkwijze</a></li>
+            <li><a href="index.html#over-mij">Over Sander</a></li>
+            <li><a href="index.html#faq">Veelgestelde vragen</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-title">Contact</p>
+          <ul class="footer-list">
+            <li><a href="mailto:srabruggeman@gmail.com">srabruggeman@gmail.com</a></li>
+            <li><a href="https://wa.me/31619588717" target="_blank" rel="noopener noreferrer">WhatsApp: +31 6 19588717</a></li>
+            <li><a href="https://www.linkedin.com/in/sander-bruggeman-415596197/" target="_blank" rel="noopener noreferrer">LinkedIn — Sander Bruggeman</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="flex items-center gap-6 font-semibold">
-        <a href="index.html" class="hover:text-navy underline underline-offset-4">Home</a>
-        <a href="privacy.html" class="hover:text-navy underline underline-offset-4">Privacyverklaring</a>
+
+      <div class="footer-bottom">
+        <p>© 2026 Bruggeman Digital • Alle tarieven excl. 21% btw</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.65rem 1.25rem;">
+          <a href="privacy.html">Privacyverklaring</a>
+          <a href="algemene-voorwaarden.html" style="color: #FFFFFF; font-weight: 600;">Algemene Voorwaarden</a>
+          <a href="llms.txt" class="mono">llms.txt</a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>
